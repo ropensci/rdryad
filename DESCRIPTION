@@ -1,0 +1,31 @@
+Package: rdryad
+Type: Package
+Title: Dryad interface.
+Version: 0.0-1
+License: GPL (>= 2)
+Date: 2012-2-21
+Author: Carl Boettiger, Scott Chamberlain
+Maintainer: Carl Boettiger <cboettig@gmail.com>
+Description: Interface to the API for Dryad
+URL: http://www.github.com/ropensci/rdryad
+Imports:
+    XML,
+    RCurl,
+    OAIHarvester,
+    ape,
+    gdata,
+    plyr,
+    stringr,
+    ReadImages,
+    RJSONIO
+Collate:
+    'identify.r'
+    'listidentifiers.r'
+    'listmetadataformats.r'
+    'download_dryadmetadata.r'
+    'download_url.r'
+    'dryad_getfile.r'
+    'getalldryad_metadata.r'
+    'search_dryad.r'
+    'totimp.r'
+    'totimp_dryad.r'
