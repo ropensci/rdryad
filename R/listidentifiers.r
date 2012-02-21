@@ -9,13 +9,13 @@
 #' @return List of OAI identifiers for each dataset.
 #' @export
 #' @examples \dontrun{
-#' identifers <- listidentifiers('r')
+#' identifiers <- listidentifiers('r')
 #'
 #' # Data packages
-#' identifers[[1]]
+#' identifiers[[1]]
 #'
 #' # Data files
-#' identifers[[2]]
+#' identifiers[[2]]
 #' }
 listidentifiers <- function(tor,
     url = 'http://www.datadryad.org/oai/request',

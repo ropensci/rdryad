@@ -4,6 +4,10 @@
 \usage{
   identify(formatted = FALSE)
 }
+\arguments{
+  \item{formatted}{Defaults to printing results - set to
+  TRUE to silence printing.}
+}
 \value{
   List of information describing Dryad.
 }

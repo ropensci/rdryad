@@ -1,5 +1,5 @@
 #' Download Dryad dataset (determines file type, then downloads).
-#' @import RCurl XML stringr ReadImages gdata
+#' @import RCurl XML stringr ReadImages gdata ape
 #' @param dryadurl Dryad URL for a dataset.
 #' @return A Dryad dataset.
 #' @export
@@ -26,7 +26,7 @@ function(dryadurl)
 		dat <- read.table(dryadurl, header=T, sep="\t")
 	} else
 	if(file_type == "xls") {
-		dat <- read.xls(dryadurl) # requires gdatas
+		dat <- read.xls(dryadurl) # requires gdata
 	} else
 	if(file_type == "csv" & str_detect(scan(dryadurl, what="raw")[1], ";") == "TRUE") {
 		dat <- read.csv(dryadurl, sep=";")

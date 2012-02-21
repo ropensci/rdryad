@@ -1,8 +1,8 @@
 Package: rdryad
 Type: Package
 Title: Dryad interface.
-Version: 0.0-1
-License: GPL (>= 2)
+Version: 0.1
+License: file LICENSE
 Date: 2012-2-21
 Author: Carl Boettiger, Scott Chamberlain
 Maintainer: Carl Boettiger <cboettig@gmail.com>

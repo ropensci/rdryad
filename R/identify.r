@@ -1,5 +1,6 @@
 #' Learn about the Dryad OAI-PMH service.
 #' @import XML
+#' @param formatted Defaults to printing results - set to TRUE to silence printing.
 #' @return List of information describing Dryad.
 #' @export
 #' @examples \dontrun{

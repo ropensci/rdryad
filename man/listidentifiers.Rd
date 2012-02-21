@@ -28,13 +28,13 @@
 }
 \examples{
 \dontrun{
-identifers <- listidentifiers('r')
+identifiers <- listidentifiers('r')
 
 # Data packages
-identifers[[1]]
+identifiers[[1]]
 
 # Data files
-identifers[[2]]
+identifiers[[2]]
 }
 }
 

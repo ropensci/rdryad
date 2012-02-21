@@ -2,6 +2,10 @@
 #' @import stringr RJSONIO plyr
 #' @param id The DOI, URL, or PubMed ID - see examples.
 #' @param fields One of 'metrics' or 'biblio'.
+#' @param sleep Time (in seconds) before function sends API call - defaults to
+#'    zero.  Set to higher number if you are using this function in a loop with
+#'    many API calls.  Although, with TotalImpact, you can also just put in
+#'    multiple id's in one call (much faster) instead of using a loop (slower).
 #' @param url The base URL (do not change from default).
 #' @return A list.
 #' @export
