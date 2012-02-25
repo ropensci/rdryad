@@ -8,7 +8,9 @@ There is no need to get an API key, as in some of our other packages. They use a
 
 We now implement the Total Impact API.  You can query for the data they serve up using `totimp`.  Use `totimp_dryad` to get metrics for just Dryad datasets.  See here for their documentation: http://total-impact.org/about#toc_2_16
 
-Install Dryad:
+Install Dryad from CRAN (http://cran.r-project.org/web/packages/available_packages_by_name.html), or 
+
+install Dryad from GitHub:
 
 ```R
 install.packages("devtools")
