@@ -9,11 +9,11 @@
 #' @export
 #' @examples \dontrun{
 #' mymetdata <- getalldryad_metadata(T, progress = "text", T,
-#'    "/Mac/R_stuff/Blog_etc/Dryad/")
+#'    "/path/to/dir/")
 #' }
 getalldryad_metadata <-
 
-function(transform, progress = 'text', write, dir = FALSE)
+function(transform, progress = 'text', write, dir = FALSE, parallel= FALSE)
 {
   myoailist <- listidentifiers('r') # get all oai's
   myoailist <- llply(myoailist[[1]], function(x) x$identifier) # list of file identifers only
