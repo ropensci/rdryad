@@ -5,6 +5,7 @@
 #' @param write (logical) write metadata to local file, TRUE or FALSE
 #' @param dir FALSE (default) or give directory as e.g. "/Mac/dryad/" only if
 #'    write argument == TRUE
+#` @param parallel Set to true to run query in parallel. Prior set up required
 #' @return A Dryad dataset in a data.frame.
 #' @export
 #' @examples \dontrun{
