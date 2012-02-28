@@ -15,24 +15,27 @@
 #' totimp(id = list('10.5061/dryad.8671','18428094','http://opensciencesummit.com/program/'), 'biblio')
 #' totimp(id = '18428094', 'biblio')
 #' }
-totimp <- function(id = NA, fields = 'metrics', sleep = 0,
-         url = "http://total-impact.org/api/v1/items/") {
-  Sys.sleep(sleep)
-  id_ <- paste(
-              laply(id, str_replace_all, pattern='/', replacement='%252F'),
-              collapse=','
-              )
-  url2 <- paste(url, id_, '.json', '?fields=', fields, sep='')
-  fromJSON(url2)
+totimp <- function(id = NA, fields = "metrics", sleep = 0, 
+    url = "http://total-impact.org/api/v1/items/") {
+    Sys.sleep(sleep)
+    id_ <- paste(laply(id, str_replace_all, pattern = "/", replacement = "%252F"), 
+        collapse = ",")
+    url2 <- paste(url, id_, ".json", "?fields=", fields, sep = "")
+    fromJSON(url2)
 }
 
 # URL
-# http://total-impact.org/api/v1/items/18428094,10.1371%252Fjournal.pmed.0020124,http:%252F%252Fopensciencesummit.com%252Fprogram%252F,10.5061%252Fdryad.8048.json?fields=metrics
+#
+#   http://total-impact.org/api/v1/items/18428094,10.1371%252Fjournal.pmed.0020124,http:%252F%252Fopensciencesummit.com%252Fprogram%252F,10.5061%252Fdryad.8048.json?fields=metrics
 # Multiple
-# fromJSON("http://total-impact.org/api/v1/items/18428094,10.1371%252Fjournal.pmed.0020124,http:%252F%252Fopensciencesummit.com%252Fprogram%252F,10.5061%252Fdryad.8048.json?fields=metrics")
+#
+#   fromJSON('http://total-impact.org/api/v1/items/18428094,10.1371%252Fjournal.pmed.0020124,http:%252F%252Fopensciencesummit.com%252Fprogram%252F,10.5061%252Fdryad.8048.json?fields=metrics')
 # Dryad
-# fromJSON("http://total-impact.org/api/v1/items/10.5061%252Fdryad.8671.json?fields=biblio")
+#
+#   fromJSON('http://total-impact.org/api/v1/items/10.5061%252Fdryad.8671.json?fields=biblio')
 # PubMed
-# fromJSON("http://total-impact.org/api/v1/items/10.1371%252Fjournal.pmed.0020124.json?fields=metrics")
+#
+#   fromJSON('http://total-impact.org/api/v1/items/10.1371%252Fjournal.pmed.0020124.json?fields=metrics')
 # Other
-# fromJSON("http://total-impact.org/api/v1/items/18428094.json?fields=biblio")
+#
+#   fromJSON('http://total-impact.org/api/v1/items/18428094.json?fields=biblio') 

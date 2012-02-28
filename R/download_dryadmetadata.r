@@ -6,20 +6,14 @@
 #' @return Metadata for a Dryad dataset.
 #' @export
 #' @examples \dontrun{
-#' metadat <- download_dryadmetadata("oai:datadryad.org:10255/dryad.8820", T)
+#' metadat <- download_dryadmetadata('oai:datadryad.org:10255/dryad.8820', T)
 #' metadat <- download_dryadmetadata(8820, T)
 #' metadat$metadata # get $identifier, $datestamp, $setSpec, or $metadata
 #' metadata <- oaih_transform(metadat$metadata) # transform to a list
 #' }
-download_dryadmetadata <-
-
-function(id, transform,
-        url = "http://www.datadryad.org/oai")
-{
-  if(is.numeric(id) == TRUE)
-    id <- paste("oai:datadryad.org:10255/dryad.", id, sep="")
-	oaih_get_record(url,
-	  id,
-	  prefix = "oai_dc",
-	  transform = transform)
-}
+download_dryadmetadata <- 
+function(id, transform, url = "http://www.datadryad.org/oai") {
+    if (is.numeric(id) == TRUE) 
+        id <- paste("oai:datadryad.org:10255/dryad.", id, sep = "")
+    oaih_get_record(url, id, prefix = "oai_dc", transform = transform)
+} 
