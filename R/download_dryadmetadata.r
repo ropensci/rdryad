@@ -11,9 +11,9 @@
 #' metadat$metadata # get $identifier, $datestamp, $setSpec, or $metadata
 #' metadata <- oaih_transform(metadat$metadata) # transform to a list
 #' }
-download_dryadmetadata <- 
+download_dryadmetadata <-
 function(id, transform, url = "http://www.datadryad.org/oai") {
-    if (is.numeric(id) == TRUE) 
+    if (is.numeric(id) == TRUE)
         id <- paste("oai:datadryad.org:10255/dryad.", id, sep = "")
     oaih_get_record(url, id, prefix = "oai_dc", transform = transform)
-} 
+}
