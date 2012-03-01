@@ -17,10 +17,10 @@
 #' # Data files
 #' identifiers[[2]]
 #' }
-listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request", 
+listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request",
     ..., curl = getCurlHandle()) {
     list_ <- list()  # make list to put OIA identifiers into
-    argspacks <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc", 
+    argspacks <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc",
         set = "hdl_10255_2")  # list of arguments for packages
     dryadlistout_packs <- getForm(url, .params = argspacks, ..., curl = curl)
     dryad_packs <- xmlTreeParse(dryadlistout_packs)  # tree parse
@@ -30,8 +30,8 @@ listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request",
     } else if (tor == "dir") {
         save(dryadpackslist, file = "~/.dryadpackages.rda")
     }
-    
-    argsfiles <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc", 
+
+    argsfiles <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc",
         set = "hdl_10255_3")  # list of arguments for data files within packages
     dryadlistout_files <- getForm(url, .params = argsfiles, ..., curl = curl)
     dryad_files <- xmlTreeParse(dryadlistout_files)  # tree parse
@@ -41,7 +41,7 @@ listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request",
     } else if (tor == "dir") {
         save(dryadfileslist, file = "~/.dryadfiles.rda")
     }
-    
-    if (tor == "r") 
+
+    if (tor == "r")
         list_
-} 
+}

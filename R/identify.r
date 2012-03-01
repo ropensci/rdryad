@@ -12,4 +12,4 @@ identify <- function(formatted = FALSE) {
     if (!formatted) {
         return(Dryad.info)
     }
-} 
+}
