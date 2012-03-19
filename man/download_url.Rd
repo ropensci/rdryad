@@ -5,7 +5,7 @@
   download_url(id, curl = getCurlHandle())
 }
 \arguments{
-  \item{id}{Dryad identifier, i.e. "10255/dryad.19".}
+  \item{id}{Dryad identifier, i.e. '10255/dryad.19'.}
 
   \item{curl}{If using in a loop, call getCurlHandle()
   first and pass the returned value in here (avoids
@@ -19,7 +19,7 @@
 }
 \examples{
 \dontrun{
-download_url("10255/dryad.1759")
+download_url('10255/dryad.1759')
 }
 }
 

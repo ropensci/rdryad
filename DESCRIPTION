@@ -33,3 +33,4 @@ Collate:
     'search_dryad.r'
     'totimp.r'
     'totimp_dryad.r'
+    'updatealldryad_metadata.R'

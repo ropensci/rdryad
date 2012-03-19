@@ -22,7 +22,7 @@
 }
 \examples{
 \dontrun{
-metadat <- download_dryadmetadata("oai:datadryad.org:10255/dryad.8820", T)
+metadat <- download_dryadmetadata('oai:datadryad.org:10255/dryad.8820', T)
 metadat <- download_dryadmetadata(8820, T)
 metadat$metadata # get $identifier, $datestamp, $setSpec, or $metadata
 metadata <- oaih_transform(metadat$metadata) # transform to a list

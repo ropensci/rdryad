@@ -12,7 +12,7 @@
   getalldryad_metadata function, or load xml from directory
   (in which case, provide directory)}
 
-  \item{terms}{search terms e.g., "plants", "Whickam"}
+  \item{terms}{search terms e.g., 'plants', 'Whickam'}
 
   \item{fuzzy}{(logical) do fuzzy search, TRUE (uses agrep)
   or FALSE (uses grep)}
@@ -35,7 +35,7 @@
 
   \item{loc}{where you want to search, any of title,
   creator, description, date, type, identifier, relation,
-  OR "all" for search over all metadata fields}
+  OR 'all' for search over all metadata fields}
 }
 \value{
   A numeric vector of OAI identifier's for datasets that
@@ -53,13 +53,13 @@
 \examples{
 \dontrun{
 # Search data.frame in R
-mymetdata <- getalldryad_metadata(T, progress = "text", T, "/Mac/R_stuff/Blog_etc/Dryad/")
-search_dryad(mymetdata, "map", fuzzy=F, loc="type", maxdistance='all')
-search_dryad(mymetdata, "asddddf", fuzzy=T, loc="all")
-search_dryad(mymetdata, "clustal", fuzzy=F, ignorecase=T, value=F, loc="all")
+mymetdata <- getalldryad_metadata(T, progress = 'text', T, '/Mac/R_stuff/Blog_etc/Dryad/')
+search_dryad(mymetdata, 'map', fuzzy=F, loc='type', maxdistance='all')
+search_dryad(mymetdata, 'asddddf', fuzzy=T, loc='all')
+search_dryad(mymetdata, 'clustal', fuzzy=F, ignorecase=T, value=F, loc='all')
 
 # Or search from a saved data.frame on file
-search_dryad("/Mac/R_stuff/Blog_etc/Dryad/dryadmetadata.csv", "me", fuzzy=T)
+search_dryad('/Mac/R_stuff/Blog_etc/Dryad/dryadmetadata.csv', 'me', fuzzy=T)
 }
 }
 

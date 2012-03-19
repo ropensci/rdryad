@@ -7,8 +7,8 @@
     curl = getCurlHandle())
 }
 \arguments{
-  \item{tor}{Return list of identifiers to R ("r"), or to
-  your directory at "~/." ("dir") (character).}
+  \item{tor}{Return list of identifiers to R ('r'), or to
+  your directory at '~/.' ('dir') (character).}
 
   \item{url}{the base url for the function (should be left
   to default).}

@@ -3,7 +3,7 @@
 \title{Download metadata for all Dryad oai's for defined time period.}
 \usage{
   getalldryad_metadata(transform, progress = "text", write,
-    dir = FALSE)
+    dir = FALSE, parallel = FALSE)
 }
 \arguments{
   \item{transform}{(logical) transform metadata to list,
@@ -28,7 +28,7 @@
 \examples{
 \dontrun{
 mymetdata <- getalldryad_metadata(T, progress = "text", T,
-   "/Mac/R_stuff/Blog_etc/Dryad/")
+   "/path/to/dir/")
 }
 }
 
