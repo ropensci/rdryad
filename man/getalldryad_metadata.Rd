@@ -3,7 +3,7 @@
 \title{Download metadata for all Dryad oai's for defined time period.}
 \usage{
   getalldryad_metadata(transform, progress = "text", write,
-    dir = FALSE, parallel = FALSE)
+    dir = FALSE)
 }
 \arguments{
   \item{transform}{(logical) transform metadata to list,

@@ -5,7 +5,6 @@
 #' @param write (logical) write metadata to local file, TRUE or FALSE
 #' @param dir FALSE (default) or give directory as e.g. "/Mac/dryad/" only if
 #'    write argument == TRUE
-#` @param parallel Set to true to run query in parallel. Prior set up required
 #' @return A Dryad dataset in a data.frame.
 #' @export
 #' @examples \dontrun{
@@ -14,7 +13,7 @@
 #' }
 getalldryad_metadata <-
 
-function(transform, progress = 'text', write, dir = FALSE, parallel= FALSE)
+function(transform, progress = 'text', write, dir = FALSE)
 {
   myoailist <- listidentifiers('r') # get all oai's
   myoailist <- llply(myoailist[[1]], function(x) x$identifier) # list of file identifers only
