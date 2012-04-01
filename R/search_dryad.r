@@ -31,16 +31,19 @@
 #' # Or search from a saved data.frame on file
 #' search_dryad('/Mac/R_stuff/Blog_etc/Dryad/dryadmetadata.csv', 'me', fuzzy=T)
 #' }
-search_dryad <- 
-function(input, terms, fuzzy = "FALSE", ignorecase = "TRUE", 
+search_dryad <-
+function(input, terms, fuzzy = "FALSE", ignorecase = "TRUE",
     value = "FALSE", maxdistance = 0.1, loc = "all") {
     searchdf <- function(x, terms) {
+        identifier.1 <- "NA"
+        rm(identifier.1)
+        # The above two non-sense lines are to allow check() to ignore the global var warning.
         if (loc == "all") {
             if (fuzzy == "TRUE") {
-                rowslist <- apply(x, 2, agrep, pattern = terms, ignore.case = ignorecase, 
+                rowslist <- apply(x, 2, agrep, pattern = terms, ignore.case = ignorecase,
                   value = value, max.distance = maxdistance)
             } else if (fuzzy == "FALSE") {
-                rowslist <- apply(x, 2, grep, pattern = terms, ignore.case = ignorecase, 
+                rowslist <- apply(x, 2, grep, pattern = terms, ignore.case = ignorecase,
                   value = value)
             }
         } else if (!loc == "all") {
@@ -49,16 +52,16 @@ function(input, terms, fuzzy = "FALSE", ignorecase = "TRUE",
             dat$rows <- rownames(dat)
             cols_ <- as.numeric(dat[dat[, 1] %in% loc, 2])
             if (fuzzy == "TRUE") {
-                rowslist <- as.list(apply(data.frame(x[, cols_], x[, 
-                  cols_]), 2, agrep, pattern = terms, ignore.case = ignorecase, 
+                rowslist <- as.list(apply(data.frame(x[, cols_], x[,
+                  cols_]), 2, agrep, pattern = terms, ignore.case = ignorecase,
                   value = value, max.distance = maxdistance))
             } else if (fuzzy == "FALSE") {
-                rowslist <- as.list(apply(data.frame(x[, cols_], x[, 
-                  cols_]), 2, grep, pattern = terms, ignore.case = ignorecase, 
+                rowslist <- as.list(apply(data.frame(x[, cols_], x[,
+                  cols_]), 2, grep, pattern = terms, ignore.case = ignorecase,
                   value = value))
             }
         }
-        
+
         if (class(try(do.call(c, rowslist), silent = T)) %in% "try-error") {
             stop("Awwwww snap. No datasets contain your search results")
         } else {
@@ -66,11 +69,11 @@ function(input, terms, fuzzy = "FALSE", ignorecase = "TRUE",
         }
         rowsus <- sort(unique(rows))
         ids <- subset(x, rownames(x) %in% rowsus, identifier.1)
-        oais <- as.numeric(apply(ids, 1, function(x) str_split(as.character(x), 
+        oais <- as.numeric(apply(ids, 1, function(x) str_split(as.character(x),
             "dryad.")[[1]][2]))
         oais_ <- oais
     }
-    
+
     if (class(input) == "data.frame") {
         oais_ <- searchdf(input, terms)
         oais_ <- oais_[!is.na(oais_)]
@@ -82,4 +85,4 @@ function(input, terms, fuzzy = "FALSE", ignorecase = "TRUE",
         stop("Error: input must be one of class data.frame or directory-file\nlocation\n or file name if in directory already")
     }
     oais_
-} 
+}
