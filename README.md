@@ -20,3 +20,8 @@ require(rdryad)
 ```
 
 See the rOpenSci rdryad tutorial here:  http://ropensci.org/tutorials/dryad-tutorial/
+
+
+Data is provided from the Dryad API.
+
+<a border="0" href="http://wiki.datadryad.org/Data_Access" ><img src="http://wiki.datadryad.org/wg/dryad/images/b/bc/Dryad_web_banner_small_v4.jpg" alt="Dryad API" /></a>
