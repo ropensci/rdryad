@@ -7,8 +7,11 @@
 #' listsets()
 #' }
 #' @export
-listsets <- function(transform = TRUE,
-  url = "http://www.datadryad.org/oai/request") 
+listsets <- function(url = "http://www.datadryad.org/oai/request") 
 { 
-	oaih_list_sets(url, transform = transform)
+	out <- oaih_list_sets(url, transform = FALSE)
+	data.frame(
+		setSpec = sapply(xpathApply(out, "//setSpec"), xmlValue),
+		setName = sapply(xpathApply(out, "//setName"), xmlValue)
+	)
 }
