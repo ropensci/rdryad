@@ -1,4 +1,5 @@
 #' Gets all OAI Dryad identifiers.
+#' 
 #' @import RCurl XML
 #' @param tor Return list of identifiers to R ('r'), or to your directory
 #'    at '~/.' ('dir') (character).
