@@ -23,9 +23,6 @@ Imports:
     ReadImages,
     RJSONIO
 Collate:
-    'identify.r'
-    'listidentifiers.r'
-    'listmetadataformats.r'
     'download_dryadmetadata.r'
     'download_url.r'
     'dryad_getfile.r'
@@ -33,4 +30,7 @@ Collate:
     'search_dryad.r'
     'totimp.r'
     'totimp_dryad.r'
-    'listsets.r'
+    'dr_identify.r'
+    'dr_listidentifiers.r'
+    'dr_listmetadataformats.r'
+    'dr_listsets.r'

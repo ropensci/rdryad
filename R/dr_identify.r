@@ -4,9 +4,9 @@
 #' @return List of information describing Dryad.
 #' @export
 #' @examples \dontrun{
-#' identify()
+#' dr_identify()
 #' }
-identify <- function(formatted = FALSE) {
+dr_identify <- function(formatted = FALSE) {
     url <- "http://www.datadryad.org/oai/request?verb=Identify"
     Dryad.info = xmlToList(url)
     if (!formatted) {

@@ -10,7 +10,7 @@
 #' @return List of OAI identifiers for each dataset.
 #' @export
 #' @examples \dontrun{
-#' identifiers <- listidentifiers('r')
+#' identifiers <- dr_listidentifiers('r')
 #'
 #' # Data packages
 #' identifiers[[1]]
@@ -18,7 +18,7 @@
 #' # Data files
 #' identifiers[[2]]
 #' }
-listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request",
+dr_listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request",
     ..., curl = getCurlHandle()) {
     list_ <- list()  # make list to put OIA identifiers into
     argspacks <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc",
