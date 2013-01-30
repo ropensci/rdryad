@@ -1,17 +1,16 @@
 #' Download Dryad dataset (determines file type, then downloads).
-#' @import RCurl XML stringr ReadImages gdata ape
+#' 
+#' @import RCurl XML stringr gdata ape
 #' @param dryadurl Dryad URL for a dataset.
 #' @return A Dryad dataset.
 #' @export
 #' @examples \dontrun{
+#' # csv file
 #' dryaddat <- download_url('10255/dryad.1759')
 #' dryad_getfile(dryaddat)
 #' }
-dryad_getfile <- 
-function(dryadurl) {
-    # ToDo:
-    # GET READ.JPEG TO WORK
-    # FIGURE OUT HOW TO DOWNLOAD WORD DOCUMENTS
+dryad_getfile <- function(dryadurl) 
+{
     file_type <- if (str_detect(dryadurl, ".XLS") == "TRUE") {
         "xls"
     } else if (str_detect(dryadurl, ".txt") == "TRUE") {
@@ -22,11 +21,7 @@ function(dryadurl) {
         "csv"
     } else if (str_detect(dryadurl, ".nex") == "TRUE") {
         "nex"
-    } else if (str_detect(dryadurl, ".jpeg") == "TRUE") {
-        "jpg"
-    } else if (str_detect(dryadurl, ".jpg") == "TRUE") {
-        "jpg"
-    } else end
+    } 
     if (file_type == "txt") {
         dat <- read.table(dryadurl, header = T, sep = "\t")
     } else if (file_type == "xls") {
@@ -40,12 +35,6 @@ function(dryadurl) {
     } else if (file_type == "nex") {
         dat <- read.nexus(dryadurl)  # requires ape
     }
-    #if(file_type == 'jpg') {
-    #\tdat <- read.jpeg(dryadurl) # requires ReadImages
-    #} else
-    #if(file_type == 'doc') {
-    #\tdat <- read.YYYY(dryadurl)
-    #} else
     end
     return(dat)
-} 
+}

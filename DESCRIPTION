@@ -1,17 +1,18 @@
 Package: rdryad
 Type: Package
+Description: Interface to the API for Dryad
 Title: Dryad API interface.
-Version: 0.1
+Version: 0.1.1
 License: CC0
-Date: 2012-2-23
+Date: 2013-1-29
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"),
     person("Carl", "Boettiger", role = "aut",
     email = "cboettig@gmail.com"),
     person("Karthik", "Ram", role = "aut",
     email = "karthik.ram@gmail.com"))
-Description: Interface to the API for Dryad
 URL: http://www.github.com/ropensci/rdryad
+BugReports: https://github.com/ropensci/rdryad/issues
 Imports:
     XML,
     RCurl,
@@ -20,7 +21,6 @@ Imports:
     gdata,
     plyr,
     stringr,
-    ReadImages,
     RJSONIO
 Collate:
     'download_dryadmetadata.r'

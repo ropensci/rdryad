@@ -19,7 +19,7 @@
 }
 \examples{
 \dontrun{
-download_url('10255/dryad.1759')
+download_url(id='10255/dryad.1759')
 }
 }
 

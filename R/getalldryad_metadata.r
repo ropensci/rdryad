@@ -1,5 +1,6 @@
 #' Download metadata for all Dryad oai's for defined time period.
-#' @import RCurl XML stringr ReadImages gdata plyr
+#' 
+#' @import RCurl XML stringr gdata plyr
 #' @param transform (logical) transform metadata to list, TRUE or FLALSE
 #' @param progress print progress bar (built in to the call to llply, plyr package)
 #' @param write (logical) write metadata to local file, TRUE or FALSE
@@ -11,11 +12,9 @@
 #' mymetdata <- getalldryad_metadata(T, progress = "text", T,
 #'    "/path/to/dir/")
 #' }
-getalldryad_metadata <-
-
-function(transform, progress = 'text', write, dir = FALSE)
+getalldryad_metadata <- function(transform, progress = 'text', write, dir = FALSE)
 {
-  myoailist <- listidentifiers('r') # get all oai's
+  myoailist <- dr_listidentifiers('r') # get all oai's
   myoailist <- llply(myoailist[[1]], function(x) x$identifier) # list of file identifers only
         # NOTE: myoailist[[1]] would give the data packages instead of files
   allmetadat <- llply(  # download metadata for all oai's
@@ -47,10 +46,3 @@ function(transform, progress = 'text', write, dir = FALSE)
     return(df)
   }
 }
-
-# makenull <- function(x){
-#   if(is.null(x$header$metadata) == TRUE) {x <- NULL}
-# }
-# llply(hh, makenull)
-#
-# hh[unlist(lapply(hh, function(x) length(x$metadata)) != 0)]
