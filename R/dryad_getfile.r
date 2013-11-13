@@ -1,6 +1,6 @@
 #' Download Dryad dataset (determines file type, then downloads).
 #' 
-#' @import RCurl XML stringr gdata ape
+#' @import RCurl XML stringr gdata ape httr
 #' @param dryadurl Dryad URL for a dataset.
 #' @return A Dryad dataset.
 #' @export
@@ -11,15 +11,18 @@
 #' }
 dryad_getfile <- function(dryadurl) 
 {
-    file_type <- if (str_detect(dryadurl, ".XLS") == "TRUE") {
+    # Separate out path from rest of URL
+    dryadpath <- parse_url(dryadurl)$path
+    # search for ".ext" or ".EXT" at the end ($) of the path
+    file_type <- if (grepl('\\.xls$', dryadpath, ignore.case=TRUE)) {
         "xls"
-    } else if (str_detect(dryadurl, ".txt") == "TRUE") {
+    } else if (grepl('\\.txt$', dryadpath, ignore.case=TRUE)) {
         "txt"
-    } else if (str_detect(dryadurl, ".doc") == "TRUE") {
+    } else if (grepl('\\.doc$', dryadpath, ignore.case=TRUE)) {
         "doc"
-    } else if (str_detect(dryadurl, ".csv") == "TRUE") {
+    } else if (grepl('\\.csv$', dryadpath, ignore.case=TRUE)) {
         "csv"
-    } else if (str_detect(dryadurl, ".nex") == "TRUE") {
+    } else if (grepl('\\.nex$', dryadpath, ignore.case=TRUE)) {
         "nex"
     } 
     if (file_type == "txt") {
