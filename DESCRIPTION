@@ -21,7 +21,8 @@ Imports:
     gdata,
     plyr,
     stringr,
-    RJSONIO
+    RJSONIO,
+    httr
 Collate:
     'download_dryadmetadata.r'
     'download_url.r'
