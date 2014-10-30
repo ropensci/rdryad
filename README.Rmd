@@ -18,21 +18,18 @@ We now implement the ImpactStory API.  You can query for the data they serve up 
 
 Install Dryad from CRAN
 
-
-```r
+```{r eval=FALSE}
 install.packages("rdryad")
 ```
 
 Or install development version of rdryad from GitHub:
 
-
-```r
+```{r eval=FALSE}
 install.packages("devtools")
 devtools::install_github("rdryad", "ropensci")
 ```
 
-
-```r
+```{r}
 library('rdryad')
 ```
 
