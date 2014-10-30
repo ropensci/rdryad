@@ -1,7 +1,7 @@
 Package: rdryad
 Type: Package
-Description: Interface to the API for Dryad
-Title: Dryad API interface.
+Title: R client for the Dryad APIs.
+Description: Interface to the Solr API for Dryad, and the API to get datasets.
 Version: 0.1.2.99
 License: MIT + file LICENSE
 Date: 2014-10-30
