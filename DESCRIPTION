@@ -23,15 +23,3 @@ Imports:
     stringr,
     RJSONIO,
     httr
-Collate:
-    'download_dryadmetadata.r'
-    'download_url.r'
-    'dryad_getfile.r'
-    'getalldryad_metadata.r'
-    'search_dryad.r'
-    'totimp.r'
-    'totimp_dryad.r'
-    'dr_identify.r'
-    'dr_listidentifiers.r'
-    'dr_listmetadataformats.r'
-    'dr_listsets.r'
