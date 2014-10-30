@@ -22,4 +22,5 @@ Imports:
     plyr,
     stringr,
     RJSONIO,
-    httr
+    httr,
+    solr
