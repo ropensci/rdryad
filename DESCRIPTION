@@ -3,7 +3,7 @@ Type: Package
 Description: Interface to the API for Dryad
 Title: Dryad API interface.
 Version: 0.1.2.99
-License: CC0
+License: MIT + file LICENSE
 Date: 2014-10-30
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"),
