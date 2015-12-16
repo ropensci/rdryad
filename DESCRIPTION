@@ -14,11 +14,8 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
 URL: http://www.github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
 Imports:
-    XML,
-    RCurl,
-    oai,
-    plyr,
-    stringr,
     httr,
+    xml2,
+    oai,
     solr
 RoxygenNote: 5.0.1
