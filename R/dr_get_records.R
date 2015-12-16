@@ -1,9 +1,15 @@
 #' Download metadata for individual Dryad id's.
 #'
 #' @export
-#' @param id Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820
-#' @param url the base url for the function (should be left to default).
-#' @return Metadata for a Dryad dataset.
+#' @param ids Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820
+#' @param prefix A character string to specify the metadata format in OAI-PMH requests issued to
+#' the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified
+#' Dublin Core metadata schema.
+#' @param as (character) What to return. One of "df" (for data.frame; default),
+#' "list", or "raw" (raw text)
+#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @return XML character string, data.frame, or list, depending on what requested
+#' witht the \code{as} parameter
 #' @examples \dontrun{
 #' dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
 #' }

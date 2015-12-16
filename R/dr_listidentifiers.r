@@ -1,12 +1,9 @@
-#' Gets all OAI Dryad identifiers.
+#' Gets OAI Dryad identifiers
 #'
 #' @export
-#' @param tor Return list of identifiers to R ('r'), or to your directory
-#'    at '~/.' ('dir') (character).
-#' @param url the base url for the function (should be left to default).
-#' @param ... optional additional curl options (debugging tools mostly)
-#' @param curl If using in a loop, call getCurlHandle() first and pass
-#'    the returned value in here (avoids unnecessary footprint)
+#' @inheritParams pg_list_records
+#' @return XML character string, data.frame, or list, depending on what requested
+#' witht the \code{as} parameter
 #' @return List of OAI identifiers for each dataset.
 #' @examples \dontrun{
 #' dr_list_identifiers(from='2010-01-01', until = "2010-06-30")

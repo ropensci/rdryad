@@ -7,12 +7,20 @@
 dr_get_records(ids, prefix = "oai_dc", as = "df", ...)
 }
 \arguments{
-\item{id}{Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820}
+\item{ids}{Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820}
 
-\item{url}{the base url for the function (should be left to default).}
+\item{prefix}{A character string to specify the metadata format in OAI-PMH requests issued to
+the repository. The default (\code{"oai_dc"}) corresponds to the mandatory OAI unqualified
+Dublin Core metadata schema.}
+
+\item{as}{(character) What to return. One of "df" (for data.frame; default),
+"list", or "raw" (raw text)}
+
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-Metadata for a Dryad dataset.
+XML character string, data.frame, or list, depending on what requested
+witht the \code{as} parameter
 }
 \description{
 Download metadata for individual Dryad id's.

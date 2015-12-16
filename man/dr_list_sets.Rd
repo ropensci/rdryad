@@ -6,6 +6,16 @@
 \usage{
 dr_list_sets(token = NULL, as = "df", ...)
 }
+\arguments{
+\item{token}{(character) a token previously provided by the server to resume a
+request where it last left off. 50 is max number of records returned. We will
+loop for you internally to get all the records you asked for.}
+
+\item{as}{(character) What to return. One of "df" (for data.frame; default),
+"list", or "raw" (raw text)}
+
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+}
 \description{
 Retrieve the set structure of Dryad, useful for selective harvesting
 }

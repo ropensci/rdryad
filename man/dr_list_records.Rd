@@ -43,14 +43,6 @@ List Dryad records
 \examples{
 \dontrun{
 dr_list_records(from='2010-01-01', until='2010-09-10')
-
-# More examples
-dr_list_records(set='citable', from='2015-10-01', until='2015-10-02')
-
-dr_list_records(prefix="iso19139", set='citable', from='2015-10-01', until='2015-10-02')
-## FIXME - below are broken
-# dr_list_records(prefix="dif", set='citable', from='2015-01-01', until='2015-01-05')
-# dr_list_records(prefix="dif", set='project4094', from='2015-01-01', until='2015-01-05')
 }
 }
 

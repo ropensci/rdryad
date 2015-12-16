@@ -2,15 +2,18 @@
 % Please edit documentation in R/dr_listmetadataformats.r
 \name{dr_list_metadata_formats}
 \alias{dr_list_metadata_formats}
-\title{Learn about the Dryad metadata formats available.}
+\title{Get available Dryad metadata formats}
 \usage{
 dr_list_metadata_formats(...)
+}
+\arguments{
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \value{
 List of information on metadata formats.
 }
 \description{
-Learn about the Dryad metadata formats available.
+Get available Dryad metadata formats
 }
 \examples{
 \dontrun{

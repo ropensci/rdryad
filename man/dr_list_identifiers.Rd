@@ -2,27 +2,19 @@
 % Please edit documentation in R/dr_listidentifiers.r
 \name{dr_list_identifiers}
 \alias{dr_list_identifiers}
-\title{Gets all OAI Dryad identifiers.}
+\title{Gets OAI Dryad identifiers}
 \usage{
 dr_list_identifiers(prefix = "oai_dc", from = NULL, until = NULL,
   set = "hdl_10255_3", token = NULL, as = "df", ...)
 }
-\arguments{
-\item{...}{optional additional curl options (debugging tools mostly)}
-
-\item{tor}{Return list of identifiers to R ('r'), or to your directory
-at '~/.' ('dir') (character).}
-
-\item{url}{the base url for the function (should be left to default).}
-
-\item{curl}{If using in a loop, call getCurlHandle() first and pass
-the returned value in here (avoids unnecessary footprint)}
-}
 \value{
+XML character string, data.frame, or list, depending on what requested
+witht the \code{as} parameter
+
 List of OAI identifiers for each dataset.
 }
 \description{
-Gets all OAI Dryad identifiers.
+Gets OAI Dryad identifiers
 }
 \examples{
 \dontrun{

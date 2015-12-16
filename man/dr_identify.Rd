@@ -7,7 +7,7 @@
 dr_identify(...)
 }
 \arguments{
-\item{formatted}{Defaults to printing results - set to TRUE to silence printing.}
+\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }
 \value{
 List of information describing Dryad.
