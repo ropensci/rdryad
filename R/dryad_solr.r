@@ -4,7 +4,7 @@
 #'
 #' @param ... Parameters to pass to any of the \code{solr_*} functions in the \code{\link{solr}}
 #' package.
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # Basic search
 #' d_solr_search(q="Galliard")
 #'

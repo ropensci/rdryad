@@ -29,7 +29,7 @@ package.}
 Search the Dryad Solr endpoint.
 }
 \examples{
-\donttest{
+\dontrun{
 # Basic search
 d_solr_search(q="Galliard")
 

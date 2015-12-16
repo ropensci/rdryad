@@ -1,7 +1,7 @@
 #' Gets OAI Dryad identifiers
 #'
 #' @export
-#' @inheritParams pg_list_records
+#' @inheritParams dr_list_records
 #' @return XML character string, data.frame, or list, depending on what requested
 #' witht the \code{as} parameter
 #' @return List of OAI identifiers for each dataset.
