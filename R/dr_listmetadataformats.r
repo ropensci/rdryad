@@ -1,11 +1,10 @@
 #' Learn about the Dryad metadata formats available.
-#' @import XML
-#' @return List of information on metadata formats.
+#'
 #' @export
+#' @return List of information on metadata formats.
 #' @examples \dontrun{
-#' dr_listmetadataformats()
+#' dr_list_metadata_formats()
 #' }
-dr_listmetadataformats <- function() {
-    url <- "http://www.datadryad.org/oai/request?verb=ListMetadataFormats"
-    xmlToList(url)$ListMetadataFormats
+dr_list_metadata_formats <- function(...) {
+  oai::list_metadataformats(url = dr_base_oai(), ...)
 }

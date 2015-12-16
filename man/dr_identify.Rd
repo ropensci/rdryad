@@ -4,7 +4,7 @@
 \alias{dr_identify}
 \title{Learn about the Dryad OAI-PMH service.}
 \usage{
-dr_identify(formatted = FALSE)
+dr_identify(...)
 }
 \arguments{
 \item{formatted}{Defaults to printing results - set to TRUE to silence printing.}

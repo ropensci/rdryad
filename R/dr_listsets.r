@@ -1,17 +1,15 @@
 #' List the sets in the Dryad metadata repository.
 #'
 #' Retrieve the set structure of Dryad, useful for selective harvesting
-#' @import OAIHarvester
-#' @examples \dontrun{
-#' dr_listsets()
-#' }
+#'
 #' @export
-dr_listsets <- function() 
-{ 
-	url = "http://www.datadryad.org/oai/request"
-	out <- oaih_list_sets(url, transform = FALSE)
-	data.frame(
-		setSpec = sapply(xpathApply(out, "//setSpec"), xmlValue),
-		setName = sapply(xpathApply(out, "//setName"), xmlValue)
-	)
+#' @examples \dontrun{
+#' dr_list_sets()
+#' dr_list_sets(as = "list")
+#' dr_list_sets(as = "raw")
+#' library('httr')
+#' res <- dr_list_sets(config = verbose())
+#' }
+dr_list_sets <- function(token = NULL, as = "df", ...) {
+  oai::list_sets(url = dr_base_oai(), token = token, as = as, ...)
 }
