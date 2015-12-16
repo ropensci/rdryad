@@ -2,24 +2,32 @@
 % Please edit documentation in R/dryad_getfile.r
 \name{dryad_getfile}
 \alias{dryad_getfile}
-\title{Download Dryad dataset (determines file type, then downloads).}
+\title{Download Dryad dataset}
 \usage{
-dryad_getfile(dryadurl)
+dryad_getfile(url, destfile = NULL, ...)
 }
 \arguments{
-\item{dryadurl}{Dryad URL for a dataset.}
+\item{url}{Dryad URL for a dataset.}
+
+\item{destfile}{Destination file. If not given, we assign a file name based
+on URL provided.}
+
+\item{...}{Further args passed on to \code{\link{download.file}}}
 }
 \value{
-A Dryad dataset.
+A path to the file
 }
 \description{
-Download Dryad dataset (determines file type, then downloads).
+Download Dryad dataset
+}
+\details{
+This function is a thin wrapper around download.file to get files
+to your machine only. We don't attempt to read/parse them in to R.
 }
 \examples{
 \dontrun{
-# csv file
-dryaddat <- download_url('10255/dryad.1759')
-dryad_getfile(dryaddat)
+url <- download_url('10255/dryad.1759')
+dryad_getfile(url)
 }
 }
 

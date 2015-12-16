@@ -7,9 +7,7 @@
 dr_get_records(ids, prefix = "oai_dc", as = "df", ...)
 }
 \arguments{
-\item{id}{Dryad identifier, i.e. 19.}
-
-\item{transform}{(logical) transform metadata to list, TRUE or FALSE.}
+\item{id}{Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820}
 
 \item{url}{the base url for the function (should be left to default).}
 }
@@ -21,10 +19,7 @@ Download metadata for individual Dryad id's.
 }
 \examples{
 \dontrun{
-metadat <- dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
-metadat <- dr_get_records(8820, T)
-metadat$metadata # get $identifier, $datestamp, $setSpec, or $metadata
-metadata <- oaih_transform(metadat$metadata) # transform to a list
+dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
 }
 }
 
