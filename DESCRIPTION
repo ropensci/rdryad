@@ -1,6 +1,6 @@
 Package: rdryad
 Type: Package
-Title: R client for the Dryad APIs.
+Title: Client for Dryad Web Services
 Description: Interface to the Solr API for Dryad, and the API to get datasets.
 Version: 0.1.3.9000
 License: MIT + file LICENSE
@@ -16,10 +16,9 @@ BugReports: https://github.com/ropensci/rdryad/issues
 Imports:
     XML,
     RCurl,
-    OAIHarvester,
-    ape,
-    gdata,
+    oai,
     plyr,
     stringr,
     httr,
     solr
+RoxygenNote: 5.0.1
