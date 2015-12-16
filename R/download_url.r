@@ -13,10 +13,11 @@ download_url <- function(id, ...) {
 	tt <- dGET(mm, ...)
 	page <- xml2::read_xml(tt)
 	out <- xml2::xml_find_all(page, "//mets:FLocat", xml_ns(page)[1])
+	if (length(out) == 0) stop("No output from search", call. = FALSE)
 	links <- paste0("http://datadryad.org", xml2::xml_attr(out, "xlink:href", xml_ns(page)[2]))
 	if (length(links) > 0) {
 	  links[grepl("sequence=1", links)][[1]]
 	} else {
-		message("No output from search")
+	  stop("No output from search", call. = FALSE)
 	}
 }
