@@ -1,4 +1,4 @@
-#' Download metadata for individual Dryad id's.
+#' Download metadata for individual Dryad id's
 #'
 #' @export
 #' @param ids Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820

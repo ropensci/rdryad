@@ -2,7 +2,7 @@
 % Please edit documentation in R/dr_get_records.R
 \name{dr_get_records}
 \alias{dr_get_records}
-\title{Download metadata for individual Dryad id's.}
+\title{Download metadata for individual Dryad id's}
 \usage{
 dr_get_records(ids, prefix = "oai_dc", as = "df", ...)
 }
@@ -23,7 +23,7 @@ XML character string, data.frame, or list, depending on what requested
 witht the \code{as} parameter
 }
 \description{
-Download metadata for individual Dryad id's.
+Download metadata for individual Dryad id's
 }
 \examples{
 \dontrun{

@@ -2,7 +2,7 @@ Package: rdryad
 Type: Package
 Title: Client for Dryad Web Services
 Description: Interface to the Solr API for Dryad, and the API to get datasets.
-Version: 0.1.6.9200
+Version: 0.1.6.9300
 License: MIT + file LICENSE
 Date: 2015-12-16
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
