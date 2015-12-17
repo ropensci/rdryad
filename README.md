@@ -4,7 +4,7 @@ rdryad
 
 
 [![Build Status](https://api.travis-ci.org/ropensci/rdryad.png)](https://travis-ci.org/ropensci/rdryad)
-[![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rdryad?branch=master)
+[![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad2)](https://codecov.io/github/ropensci/rdryad?branch=rdryad2)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rdryad)](http://cran.rstudio.com/web/packages/rdryad)
 
@@ -117,7 +117,6 @@ d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
 #> 6     doi:10.1111/j.1095-8312.2012.01937.x
 #> 7                   doi:10.1111/gcbb.12268
 #> 8              doi:10.1111/1755-0998.12465
-#> 9      doi:10.1002/ece3.1174,pmid:25614796
 ```
 
 ### OAI-PMH interface
