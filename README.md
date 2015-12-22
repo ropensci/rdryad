@@ -4,14 +4,15 @@ rdryad
 
 
 [![Build Status](https://api.travis-ci.org/ropensci/rdryad.png)](https://travis-ci.org/ropensci/rdryad)
-[![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad2)](https://codecov.io/github/ropensci/rdryad?branch=rdryad2)
+[![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad)](https://codecov.io/github/ropensci/rdryad?branch=rdryad)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rdryad)](http://cran.rstudio.com/web/packages/rdryad)
 
 `rdryad` is a package to interface with the Dryad data repository.
 
 * General Dryad API documentation: http://wiki.datadryad.org/wiki/API
-* OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; [description of OAI-PMH](http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting)
+* [Solr API (http://wiki.datadryad.org/API#SOLR_search_access)](http://wiki.datadryad.org/API#SOLR_search_access)
+* OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; [Dryad OAI-PMH description](http://wiki.datadryad.org/API#OAI-PMH). [Description of OAI-PMH in general](http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting)
 
 ## Installation
 
@@ -84,11 +85,11 @@ d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
 #> $facet_fields$dc.subject_filter
 #>                                                                   X1  X2
 #> 1                                            adaptation|||Adaptation 590
-#> 2  population genetics - empirical|||Population Genetics - Empirical 469
-#> 3                                            speciation|||Speciation 356
+#> 2  population genetics - empirical|||Population Genetics - Empirical 470
+#> 3                                            speciation|||Speciation 357
 #> 4                          ecological genetics|||Ecological Genetics 309
 #> 5                                    phylogeography|||Phylogeography 288
-#> 6                                      hybridization|||Hybridization 242
+#> 6                                      hybridization|||Hybridization 243
 #> 7                                                  insects|||Insects 236
 #> 8                      conservation genetics|||Conservation Genetics 230
 #> 9                                  microsatellites|||microsatellites 188
@@ -108,15 +109,16 @@ Article DOIs associated with all data published in Dryad over the past 90 days:
 ```r
 d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
    fl="dc.relation.isreferencedby", rows=10)
-#>                 dc.relation.isreferencedby
-#> 1    doi:10.1038/hdy.2012.43,pmid:22892635
-#> 2      doi:10.1111/mec.12243,pmid:23432376
-#> 3                    doi:10.1890/12-1742.1
-#> 4 doi:10.1098/rspb.2013.2647,pmid:24523267
-#> 5      doi:10.1111/jeb.12489,pmid:25264126
-#> 6     doi:10.1111/j.1095-8312.2012.01937.x
-#> 7                   doi:10.1111/gcbb.12268
-#> 8              doi:10.1111/1755-0998.12465
+#>                       dc.relation.isreferencedby
+#> 1          doi:10.1038/hdy.2012.43,pmid:22892635
+#> 2            doi:10.1111/mec.12243,pmid:23432376
+#> 3                          doi:10.1890/12-1742.1
+#> 4       doi:10.1098/rspb.2013.2647,pmid:24523267
+#> 5            doi:10.1111/jeb.12489,pmid:25264126
+#> 6           doi:10.1111/j.1095-8312.2012.01937.x
+#> 7                    doi:10.1111/1755-0998.12465
+#> 8 doi:10.1371/journal.pone.0137005,pmid:26389594
+#> 9               doi:10.1371/journal.pone.0137303
 ```
 
 ### OAI-PMH interface
