@@ -1,4 +1,4 @@
-#' Interface to the Solr API for Dryad, and the API to get datasets.
+#' Interface to the Dryad Solr API, and OAI-PMH service
 #'
 #' @importFrom httr GET content stop_for_status
 #' @importFrom xml2 read_xml xml_find_all xml_ns xml_attr

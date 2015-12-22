@@ -12,7 +12,10 @@
 #' witht the \code{as} parameter
 #' @examples \dontrun{
 #' dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
+#' handles <- c('10255/dryad.36217', '10255/dryad.86943', '10255/dryad.84720', '10255/dryad.34100')
+#' ids <- paste0('oai:datadryad.org:', handles)
+#' dr_get_records(ids)
 #' }
 dr_get_records <- function(ids, prefix = "oai_dc", as = "df", ...) {
-  oai::get_records(ids, prefix = prefix, url = dr_base_oai(), as = as)
+  oai::get_records(ids, prefix = prefix, url = dr_base_oai(), as = as, ...)
 }

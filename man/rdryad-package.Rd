@@ -4,8 +4,8 @@
 \name{rdryad-package}
 \alias{rdryad}
 \alias{rdryad-package}
-\title{Interface to the Solr API for Dryad, and the API to get datasets.}
+\title{Interface to the Dryad Solr API, and OAI-PMH service}
 \description{
-Interface to the Solr API for Dryad, and the API to get datasets.
+Interface to the Dryad Solr API, and OAI-PMH service
 }
 
