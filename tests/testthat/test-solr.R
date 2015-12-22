@@ -7,51 +7,57 @@ context("solr - methods")
 # * aa <- d_solr_search
 # * d_solr_stats
 
-test_that("aa <- d_solr_search works", {
+test_that("d_solr_search works", {
   skip_on_cran()
 
-  aa <- d_solr_search(q="Galliard")
+  aa <- d_solr_search(q="Galliard", verbose = FALSE)
 
   # Basic search, restricting to certain fields
-  aa <- d_solr_search(q="Galliard", fl='handle,dc.title_sort')
+  bb <- d_solr_search(q="Galliard", fl='handle,dc.title_sort', verbose = FALSE)
 
   # Search all text for a string, but limits results to two specified fields:
-  aa <- d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort')
+  cc <- d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort', verbose = FALSE)
 
   # Dryad data based on an article DOI:
-  aa <- d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
-     fl="dc.identifier,dc.title_ac")
+  dd <- d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
+     fl="dc.identifier,dc.title_ac", verbose = FALSE)
 
   # All terms in the dc.subject facet, along with their frequencies:
-  d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
-     facet.limit=10)
+  ee <- d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
+     facet.limit=10, verbose = FALSE)
 
   # Article DOIs associated with all data published in Dryad over the past 90 days:
-  aa <- d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
-     fl="dc.relation.isreferencedby", rows=10)
+  ff <- d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
+     fl="dc.relation.isreferencedby", rows=10, verbose = FALSE)
 
   # Data DOIs published in Dryad during January 2011, with results returned in JSON format:
   query <- "location:l2 dc.date.available_dt:[2011-01-01T00:00:00Z TO 2011-01-31T23:59:59Z]"
-  aa <- d_solr_search(q=query, fl="dc.identifier", rows=10)
+  gg <- d_solr_search(q=query, fl="dc.identifier", rows=10, verbose = FALSE)
 
   expect_is(aa, "data.frame")
-  expect_is(aa$identifier, "character")
-  expect_equal(NROW(aa), length(id))
-  expect_true(grepl("dryad", aa$identifier))
-
   expect_is(bb, "data.frame")
-  expect_is(bb$identifier, "character")
-  expect_equal(NROW(bb), length(ids))
-  expect_true(any(grepl("dryad", bb$identifier)))
-})
+  expect_is(cc, "data.frame")
+  expect_is(dd, "data.frame")
+  expect_is(ee, "list")
+  expect_is(ff, "data.frame")
+  expect_is(gg, "data.frame")
 
-test_that("dr_get_records fails as expected", {
-  skip_on_cran()
+  expect_true(any(grepl("Galliard", aa$dc.contributor.author, ignore.case = TRUE)))
+  expect_more_than(NROW(aa), 0)
 
-  expect_error(dr_get_records(), "argument \"ids\" is missing, with no default")
-  expect_error(dr_get_records(id, prefix = 44),
-               "\"44\" is not supported")
+  expect_named(bb, c('handle', 'dc.title_sort'))
 
-  library("httr")
-  expect_error(dr_get_records(id, config = timeout(0.001)), "Timeout was reached")
+  expect_true(any(grepl("Drosophila", cc$dc.title_sort, ignore.case = TRUE)))
+  expect_named(cc, c('handle', 'dc.title_sort'))
+
+  expect_named(dd, c('dc.identifier', 'dc.title_ac'))
+
+  expect_named(ee, c('facet_queries','facet_fields','facet_dates','facet_ranges'))
+  expect_is(ee$facet_fields$dc.subject_filter, 'data.frame')
+
+  expect_named(ff, 'dc.relation.isreferencedby')
+  expect_true(all(grepl("doi", ff$dc.relation.isreferencedby)))
+
+  expect_named(gg, 'dc.identifier')
+  expect_true(all(grepl("doi", gg$dc.identifier)))
 })

@@ -1,8 +1,9 @@
 Package: rdryad
 Type: Package
-Title: Client for Dryad Web Services
-Description: Interface to the Solr API for Dryad, and the API to get datasets.
-Version: 0.1.6.9600
+Title: Access for Dryad Web Services
+Description: Interface to the Dryad Solr API, their OAI-PMH service, and
+    fetch datasets.
+Version: 0.1.9.9000
 License: MIT + file LICENSE
 Date: 2015-12-22
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
@@ -14,7 +15,7 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
 URL: https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
 Imports:
-    httr,
+    httr (>= 1.0.0),
     xml2,
     oai,
     solr
