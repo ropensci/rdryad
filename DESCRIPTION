@@ -3,7 +3,7 @@ Type: Package
 Title: Access for Dryad Web Services
 Description: Interface to the Dryad Solr API, their OAI-PMH service, and
     fetch datasets.
-Version: 0.1.9.9000
+Version: 0.2.0
 License: MIT + file LICENSE
 Date: 2015-12-22
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),

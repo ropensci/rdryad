@@ -4,11 +4,18 @@ rdryad 0.2.0
 NEW FEATURES
 
 * Re-worked most of the package.
-* New package API, some methods are the same, but many are different.
+* New package API, some methods are the same, but many are different. (#16)
+* New functions (see functions starting with `d_*()`) to interact
+with Dryad Solr search engine (#10)
+* OAI-PMH functions now using internally the `oai` package. (#14)
 
 MINOR IMPROVEMENTS
 
 * Slimmed down dependencies to a smaller set.
+* Changed license from CC0 to MIT (#17)
+* Added more tests (#18)
+* Changed function to get files to only download them, and not attempt to
+read them into R, which introduces a very long dependency chain (#15)
 
 
 rdryad 0.1.1
