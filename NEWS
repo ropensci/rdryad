@@ -1,14 +1,27 @@
+rdryad 0.2.0
+===============
+
+NEW FEATURES
+
+* Re-worked most of the package.
+* New package API, some methods are the same, but many are different.
+
+MINOR IMPROVEMENTS
+
+* Slimmed down dependencies to a smaller set.
+
+
 rdryad 0.1.1
 ===============
 
 BUG FIXES
 
-* removed read.jpeg as a dependency 
+* removed read.jpeg as a dependency
 
 
 rdryad 0.1
 ===============
 
-NEW FEATURES 
+NEW FEATURES
 
 * released to CRAN

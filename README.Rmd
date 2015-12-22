@@ -1,20 +1,27 @@
 rdryad
 ======
 
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
 [![Build Status](https://api.travis-ci.org/ropensci/rdryad.png)](https://travis-ci.org/ropensci/rdryad)
+[![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad)](https://codecov.io/github/ropensci/rdryad?branch=rdryad)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/rdryad)](http://cran.rstudio.com/web/packages/rdryad)
 
 `rdryad` is a package to interface with the Dryad data repository.
 
-Dryad API documentation here: http://wiki.datadryad.org/wiki/API
+* General Dryad API documentation: http://wiki.datadryad.org/wiki/API
+* [Solr API (http://wiki.datadryad.org/API#SOLR_search_access)](http://wiki.datadryad.org/API#SOLR_search_access)
+* OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; [Dryad OAI-PMH description](http://wiki.datadryad.org/API#OAI-PMH). [Description of OAI-PMH in general](http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting)
 
-There is no need to get an API key, as in some of our other packages. They use an OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; see here for a description of OAI-PMH: http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting
-
-We now implement the ImpactStory API.  You can query for the data they serve up using `totimp`.  Use `totimp_dryad` to get metrics for just Dryad datasets.  See here for their documentation: http://total-impact.org/about#toc_2_16
-
-
-## Quick start
-
-### Installation
+## Installation
 
 Install Dryad from CRAN
 
@@ -25,17 +32,78 @@ install.packages("rdryad")
 Or install development version of rdryad from GitHub:
 
 ```{r eval=FALSE}
-install.packages("devtools")
-devtools::install_github("rdryad", "ropensci")
+devtools::install_github("ropensci/rdryad")
 ```
 
 ```{r}
 library('rdryad')
 ```
 
-### Examples
+## Examples
 
-**We'll have examples up soon.**
+### Solr search interface
+
+Basic search, restricting to certain fields for brevity
+
+```{r}
+d_solr_search(q="Galliard", fl='handle,dc.title_sort')
+```
+
+Dryad data based on an article DOI:
+
+```{r}
+d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
+   fl="dc.identifier,dc.title_ac")
+```
+
+All terms in the dc.subject facet, along with their frequencies:
+
+```{r}
+d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
+   facet.limit=10)
+```
+
+Article DOIs associated with all data published in Dryad over the past 90 days:
+
+```{r}
+d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
+   fl="dc.relation.isreferencedby", rows=10)
+```
+
+### OAI-PMH interface
+
+Identify the service
+
+```{r}
+dr_identify()
+```
+
+List sets
+
+```{r}
+dr_list_sets()
+```
+
+Get records
+
+```{r}
+dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
+```
+
+### Get a download URL from Dryad identifier
+
+```{r}
+download_url(id = '10255/dryad.102551')
+```
+
+### Download a file
+
+Does not read file into, just a helper to get data files
+
+```{r eval=FALSE}
+dryad_getfile(download_url('10255/dryad.1759'))
+```
+
 
 ## Meta
 
@@ -43,7 +111,7 @@ library('rdryad')
 * License: MIT
 * Get citation information for `rdryad` in R doing `citation(package = 'rdryad')`
 
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
 
 ### Data provided by...
 

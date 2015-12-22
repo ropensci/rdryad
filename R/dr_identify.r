@@ -1,15 +1,11 @@
 #' Learn about the Dryad OAI-PMH service.
-#' @import XML
-#' @param formatted Defaults to printing results - set to TRUE to silence printing.
-#' @return List of information describing Dryad.
+#'
 #' @export
+#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @return List of information describing Dryad.
 #' @examples \dontrun{
 #' dr_identify()
 #' }
-dr_identify <- function(formatted = FALSE) {
-    url <- "http://www.datadryad.org/oai/request?verb=Identify"
-    Dryad.info = xmlToList(url)
-    if (!formatted) {
-        return(Dryad.info)
-    }
+dr_identify <- function(...) {
+  oai::id(url = dr_base_oai(), ...)
 }

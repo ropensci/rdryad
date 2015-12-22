@@ -1,16 +1,17 @@
-#' Gets all OAI Dryad identifiers.
-#' 
-#' @import RCurl XML
-#' @param tor Return list of identifiers to R ('r'), or to your directory
-#'    at '~/.' ('dir') (character).
-#' @param url the base url for the function (should be left to default).
-#' @param ... optional additional curl options (debugging tools mostly)
-#' @param curl If using in a loop, call getCurlHandle() first and pass
-#'    the returned value in here (avoids unnecessary footprint)
-#' @return List of OAI identifiers for each dataset.
+#' Gets OAI Dryad identifiers
+#'
 #' @export
+#' @inheritParams dr_list_records
+#' @return XML character string, data.frame, or list, depending on what requested
+#' witht the \code{as} parameter
+#' @return List of OAI identifiers for each dataset.
 #' @examples \dontrun{
-#' identifiers <- dr_listidentifiers('r')
+#' dr_list_identifiers(from='2010-01-01', until = "2010-06-30")
+#' dr_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')
+#' dr_list_identifiers(prefix="iso19139", from='2015-09-01', until='2015-09-20')
+#' dr_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-20')
+#'
+#' identifiers <- dr_list_identifiers('r')
 #'
 #' # Data packages
 #' identifiers[[1]]
@@ -18,31 +19,8 @@
 #' # Data files
 #' identifiers[[2]]
 #' }
-dr_listidentifiers <- function(tor, url = "http://www.datadryad.org/oai/request",
-    ..., curl = getCurlHandle()) {
-    list_ <- list()  # make list to put OIA identifiers into
-    argspacks <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc",
-        set = "hdl_10255_2")  # list of arguments for packages
-    dryadlistout_packs <- getForm(url, .params = argspacks, ..., curl = curl)
-    dryad_packs <- xmlTreeParse(dryadlistout_packs)  # tree parse
-    dryadpackslist <- xmlToList(dryad_packs)[[3]]  # parsed xml to list
-    if (tor == "r") {
-        list_[[1]] <- dryadpackslist
-    } else if (tor == "dir") {
-        save(dryadpackslist, file = "~/.dryadpackages.rda")
-    }
-
-    argsfiles <- list(verb = "ListIdentifiers", metadataPrefix = "oai_dc",
-        set = "hdl_10255_3")  # list of arguments for data files within packages
-    dryadlistout_files <- getForm(url, .params = argsfiles, ..., curl = curl)
-    dryad_files <- xmlTreeParse(dryadlistout_files)  # tree parse
-    dryadfileslist <- xmlToList(dryad_files)[[3]]  # parsed xml to list
-    if (tor == "r") {
-        list_[[2]] <- dryadfileslist
-    } else if (tor == "dir") {
-        save(dryadfileslist, file = "~/.dryadfiles.rda")
-    }
-
-    if (tor == "r")
-        list_
+dr_list_identifiers <- function(prefix = "oai_dc", from = NULL, until = NULL,
+                               set = "hdl_10255_3", token = NULL, as = "df", ...) {
+  oai::list_identifiers(url = dr_base_oai(), prefix = prefix, from = from, until = until,
+                        set = set, token = token, as = as, ...)
 }
