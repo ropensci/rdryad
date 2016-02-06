@@ -2,23 +2,23 @@ Package: rdryad
 Type: Package
 Title: Access for Dryad Web Services
 Description: Interface to the Dryad Solr API, their OAI-PMH service, and
-    fetch datasets.
-Version: 0.2.0
+    fetch datasets. Dryad (<http://datadryad.org/>) is a curated host of
+    data underlying scientific publications.
+Version: 0.2.0.9000
 License: MIT + file LICENSE
-Date: 2015-12-22
-Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
-    email = "myrmecocystus@gmail.com"),
-    person("Carl", "Boettiger", role = "aut",
-    email = "cboettig@gmail.com"),
-    person("Karthik", "Ram", role = "aut",
-    email = "karthik.ram@gmail.com"))
+Date: 2016-02-05
+Authors@R: c(
+    person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
+    person("Carl", "Boettiger", role = "aut", email = "cboettig@gmail.com"),
+    person("Karthik", "Ram", role = "aut", email = "karthik.ram@gmail.com")
+    )
 URL: https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
 Imports:
     utils,
     httr (>= 1.0.0),
     xml2,
-    oai,
+    oai (>= 0.2.0),
     solr
 Suggests:
     testthat
