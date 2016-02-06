@@ -7,5 +7,5 @@
 #' dr_identify()
 #' }
 dr_identify <- function(...) {
-  oai::id_entify(url = dr_base_oai(), ...)
+  oai::id(url = dr_base_oai(), ...)
 }
