@@ -43,7 +43,7 @@ test_that("d_solr_search works", {
   expect_is(gg, "data.frame")
 
   expect_true(any(grepl("Galliard", aa$dc.contributor.author, ignore.case = TRUE)))
-  expect_more_than(NROW(aa), 0)
+  expect_gt(NROW(aa), 0)
 
   expect_named(bb, c('handle', 'dc.title_sort'))
 
