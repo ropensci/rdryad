@@ -12,9 +12,9 @@ download_url <- function(id, ...) {
 	mm <- sprintf("%s/%s/%s", "http://datadryad.org/metadata/handle/", id, "/mets.xml")
 	tt <- dGET(mm, ...)
 	page <- xml2::read_xml(tt)
-	out <- xml2::xml_find_all(page, "//mets:FLocat", xml_ns(page)[1])
+	out <- xml2::xml_find_all(page, "//mets:FLocat", ns = xml_ns(page))
 	if (length(out) == 0) stop("No output from search", call. = FALSE)
-	links <- paste0("http://datadryad.org", xml2::xml_attr(out, "xlink:href", xml_ns(page)[2]))
+	links <- paste0("http://datadryad.org", xml2::xml_attr(out, "xlink:href", xml_ns(page)))
 	if (length(links) > 0) {
 	  links[grepl("sequence=1", links)][[1]]
 	} else {

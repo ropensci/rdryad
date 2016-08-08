@@ -20,5 +20,6 @@ dryad_fetch <- function(url, destfile = NULL, ...) {
       dir.create(dirname(destfile), recursive = TRUE)
     }
   }
+  message("saving to: ", destfile)
   download.file(url, destfile = destfile, ...)
 }
