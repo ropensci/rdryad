@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://api.travis-ci.org/ropensci/rdryad.png)](https://travis-ci.org/ropensci/rdryad)
 [![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad)](https://codecov.io/github/ropensci/rdryad?branch=rdryad)
 [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rdryad)](http://cran.rstudio.com/web/packages/rdryad)
+[![cran version](http://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
 
 `rdryad` is a package to interface with the Dryad data repository.
 
