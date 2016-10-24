@@ -52,7 +52,7 @@ test_that("d_solr_search works", {
 
   expect_named(dd, c('dc.identifier', 'dc.title_ac'))
 
-  expect_named(ee, c('facet_queries','facet_fields','facet_dates','facet_ranges'))
+  expect_named(ee, c('facet_queries','facet_fields','facet_pivot','facet_dates','facet_ranges'))
   expect_is(ee$facet_fields$dc.subject_filter, 'data.frame')
 
   expect_named(ff, 'dc.relation.isreferencedby')

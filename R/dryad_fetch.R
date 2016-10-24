@@ -21,5 +21,5 @@ dryad_fetch <- function(url, destfile = NULL, ...) {
     }
   }
   message("saving to: ", destfile)
-  download.file(url, destfile = destfile, ...)
+  utils::download.file(url, destfile = destfile, ...)
 }

@@ -2,8 +2,25 @@
 #'
 #' @export
 #'
-#' @param ... Parameters to pass to any of the \code{solr_*} functions in the \code{\link{solr}}
-#' package.
+#' @param ... Solr parameters passed on to the respective \pkg{solrium} package
+#' function.
+#' @param proxy List of arguments for a proxy connection, including one or
+#' more of: url, port, username, password, and auth. See
+#' \code{\link[httr]{use_proxy}} for help, which is used to construct the
+#' proxy connection.
+#' @param errors (character) One of simple or complete. Simple gives http
+#' code and error message on an error, while complete gives both http code and
+#' error message, and stack trace, if available.
+#' @param verbose (logical) Whether to print help messages or not. E.g., if
+#' \code{TRUE}, we print the URL on each request to a Solr server for your
+#' reference. Default: \code{TRUE}
+#' @param callopts Further args passed on to \code{\link[httr]{GET}}
+#'
+#' @details See the \code{solrium} package documentation for available
+#' parameters. For each of \code{d_solr_search}, \code{d_solr_facet},
+#' \code{d_solr_stats}, and \code{d_solr_mlt}, \code{d_solr_group}, and
+#' \code{d_solr_highlight} see the equivalently named function in \pkg{solrium}.
+#'
 #' @examples \dontrun{
 #' # Basic search
 #' d_solr_search(q="Galliard")
@@ -39,38 +56,54 @@
 #' # Stats
 #' d_solr_stats(q="*:*", stats.field="dc.date.accessioned.year")
 #' }
-d_solr_search <- function(...){
-  solr_search(..., base = dsolrbase())
+d_solr_search <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
+                          callopts = list()) {
+  check_conn(verbose, errors, proxy)
+  solrium::solr_search(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_facet <- function(...){
-  solr_facet(..., base = dsolrbase())
+d_solr_facet <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
+                         callopts = list()) {
+  check_conn(verbose, errors, proxy)
+  solrium::solr_facet(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_group <- function(...){
-  solr_group(..., base = dsolrbase())
+d_solr_group <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
+                         callopts = list()) {
+  check_conn(verbose, errors, proxy)
+  solrium::solr_group(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_highlight <- function(...){
-  solr_highlight(..., base = dsolrbase())
+d_solr_highlight <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
+                             callopts = list()) {
+  check_conn(verbose, errors, proxy)
+  solrium::solr_highlight(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_mlt <- function(...){
-  solr_mlt(..., base = dsolrbase())
+d_solr_mlt <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
+                       callopts = list()) {
+  check_conn(verbose, errors, proxy)
+  solrium::solr_mlt(..., callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_stats <- function(...){
-  solr_stats(..., base = dsolrbase())
+d_solr_stats <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
+                         callopts = list()) {
+  check_conn(verbose, errors, proxy)
+  solrium::solr_stats(..., callopts = callopts)
 }
 
 dsolrbase <- function() "http://datadryad.org/solr/search/select"
+
+check_conn <- function(verbose, errors, proxy) {
+  solrium::solr_connect(dsolrbase(), proxy = proxy, errors = errors, verbose = verbose)
+}

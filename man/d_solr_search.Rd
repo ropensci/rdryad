@@ -9,24 +9,51 @@
 \alias{d_solr_stats}
 \title{Search the Dryad Solr endpoint.}
 \usage{
-d_solr_search(...)
+d_solr_search(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-d_solr_facet(...)
+d_solr_facet(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-d_solr_group(...)
+d_solr_group(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-d_solr_highlight(...)
+d_solr_highlight(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-d_solr_mlt(...)
+d_solr_mlt(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 
-d_solr_stats(...)
+d_solr_stats(..., verbose = TRUE, errors = "simple", proxy = NULL,
+  callopts = list())
 }
 \arguments{
-\item{...}{Parameters to pass to any of the \code{solr_*} functions in the \code{\link{solr}}
-package.}
+\item{...}{Solr parameters passed on to the respective \pkg{solrium} package
+function.}
+
+\item{verbose}{(logical) Whether to print help messages or not. E.g., if
+\code{TRUE}, we print the URL on each request to a Solr server for your
+reference. Default: \code{TRUE}}
+
+\item{errors}{(character) One of simple or complete. Simple gives http
+code and error message on an error, while complete gives both http code and
+error message, and stack trace, if available.}
+
+\item{proxy}{List of arguments for a proxy connection, including one or
+more of: url, port, username, password, and auth. See
+\code{\link[httr]{use_proxy}} for help, which is used to construct the
+proxy connection.}
+
+\item{callopts}{Further args passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Search the Dryad Solr endpoint.
+}
+\details{
+See the \code{solrium} package documentation for available
+parameters. For each of \code{d_solr_search}, \code{d_solr_facet},
+\code{d_solr_stats}, and \code{d_solr_mlt}, \code{d_solr_group}, and
+\code{d_solr_highlight} see the equivalently named function in \pkg{solrium}.
 }
 \examples{
 \dontrun{
