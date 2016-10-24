@@ -2,7 +2,9 @@ strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 
 dGET <- function(x, ...) {
   res <- httr::GET(x, ...)
-  httr::stop_for_status(res)
+  if (res$status_code > 201) {
+    stop(httr::http_status(res)$message, call. = FALSE)
+  }
   httr::content(res, "text", encoding = "UTF-8")
 }
 
