@@ -4,12 +4,19 @@
 \alias{download_url}
 \title{Get a URL given a Dryad ID}
 \usage{
-download_url(id, ...)
+download_url(doi = NULL, handle = NULL, ...)
 }
 \arguments{
-\item{id}{Dryad identifier, i.e. '10255/dryad.19'.}
+\item{doi}{(character) A Dryad dataset DOI, of the form
+10.5061/dryad.xxx}
+
+\item{handle}{(character) A Dryad dataset handle, of the form
+10255/dryad.xxx}
 
 \item{...}{Curl options, passed on to \code{\link[httr]{GET}}}
+
+\item{id}{Dryad identifier, i.e. '10255/dryad.19'. DEFUNCT, USE
+\code{doi} or \code{handle} parameters}
 }
 \value{
 A URL for dataset for the Dryad id.
@@ -19,8 +26,12 @@ Get a URL given a Dryad ID
 }
 \examples{
 \dontrun{
-download_url(id = '10255/dryad.1759')
-download_url(id = '10255/dryad.102551')
+# look up by doi
+download_url(doi = '10.5061/dryad.9t0n8/1')
+
+# look up by legacy handle
+download_url(handle = '10255/dryad.1759')
+download_url(handle = '10255/dryad.102551')
 }
 }
 
