@@ -4,7 +4,7 @@ Title: Access for Dryad Web Services
 Description: Interface to the Dryad Solr API, their OAI-PMH service, and
     fetch datasets. Dryad (<http://datadryad.org/>) is a curated host of
     data underlying scientific publications.
-Version: 0.2.2.9100
+Version: 0.2.2.9120
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
@@ -17,10 +17,9 @@ Imports:
     utils,
     httr (>= 1.2.1),
     xml2 (>= 1.0.0),
-    oai (>= 0.2.1),
+    oai (>= 0.2.0),
     solrium (>= 0.4.0)
 Suggests:
     testthat,
     covr
-Remotes: ropensci/oai
 RoxygenNote: 5.0.1

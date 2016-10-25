@@ -3,9 +3,9 @@ context("oai-pmh - dr_list_records")
 test_that("dr_list_records works - output formats", {
   skip_on_cran()
 
-  aa <- dr_list_records(from = '2010-01-01', until = '2010-09-10')
-  bb <- dr_list_records(from = '2010-01-01', until = '2010-09-10', as = "list")
-  cc <- dr_list_records(from = '2010-01-01', until = '2010-09-10', as = "raw")
+  aa <- suppressWarnings(dr_list_records(from = '2010-01-01', until = '2010-09-10'))
+  bb <- suppressWarnings(dr_list_records(from = '2010-01-01', until = '2010-09-10', as = "list"))
+  cc <- suppressWarnings(dr_list_records(from = '2010-01-01', until = '2010-09-10', as = "raw"))
 
   expect_is(aa, "data.frame")
   expect_is(bb, "list")
@@ -22,10 +22,10 @@ test_that("dr_list_records works - output formats", {
 test_that("dr_list_records fails well", {
   skip_on_cran()
 
-  expect_error(dr_list_records(prefix = 5), "\"5\" is not supported")
-  expect_error(dr_list_records(from = "the"), "The request includes illegal arguments")
-  expect_error(dr_list_records(until = "adfafdfd"), "The request includes illegal arguments")
-  expect_error(dr_list_records(set = 344), "The request includes illegal arguments")
+  expect_error(suppressWarnings(dr_list_records(prefix = 5)), "\"5\" is not supported")
+  expect_error(suppressWarnings(dr_list_records(from = "the")), "The request includes illegal arguments")
+  expect_error(suppressWarnings(dr_list_records(until = "adfafdfd")), "The request includes illegal arguments")
+  expect_error(suppressWarnings(dr_list_records(set = 344)), "The request includes illegal arguments")
   # expect_error(dr_list_records(as = 5), "The request includes illegal arguments") FIXME
 })
 

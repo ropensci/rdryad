@@ -3,9 +3,9 @@ context("oai-pmh - dr_list_sets")
 test_that("dr_list_sets works - output formats", {
   skip_on_cran()
 
-  aa <- dr_list_sets()
-  bb <- dr_list_sets(as = "list")
-  cc <- dr_list_sets(as = "raw")
+  aa <- suppressWarnings(dr_list_sets())
+  bb <- suppressWarnings(dr_list_sets(as = "list"))
+  cc <- suppressWarnings(dr_list_sets(as = "raw"))
 
   expect_is(aa, "data.frame")
   expect_is(bb, "list")
@@ -16,7 +16,7 @@ test_that("dr_list_sets works - output formats", {
 test_that("dr_list_sets fails well", {
   skip_on_cran()
 
-  expect_error(dr_list_sets(token = 5),
+  expect_error(suppressWarnings(dr_list_sets(token = 5)),
                "The value of the resumptionToken argument is invalid or expired")
 })
 

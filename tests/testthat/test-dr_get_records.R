@@ -7,30 +7,25 @@ ids <- paste0('oai:datadryad.org:', handles)
 test_that("dr_get_records works", {
   skip_on_cran()
 
-  aa <- dr_get_records(id)
-  bb <- dr_get_records(ids)
+  aa <- suppressWarnings(dr_get_records(id))
+  bb <- suppressWarnings(dr_get_records(ids))
 
-  expect_is(aa, "list")
-  expect_is(aa[[1]], "list")
-  expect_is(aa[[1]]$header, "data.frame")
-  expect_is(aa[[1]]$metadata, "data.frame")
-  expect_is(aa[[1]]$header$identifier, "character")
-  expect_equal(NROW(aa[[1]]$metadata), length(id))
-  expect_true(grepl("dryad", aa[[1]]$header$identifier))
+  expect_is(aa, "data.frame")
+  expect_is(aa$identifier, "character")
+  expect_equal(NROW(aa), length(id))
+  expect_true(grepl("dryad", aa$identifier))
 
-  expect_is(bb, "list")
-  expect_is(bb[[1]], "list")
-  expect_is(bb[[3]], "list")
-  expect_is(bb[[3]]$metadata$identifier, "character")
-  expect_equal(length(bb), length(ids))
-  expect_true(any(grepl("dryad", bb[[4]]$metadata$identifier)))
+  expect_is(bb, "data.frame")
+  expect_is(bb$identifier, "character")
+  expect_equal(NROW(bb), length(ids))
+  expect_true(any(grepl("dryad", bb$identifier)))
 })
 
 test_that("dr_get_records fails as expected", {
   skip_on_cran()
 
   expect_error(dr_get_records(), "argument \"ids\" is missing, with no default")
-  expect_error(dr_get_records(id, prefix = 44),
+  expect_error(suppressWarnings(dr_get_records(id, prefix = 44)),
                "\"44\" is not supported")
 
   library("httr")
