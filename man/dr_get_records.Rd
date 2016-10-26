@@ -4,7 +4,7 @@
 \alias{dr_get_records}
 \title{Download metadata for individual Dryad id's}
 \usage{
-dr_get_records(ids, prefix = "oai_dc", as = "parsed", ...)
+dr_get_records(ids, prefix = "oai_dc", as = "df", ...)
 }
 \arguments{
 \item{ids}{Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820}
@@ -13,8 +13,8 @@ dr_get_records(ids, prefix = "oai_dc", as = "parsed", ...)
 requests issued to the repository. The default (\code{"oai_dc"})
 corresponds to the mandatory OAI unqualified Dublin Core metadata schema.}
 
-\item{as}{(character) What to return. One of "parsed" (for data.frame;
-default), or "raw" (raw text)}
+\item{as}{(character) What to return. One of "df" (for data.frame;
+default), "list", or "raw" (raw text)}
 
 \item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
 }

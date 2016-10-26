@@ -17,12 +17,11 @@
 #' download_url(handle = '10255/dryad.1759')
 #' download_url(handle = '10255/dryad.102551')
 #' }
-download_url <- function(doi = NULL, handle = NULL, ...) {
+download_url <- function(doi = NULL, handle = NULL, id = NULL, ...) {
   calls <- names(sapply(match.call(), deparse))[-1]
   calls_vec <- 'id' %in% calls
   if (any(calls_vec)) {
-    stop("The parameter 'id' has been removed. Use 'doi' or 'handle'",
-         call. = FALSE)
+    stop("Use 'doi' or 'handle' instead of 'id'", call. = FALSE)
   }
 
   stopifnot(xor(!is.null(doi), !is.null(handle)))

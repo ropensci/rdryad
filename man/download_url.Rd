@@ -4,7 +4,7 @@
 \alias{download_url}
 \title{Get a URL given a Dryad ID}
 \usage{
-download_url(doi = NULL, handle = NULL, ...)
+download_url(doi = NULL, handle = NULL, id = NULL, ...)
 }
 \arguments{
 \item{doi}{(character) A Dryad dataset DOI, of the form
@@ -13,10 +13,10 @@ download_url(doi = NULL, handle = NULL, ...)
 \item{handle}{(character) A Dryad dataset handle, of the form
 10255/dryad.xxx}
 
-\item{...}{Curl options, passed on to \code{\link[httr]{GET}}}
-
 \item{id}{Dryad identifier, i.e. '10255/dryad.19'. DEFUNCT, USE
 \code{doi} or \code{handle} parameters}
+
+\item{...}{Curl options, passed on to \code{\link[httr]{GET}}}
 }
 \value{
 A URL for dataset for the Dryad id.
