@@ -32,5 +32,5 @@ test_that("download_url fails well", {
 
   # id param no longer exists
   expect_error(download_url(id = "10255/dryad.1664"),
-               "The parameter 'id' has been removed")
+               "Use 'doi' or 'handle' instead of 'id'")
 })
