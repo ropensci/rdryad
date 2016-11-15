@@ -14,15 +14,15 @@ test_that("download_url: handle input", {
   expect_true(grepl("dryad\\.102551", bb))
 })
 
-test_that("download_url: doi input", {
-  skip_on_cran()
-
-  aa <- download_url(doi = '10.5061/dryad.9t0n8/1')
-
-  expect_is(aa, "character")
-  expect_true(grepl("datadryad.org/bitstream", aa))
-  expect_match(aa, "dryad\\.116171")
-})
+# test_that("download_url: doi input", {
+#   skip_on_cran()
+#
+#   aa <- download_url(doi = '10.5061/dryad.01n2q/2')
+#
+#   expect_is(aa, "character")
+#   expect_true(grepl("datadryad.org/bitstream", aa))
+#   expect_match(aa, "dryad\\.116171")
+# })
 
 
 test_that("download_url fails well", {
