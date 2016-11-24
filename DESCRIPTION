@@ -17,7 +17,7 @@ Imports:
     utils,
     httr (>= 1.2.1),
     xml2 (>= 1.0.0),
-    oai (>= 0.2.0),
+    oai (>= 0.2.2),
     solrium (>= 0.4.0)
 Suggests:
     testthat,
