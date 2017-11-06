@@ -10,4 +10,3 @@ search_dryad(...)
 This function is defunct
 }
 \keyword{internal}
-

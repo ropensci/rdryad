@@ -10,4 +10,3 @@ download_dryadmetadata(...)
 This function changed name to \code{\link{dr_get_records}}
 }
 \keyword{internal}
-

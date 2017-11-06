@@ -27,11 +27,11 @@ Get a URL given a Dryad ID
 \examples{
 \dontrun{
 # look up by doi
-download_url(doi = '10.5061/dryad.9t0n8/1')
+download_url(doi = '10.5061/dryad.k7455')
+# download_url(doi = '10.5061/dryad.9t0n8/1') # doesn't work
 
 # look up by legacy handle
 download_url(handle = '10255/dryad.1759')
 download_url(handle = '10255/dryad.102551')
 }
 }
-

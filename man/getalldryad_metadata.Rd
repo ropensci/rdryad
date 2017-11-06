@@ -10,4 +10,3 @@ getalldryad_metadata(...)
 This function is defunct
 }
 \keyword{internal}
-

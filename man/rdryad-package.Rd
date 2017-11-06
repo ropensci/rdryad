@@ -2,10 +2,9 @@
 % Please edit documentation in R/rdryad-package.R
 \docType{package}
 \name{rdryad-package}
-\alias{rdryad}
 \alias{rdryad-package}
+\alias{rdryad}
 \title{Interface to the Dryad Solr API, and OAI-PMH service}
 \description{
 Interface to the Dryad Solr API, and OAI-PMH service
 }
-

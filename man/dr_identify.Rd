@@ -20,4 +20,3 @@ Learn about the Dryad OAI-PMH service.
 dr_identify()
 }
 }
-

@@ -28,4 +28,3 @@ library('httr')
 res <- dr_list_sets(config = verbose())
 }
 }
-

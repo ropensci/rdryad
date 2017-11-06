@@ -45,4 +45,3 @@ List Dryad records
 dr_list_records(from='2010-01-01', until='2010-09-10')
 }
 }
-

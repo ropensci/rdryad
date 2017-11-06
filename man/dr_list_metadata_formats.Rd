@@ -20,4 +20,3 @@ Get available Dryad metadata formats
 dr_list_metadata_formats()
 }
 }
-
