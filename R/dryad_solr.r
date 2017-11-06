@@ -8,12 +8,6 @@
 #' more of: url, port, username, password, and auth. See
 #' \code{\link[httr]{use_proxy}} for help, which is used to construct the
 #' proxy connection.
-#' @param errors (character) One of simple or complete. Simple gives http
-#' code and error message on an error, while complete gives both http code and
-#' error message, and stack trace, if available.
-#' @param verbose (logical) Whether to print help messages or not. E.g., if
-#' \code{TRUE}, we print the URL on each request to a Solr server for your
-#' reference. Default: \code{TRUE}
 #' @param callopts Further args passed on to \code{\link[httr]{GET}}
 #'
 #' @details See the \code{solrium} package documentation for available
@@ -56,54 +50,63 @@
 #' # Stats
 #' d_solr_stats(q="*:*", stats.field="dc.date.accessioned.year")
 #' }
-d_solr_search <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
-                          callopts = list()) {
-  check_conn(verbose, errors, proxy)
-  solrium::solr_search(..., callopts = callopts)
+d_solr_search <- function(..., proxy = NULL, callopts = list()) {
+  if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
+  args <- list(...)
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  conn_dryad$search(params = args, minOptimizedRows = FALSE,
+    callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_facet <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
-                         callopts = list()) {
-  check_conn(verbose, errors, proxy)
-  solrium::solr_facet(..., callopts = callopts)
+d_solr_facet <- function(..., proxy = NULL, callopts = list()) {
+  if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
+  args <- list(...)
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  conn_dryad$facet(params = args, callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_group <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
-                         callopts = list()) {
-  check_conn(verbose, errors, proxy)
-  solrium::solr_group(..., callopts = callopts)
+d_solr_group <- function(..., proxy = NULL, callopts = list()) {
+  if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
+  args <- list(...)
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  conn_dryad$group(params = args, callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_highlight <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
-                             callopts = list()) {
-  check_conn(verbose, errors, proxy)
-  solrium::solr_highlight(..., callopts = callopts)
+d_solr_highlight <- function(..., proxy = NULL, callopts = list()) {
+  if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
+  args <- list(...)
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  conn_dryad$highlight(params = args, callopts = callopts, parsetype = "list")
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_mlt <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
-                       callopts = list()) {
-  check_conn(verbose, errors, proxy)
-  solrium::solr_mlt(..., callopts = callopts)
+d_solr_mlt <- function(..., proxy = NULL, callopts = list()) {
+  if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
+  args <- list(...)
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  conn_dryad$mlt(params = args, minOptimizedRows = FALSE,
+    callopts = callopts)
 }
 
 #' @export
 #' @rdname d_solr_search
-d_solr_stats <- function(..., verbose = TRUE, errors = "simple", proxy = NULL,
-                         callopts = list()) {
-  check_conn(verbose, errors, proxy)
-  solrium::solr_stats(..., callopts = callopts)
+d_solr_stats <- function(..., proxy = NULL, callopts = list()) {
+  if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
+  args <- list(...)
+  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  conn_dryad$stats(params = args, callopts = callopts)
 }
 
-dsolrbase <- function() "http://datadryad.org/solr/search/select"
-
-check_conn <- function(verbose, errors, proxy) {
-  solrium::solr_connect(dsolrbase(), proxy = proxy, errors = errors, verbose = verbose)
+# helpers ---------------------------------------
+make_dryad_conn <- function(proxy) {
+  solrium::SolrClient$new(host = "datadryad.org",
+    path = "solr/search/select", scheme = "http",
+    port = NULL, errors = "complete")
 }

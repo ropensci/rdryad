@@ -9,35 +9,21 @@
 \alias{d_solr_stats}
 \title{Search the Dryad Solr endpoint.}
 \usage{
-d_solr_search(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+d_solr_search(..., proxy = NULL, callopts = list())
 
-d_solr_facet(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+d_solr_facet(..., proxy = NULL, callopts = list())
 
-d_solr_group(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+d_solr_group(..., proxy = NULL, callopts = list())
 
-d_solr_highlight(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+d_solr_highlight(..., proxy = NULL, callopts = list())
 
-d_solr_mlt(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+d_solr_mlt(..., proxy = NULL, callopts = list())
 
-d_solr_stats(..., verbose = TRUE, errors = "simple", proxy = NULL,
-  callopts = list())
+d_solr_stats(..., proxy = NULL, callopts = list())
 }
 \arguments{
 \item{...}{Solr parameters passed on to the respective \pkg{solrium} package
 function.}
-
-\item{verbose}{(logical) Whether to print help messages or not. E.g., if
-\code{TRUE}, we print the URL on each request to a Solr server for your
-reference. Default: \code{TRUE}}
-
-\item{errors}{(character) One of simple or complete. Simple gives http
-code and error message on an error, while complete gives both http code and
-error message, and stack trace, if available.}
 
 \item{proxy}{List of arguments for a proxy connection, including one or
 more of: url, port, username, password, and auth. See
