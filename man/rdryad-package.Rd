@@ -8,3 +8,34 @@
 \description{
 Interface to the Dryad Solr API, and OAI-PMH service
 }
+\section{Package API}{
+
+
+The following functions work with the Dryad Solr service
+\itemize{
+\item \code{\link[=d_solr_facet]{d_solr_facet()}}
+\item \code{\link[=d_solr_group]{d_solr_group()}}
+\item \code{\link[=d_solr_highlight]{d_solr_highlight()}}
+\item \code{\link[=d_solr_mlt]{d_solr_mlt()}}
+\item \code{\link[=d_solr_search]{d_solr_search()}}
+\item \code{\link[=d_solr_stats]{d_solr_stats()}}
+}
+
+The following functions work with the Dryad OAI-PMH service
+\itemize{
+\item \code{\link[=dr_get_records]{dr_get_records()}}
+\item \code{\link[=dr_identify]{dr_identify()}}
+\item \code{\link[=dr_list_identifiers]{dr_list_identifiers()}}
+\item \code{\link[=dr_list_metadata_formats]{dr_list_metadata_formats()}}
+\item \code{\link[=dr_list_records]{dr_list_records()}}
+\item \code{\link[=dr_list_sets]{dr_list_sets()}}
+}
+
+The following two functions sort out file URLs and help you download
+those files
+\itemize{
+\item \code{\link[=dryad_fetch]{dryad_fetch()}}
+\item \code{\link[=dryad_files]{dryad_files()}}
+}
+}
+

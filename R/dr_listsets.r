@@ -8,7 +8,7 @@
 #' loop for you internally to get all the records you asked for.
 #' @param as (character) What to return. One of "df" (for data.frame; default),
 #' "list", or "raw" (raw text)
-#' @param ... Curl debugging options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl debugging options passed on to `httr::GET`
 #' @examples \dontrun{
 #' dr_list_sets()
 #' dr_list_sets(as = "list")

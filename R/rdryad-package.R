@@ -1,4 +1,32 @@
-#' Interface to the Dryad Solr API, and OAI-PMH service
+#' Interface to the Dryad Web services
+#'
+#' Includes access to Dryad's Solr API, OAI-PMH service, and part of
+#' their REST API.
+#'
+#' @section Package API:
+#'
+#' The following functions work with the Dryad Solr service
+#' - [d_solr_facet()]
+#' - [d_solr_group()]
+#' - [d_solr_highlight()]
+#' - [d_solr_mlt()]
+#' - [d_solr_search()]
+#' - [d_solr_stats()]
+#'
+#' The following functions work with the Dryad OAI-PMH service
+#'
+#' - [dr_get_records()]
+#' - [dr_identify()]
+#' - [dr_list_identifiers()]
+#' - [dr_list_metadata_formats()]
+#' - [dr_list_records()]
+#' - [dr_list_sets()]
+#'
+#' The following two functions sort out file URLs and help you download
+#' those files
+#'
+#' - [dryad_fetch()]
+#' - [dryad_files()]
 #'
 #' @importFrom solrium SolrClient
 #' @importFrom crul HttpClient

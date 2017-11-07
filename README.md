@@ -3,10 +3,10 @@ rdryad
 
 
 
-[![Build Status](https://api.travis-ci.org/ropensci/rdryad.png)](https://travis-ci.org/ropensci/rdryad)
+[![Build Status](https://travis-ci.org/ropensci/rdryad.svg?branch=master)](https://travis-ci.org/ropensci/rdryad)
 [![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad)](https://codecov.io/github/ropensci/rdryad?branch=rdryad)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
 
 `rdryad` is a package to interface with the Dryad data repository.
 
@@ -44,20 +44,19 @@ Basic search, restricting to certain fields for brevity
 
 ```r
 d_solr_search(q="Galliard", fl='handle,dc.title_sort')
+#> # A tibble: 9 x 2
 #>               handle
-#> 1   10255/dryad.8872
+#>                <chr>
+#> 1             252539
 #> 2  10255/dryad.84720
-#> 3  10255/dryad.86943
-#> 4  10255/dryad.36217
-#> 5  10255/dryad.34100
-#> 6 10255/dryad.102424
-#>                                                                                                                            dc.title_sort
-#> 1                                                                Data from: Inconsistency between different measures of sexual selection
-#> 2             Data from: An experimental test of density-dependent selection on temperament traits of activity, boldness and sociability
-#> 3 Data from: Quantification of correlational selection on thermal physiology, thermoregulatory behavior and energy metabolism in lizards
-#> 4                                                         Data from: Patterns and processes of dispersal behaviour in arvicoline rodents
-#> 5                                              Data from: Population and life-history consequences of within-cohort individual variation
-#> 6           Data from: Climate and habitat interacts to shape the thermal reaction norms of breeding phenology across lizard populations
+#> 3   10255/dryad.8872
+#> 4  10255/dryad.86943
+#> 5  10255/dryad.36217
+#> 6 10255/dryad.159843
+#> 7  10255/dryad.34100
+#> 8 10255/dryad.102424
+#> 9 10255/dryad.135812
+#> # ... with 1 more variables: dc.title_sort <chr>
 ```
 
 Dryad data based on an article DOI:
@@ -66,10 +65,11 @@ Dryad data based on an article DOI:
 ```r
 d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
    fl="dc.identifier,dc.title_ac")
+#> # A tibble: 1 x 2
 #>                                                              dc.identifier
+#>                                                                      <chr>
 #> 1 doi:10.5061/dryad.8426,doi:10.5061/dryad.8426/1,doi:10.5061/dryad.8426/2
-#>                                                                                                                                          dc.title_ac
-#> 1 Data from: Minimal ProtoHox cluster inferred from bilaterian and cnidarian Hox complements,Chourrout-Nature2006_82taxa,Chourrout-Nature2006_92taxa
+#> # ... with 1 more variables: dc.title_ac <chr>
 ```
 
 All terms in the dc.subject facet, along with their frequencies:
@@ -83,18 +83,23 @@ d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
 #> 
 #> $facet_fields
 #> $facet_fields$dc.subject_filter
-#>                                                                   X1  X2
-#> 1                                            adaptation|||Adaptation 590
-#> 2  population genetics - empirical|||Population Genetics - Empirical 470
-#> 3                                            speciation|||Speciation 357
-#> 4                          ecological genetics|||Ecological Genetics 309
-#> 5                                    phylogeography|||Phylogeography 288
-#> 6                                      hybridization|||Hybridization 243
-#> 7                                                  insects|||Insects 236
-#> 8                      conservation genetics|||Conservation Genetics 230
-#> 9                                  microsatellites|||microsatellites 188
-#> 10                                                       fish|||Fish 172
+#> # A tibble: 10 x 2
+#>                                                                 term value
+#>                                                                <chr> <chr>
+#>  1                                           adaptation|||Adaptation   745
+#>  2 population genetics - empirical|||Population Genetics - Empirical   566
+#>  3                                           speciation|||Speciation   459
+#>  4                         ecological genetics|||Ecological Genetics   380
+#>  5                                   phylogeography|||Phylogeography   361
+#>  6                                     hybridization|||Hybridization   320
+#>  7                                   climate change|||climate change   317
+#>  8                     conservation genetics|||Conservation Genetics   286
+#>  9                                             phylogeny|||phylogeny   277
+#> 10                                                 insects|||Insects   276
 #> 
+#> 
+#> $facet_pivot
+#> NULL
 #> 
 #> $facet_dates
 #> NULL
@@ -109,16 +114,17 @@ Article DOIs associated with all data published in Dryad over the past 90 days:
 ```r
 d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
    fl="dc.relation.isreferencedby", rows=10)
-#>                       dc.relation.isreferencedby
-#> 1          doi:10.1038/hdy.2012.43,pmid:22892635
-#> 2            doi:10.1111/mec.12243,pmid:23432376
-#> 3                          doi:10.1890/12-1742.1
-#> 4       doi:10.1098/rspb.2013.2647,pmid:24523267
-#> 5            doi:10.1111/jeb.12489,pmid:25264126
-#> 6           doi:10.1111/j.1095-8312.2012.01937.x
-#> 7                    doi:10.1111/1755-0998.12465
-#> 8 doi:10.1371/journal.pone.0137005,pmid:26389594
-#> 9               doi:10.1371/journal.pone.0137303
+#> # A tibble: 8 x 1
+#>        dc.relation.isreferencedby
+#>                             <chr>
+#> 1 doi:10.1016/j.ympev.2017.07.006
+#> 2     doi:10.1111/1365-2435.12951
+#> 3     doi:10.1111/1365-2664.12985
+#> 4     doi:10.1111/1365-2664.12989
+#> 5     doi:10.1111/1365-2435.12539
+#> 6      doi:10.1098/rsbl.2017.0321
+#> 7           doi:10.1111/evo.13322
+#> 8           doi:10.1111/mec.14285
 ```
 
 ### OAI-PMH interface
@@ -143,9 +149,9 @@ List sets
 
 ```r
 dr_list_sets()
-#> <ListSets> 8 X 2 
-#> 
+#> # A tibble: 8 x 2
 #>                setSpec             setName
+#>                  <chr>               <chr>
 #> 1  hdl_10255_dryad.148               BIRDD
 #> 2          hdl_10255_2    Dryad Data Files
 #> 3          hdl_10255_3 Dryad Data Packages
@@ -161,23 +167,29 @@ Get records
 
 ```r
 dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
-#> <GetRecord> 1 X 22 
-#> 
+#> $`oai:datadryad.org:10255/dryad.8820`
+#> $`oai:datadryad.org:10255/dryad.8820`$header
+#> # A tibble: 1 x 3
 #>                           identifier            datestamp     setSpec
-#> 1 oai:datadryad.org:10255/dryad.8820 2013-07-18T18:07:00Z hdl_10255_2
-#> Variables not shown: title (chr), creator (chr), creator.1 (chr),
-#>      creator.2 (chr), subject (chr), subject.1 (chr), subject.2 (chr),
-#>      subject.3 (chr), subject.4 (chr), date (chr), date.1 (chr), date.2
-#>      (chr), type (chr), identifier.2 (chr), identifier.1 (chr), relation
-#>      (chr), coverage (chr), coverage.1 (chr), rights (chr)
+#>                                <chr>                <chr>       <chr>
+#> 1 oai:datadryad.org:10255/dryad.8820 2015-10-29T06:27:53Z hdl_10255_2
+#> 
+#> $`oai:datadryad.org:10255/dryad.8820`$metadata
+#> # A tibble: 1 x 9
+#>                                                                         title
+#>                                                                         <chr>
+#> 1 NEXUS file based on phenotypic data and clustalw alignment of molecular dat
+#> # ... with 8 more variables: creator <chr>, subject <chr>, date <chr>,
+#> #   type <chr>, identifier <chr>, relation <chr>, coverage <chr>,
+#> #   rights <chr>
 ```
 
 ### Get a download URL from Dryad identifier
 
 
 ```r
-download_url(id = '10255/dryad.102551')
-#> [1] "http://datadryad.org/bitstream/handle/10255/dryad.102551/Beetles%20-%20Darwin%20Core.xls?sequence=1"
+dryad_files('10.5061/dryad.1758')
+#> [1] "http://api.datadryad.org/mn/object/doi:10.5061/dryad.1758/1/bitstream"
 ```
 
 ### Download a file
@@ -186,7 +198,7 @@ Does not read file into, just a helper to get data files
 
 
 ```r
-dryad_getfile(download_url('10255/dryad.1759'))
+dryad_getfile(dryad_files('10.5061/dryad.1758'))
 ```
 
 

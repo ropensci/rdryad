@@ -10,10 +10,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Build Status](https://api.travis-ci.org/ropensci/rdryad.png)](https://travis-ci.org/ropensci/rdryad)
+[![Build Status](https://travis-ci.org/ropensci/rdryad.svg?branch=master)](https://travis-ci.org/ropensci/rdryad)
 [![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad)](https://codecov.io/github/ropensci/rdryad?branch=rdryad)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
 
 `rdryad` is a package to interface with the Dryad data repository.
 
@@ -93,7 +93,7 @@ dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
 ### Get a download URL from Dryad identifier
 
 ```{r}
-download_url(id = '10255/dryad.102551')
+dryad_files('10.5061/dryad.1758')
 ```
 
 ### Download a file
@@ -101,7 +101,7 @@ download_url(id = '10255/dryad.102551')
 Does not read file into, just a helper to get data files
 
 ```{r eval=FALSE}
-dryad_getfile(download_url('10255/dryad.1759'))
+dryad_getfile(dryad_files('10.5061/dryad.1758'))
 ```
 
 

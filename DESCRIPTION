@@ -13,8 +13,10 @@ Authors@R: c(
     )
 URL: https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
+Roxygen: list(markdown = TRUE)
 Imports:
     crul (>= 0.4.0),
+    curl (>= 3.0),
     xml2 (>= 1.0.0),
     oai (>= 0.2.2),
     solrium (>= 1.0.0)
