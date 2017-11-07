@@ -10,7 +10,7 @@ rdryad
 
 `rdryad` is a package to interface with the Dryad data repository.
 
-* General Dryad API documentation: http://wiki.datadryad.org/wiki/API
+* General Dryad API documentation: http://wiki.datadryad.org/Data_Access
 * [Solr API (http://wiki.datadryad.org/API#SOLR_search_access)](http://wiki.datadryad.org/API#SOLR_search_access)
 * OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; [Dryad OAI-PMH description](http://wiki.datadryad.org/API#OAI-PMH). [Description of OAI-PMH in general](http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting)
 
