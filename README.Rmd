@@ -111,8 +111,6 @@ dryad_getfile(dryad_files('10.5061/dryad.1758'))
 * License: MIT
 * Get citation information for `rdryad` in R doing `citation(package = 'rdryad')`
 
-[![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
-
 ### Data provided by...
 
 Data is provided from the Dryad API.
