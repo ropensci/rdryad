@@ -6,9 +6,7 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-
+0 errors | 0 warnings | 0 notes
 
 
 ## Reverse dependencies
@@ -17,7 +15,8 @@ There are no reverse dependencies.
 
 ---
 
-This version xxxx.
+This version swaps out some dependencies, and makes some
+improvements.
 
 Thanks!
 Scott Chamberlain
