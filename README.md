@@ -4,7 +4,7 @@ rdryad
 
 
 [![Build Status](https://travis-ci.org/ropensci/rdryad.svg?branch=master)](https://travis-ci.org/ropensci/rdryad)
-[![codecov.io](https://codecov.io/github/ropensci/rdryad/coverage.svg?branch=rdryad)](https://codecov.io/github/ropensci/rdryad?branch=rdryad)
+[![codecov](https://codecov.io/gh/ropensci/rdryad/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rdryad)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
 
@@ -80,7 +80,7 @@ d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
    facet.limit=10)
 #> $facet_queries
 #> NULL
-#> 
+#>
 #> $facet_fields
 #> $facet_fields$dc.subject_filter
 #> # A tibble: 10 x 2
@@ -96,14 +96,14 @@ d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
 #>  8                     conservation genetics|||Conservation Genetics   286
 #>  9                                             phylogeny|||phylogeny   277
 #> 10                                                 insects|||Insects   276
-#> 
-#> 
+#>
+#>
 #> $facet_pivot
 #> NULL
-#> 
+#>
 #> $facet_dates
 #> NULL
-#> 
+#>
 #> $facet_ranges
 #> NULL
 ```
@@ -173,7 +173,7 @@ dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
 #>                           identifier            datestamp     setSpec
 #>                                <chr>                <chr>       <chr>
 #> 1 oai:datadryad.org:10255/dryad.8820 2015-10-29T06:27:53Z hdl_10255_2
-#> 
+#>
 #> $`oai:datadryad.org:10255/dryad.8820`$metadata
 #> # A tibble: 1 x 9
 #>                                                                         title
