@@ -7,11 +7,12 @@
 #' @return (character) One or more URLS for direct download of datasets
 #' for the given Dryad DOI
 #' @examples \dontrun{
-#' # look up by doi
 #' dryad_files(doi = '10.5061/dryad.1758')
 #' dryad_files(doi = '10.5061/dryad.60699')
 #' }
 dryad_files <- function(doi, ...) {
+	assert(doi, "character")
+	stopifnot(length(doi) == 1)
   mm <- paste0("http://api.datadryad.org/mn/object/doi:", doi)
 	tt <- dGET(mm, ...)
 	page <- xml2::read_xml(tt)

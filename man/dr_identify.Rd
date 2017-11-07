@@ -7,7 +7,7 @@
 dr_identify(...)
 }
 \arguments{
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{httr::GET}}
 }
 \value{
 List of information describing Dryad.

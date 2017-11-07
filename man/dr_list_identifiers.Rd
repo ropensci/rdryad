@@ -31,7 +31,7 @@ loop for you internally to get all the records you asked for.}
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{httr::GET}}
 }
 \value{
 XML character string, data.frame, or list, depending on what requested
@@ -45,11 +45,9 @@ Gets OAI Dryad identifiers
 \examples{
 \dontrun{
 dr_list_identifiers(from='2010-01-01', until = "2010-06-30")
-dr_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')
-dr_list_identifiers(prefix="iso19139", from='2015-09-01', until='2015-09-20')
-dr_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-20')
+dr_list_identifiers(prefix="mets", from='2015-09-01', until='2015-09-20')
 
-identifiers <- dr_list_identifiers('r')
+identifiers <- dr_list_identifiers('rdf')
 
 # Data packages
 identifiers[[1]]

@@ -14,7 +14,7 @@ loop for you internally to get all the records you asked for.}
 \item{as}{(character) What to return. One of "df" (for data.frame; default),
 "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{httr::GET}}
 }
 \description{
 Retrieve the set structure of Dryad, useful for selective harvesting

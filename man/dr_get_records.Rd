@@ -16,7 +16,7 @@ corresponds to the mandatory OAI unqualified Dublin Core metadata schema.}
 \item{as}{(character) What to return. One of "df" (for data.frame;
 default), "list", or "raw" (raw text)}
 
-\item{...}{Curl debugging options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl debugging options passed on to \code{httr::GET}}
 }
 \value{
 XML character string, data.frame, or list, depending on what

@@ -12,7 +12,7 @@ dryad_fetch(url, destfile = NULL, ...)
 \item{destfile}{Destination file. If not given, we assign a file name based
 on URL provided.}
 
-\item{...}{Further args passed on to \code{\link{download.file}}}
+\item{...}{Further args passed on to \code{\link[curl:curl_download]{curl::curl_download()}}}
 }
 \value{
 A path to the file

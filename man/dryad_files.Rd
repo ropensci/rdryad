@@ -10,7 +10,7 @@ dryad_files(doi, ...)
 \item{doi}{(character) A Dryad dataset DOI, of the form
 10.5061/dryad.xxx. required}
 
-\item{...}{Curl options, passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Curl options, passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
 (character) One or more URLS for direct download of datasets

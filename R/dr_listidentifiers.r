@@ -7,11 +7,9 @@
 #' @return List of OAI identifiers for each dataset.
 #' @examples \dontrun{
 #' dr_list_identifiers(from='2010-01-01', until = "2010-06-30")
-#' dr_list_identifiers(set="geocode1", from='2015-09-01', until='2015-09-05')
-#' dr_list_identifiers(prefix="iso19139", from='2015-09-01', until='2015-09-20')
-#' dr_list_identifiers(prefix="dif", from='2015-09-01', until='2015-09-20')
+#' dr_list_identifiers(prefix="mets", from='2015-09-01', until='2015-09-20')
 #'
-#' identifiers <- dr_list_identifiers('r')
+#' identifiers <- dr_list_identifiers('rdf')
 #'
 #' # Data packages
 #' identifiers[[1]]

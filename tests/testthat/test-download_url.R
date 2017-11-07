@@ -1,36 +1,23 @@
-context("download_url")
+context("dyrad_files")
 
-test_that("download_url: handle input", {
+test_that("dyrad_files, works well", {
   skip_on_cran()
 
-  aa <- download_url(handle = '10255/dryad.1759')
-  bb <- download_url(handle = '10255/dryad.102551')
+  aa <- dryad_files(doi = '10.5061/dryad.1758')
 
   expect_is(aa, "character")
-  expect_is(bb, "character")
-  expect_true(grepl("datadryad.org/bitstream", aa))
-  expect_true(grepl("datadryad.org/bitstream", bb))
-  expect_true(grepl("dryad\\.1759", aa))
-  expect_true(grepl("dryad\\.102551", bb))
+  expect_equal(length(aa), 1)
+  expect_match(aa, "datadryad.org")
+  expect_match(aa, "bitstream")
+
+  expect_length(dryad_files(doi = '10.5061/dryad.60699'), 6)
 })
 
-# test_that("download_url: doi input", {
-#   skip_on_cran()
-#
-#   aa <- download_url(doi = '10.5061/dryad.01n2q/2')
-#
-#   expect_is(aa, "character")
-#   expect_true(grepl("datadryad.org/bitstream", aa))
-#   expect_match(aa, "dryad\\.116171")
-# })
-
-
-test_that("download_url fails well", {
+test_that("dyrad_files fails well", {
   skip_on_cran()
 
-  expect_error(download_url(doi = "asdfafd"), "Client error:")
-
-  # id param no longer exists
-  expect_error(download_url(id = "10255/dryad.1664"),
-               "Use 'doi' or 'handle' instead of 'id'")
+  expect_error(dryad_files("4"), "Not Found")
+  expect_error(dryad_files(4), "doi must be of class character")
+  expect_error(dryad_files(letters[1:3]),
+    "length\\(doi\\) == 1 is not TRUE")
 })
