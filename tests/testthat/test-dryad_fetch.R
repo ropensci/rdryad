@@ -3,7 +3,7 @@ context("dryad_fetch")
 test_that("dryad_fetch, works well", {
   skip_on_cran()
 
-  x <- "http://api.datadryad.org/mn/object/doi:10.5061/dryad.1758/1/bitstream"
+  x <- "http://api.datadryad.org/mn/object/doi:10.5061/dryad.n378d/1/bitstream"
 
   aa <- dryad_fetch(x)
 
