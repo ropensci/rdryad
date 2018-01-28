@@ -8,3 +8,4 @@ CONTRIBUTING.md
 README.Rmd
 cran-comments.md
 ^cran-comments\.md$
+^codemeta\.json$
