@@ -22,24 +22,29 @@ d_solr_mlt(..., proxy = NULL, callopts = list())
 d_solr_stats(..., proxy = NULL, callopts = list())
 }
 \arguments{
-\item{...}{Solr parameters passed on to the respective \pkg{solrium} package
-function.}
+\item{...}{Solr parameters passed on to the respective \pkg{solrium}
+package function.}
 
 \item{proxy}{List of arguments for a proxy connection, including one or
-more of: url, port, username, password, and auth. See
-\code{\link[httr]{use_proxy}} for help, which is used to construct the
-proxy connection.}
+more of: \code{url}, \code{user}, \code{pwd}, and \code{auth}. See \link[crul:proxy]{crul::proxy} for help,
+which is used to construct the proxy connection.}
 
-\item{callopts}{Further args passed on to \code{\link[httr]{GET}}}
+\item{callopts}{Further args passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Search the Dryad Solr endpoint.
 }
 \details{
-See the \code{solrium} package documentation for available
+See the \pkg{solrium} package documentation for available
 parameters. For each of \code{d_solr_search}, \code{d_solr_facet},
 \code{d_solr_stats}, and \code{d_solr_mlt}, \code{d_solr_group}, and
-\code{d_solr_highlight} see the equivalently named function in \pkg{solrium}.
+\code{d_solr_highlight} see the equivalently named function in
+\pkg{solrium}.
+
+The \code{wt} parameter is now hard-coded to \code{xml} because a recent
+change in the Dryad Solr infrastructure makes it impossible to get
+JSON output - this shouldn't affect most users. In addition, we
+hard code a curl option to follow redirects, just so you're aware.
 }
 \examples{
 \dontrun{

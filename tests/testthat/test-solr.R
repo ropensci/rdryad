@@ -10,29 +10,29 @@ context("solr - methods")
 test_that("d_solr_search works", {
   skip_on_cran()
 
-  aa <- d_solr_search(q="Galliard", verbose = FALSE)
+  aa <- d_solr_search(q="Galliard")
 
   # Basic search, restricting to certain fields
-  bb <- d_solr_search(q="Galliard", fl='handle,dc.title_sort', verbose = FALSE)
+  bb <- d_solr_search(q="Galliard", fl='handle,dc.title_sort')
 
   # Search all text for a string, but limits results to two specified fields:
-  cc <- d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort', verbose = FALSE)
+  cc <- d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort')
 
   # Dryad data based on an article DOI:
   dd <- d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
-     fl="dc.identifier,dc.title_ac", verbose = FALSE)
+     fl="dc.identifier,dc.title_ac")
 
   # All terms in the dc.subject facet, along with their frequencies:
   ee <- d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
-     facet.limit=10, verbose = FALSE)
+     facet.limit=10)
 
   # Article DOIs associated with all data published in Dryad over the past 90 days:
   ff <- d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
-     fl="dc.relation.isreferencedby", rows=10, verbose = FALSE)
+     fl="dc.relation.isreferencedby", rows=10)
 
   # Data DOIs published in Dryad during January 2011, with results returned in JSON format:
   query <- "location:l2 dc.date.available_dt:[2011-01-01T00:00:00Z TO 2011-01-31T23:59:59Z]"
-  gg <- d_solr_search(q=query, fl="dc.identifier", rows=10, verbose = FALSE)
+  gg <- d_solr_search(q=query, fl="dc.identifier", rows=10)
 
   expect_is(aa, "data.frame")
   expect_is(bb, "data.frame")
@@ -48,7 +48,7 @@ test_that("d_solr_search works", {
   expect_named(bb, c('handle', 'dc.title_sort'))
 
   expect_true(any(grepl("Drosophila", cc$dc.title_sort, ignore.case = TRUE)))
-  expect_named(cc, c('handle', 'dc.title_sort'))
+  expect_named(cc, c('dc.title_sort', 'handle'))
 
   expect_named(dd, c('dc.identifier', 'dc.title_ac'))
 

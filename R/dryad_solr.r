@@ -2,18 +2,23 @@
 #'
 #' @export
 #'
-#' @param ... Solr parameters passed on to the respective \pkg{solrium} package
-#' function.
+#' @param ... Solr parameters passed on to the respective \pkg{solrium} 
+#' package function.
 #' @param proxy List of arguments for a proxy connection, including one or
-#' more of: url, port, username, password, and auth. See
-#' \code{\link[httr]{use_proxy}} for help, which is used to construct the
-#' proxy connection.
-#' @param callopts Further args passed on to \code{\link[httr]{GET}}
+#' more of: `url`, `user`, `pwd`, and `auth`. See [crul::proxy] for help, 
+#' which is used to construct the proxy connection.
+#' @param callopts Further args passed on to [crul::HttpClient]
 #'
-#' @details See the \code{solrium} package documentation for available
-#' parameters. For each of \code{d_solr_search}, \code{d_solr_facet},
-#' \code{d_solr_stats}, and \code{d_solr_mlt}, \code{d_solr_group}, and
-#' \code{d_solr_highlight} see the equivalently named function in \pkg{solrium}.
+#' @details See the \pkg{solrium} package documentation for available
+#' parameters. For each of `d_solr_search`, `d_solr_facet`,
+#' `d_solr_stats`, and `d_solr_mlt`, `d_solr_group`, and
+#' `d_solr_highlight` see the equivalently named function in 
+#' \pkg{solrium}.
+#' 
+#' The `wt` parameter is now hard-coded to `xml` because a recent 
+#' change in the Dryad Solr infrastructure makes it impossible to get 
+#' JSON output - this shouldn't affect most users. In addition, we 
+#' hard code a curl option to follow redirects, just so you're aware.
 #'
 #' @examples \dontrun{
 #' # Basic search
@@ -54,6 +59,8 @@ d_solr_search <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
   if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  args$wt <- "xml"
+  callopts$followlocation <- TRUE
   conn_dryad$search(params = args, minOptimizedRows = FALSE,
     callopts = callopts)
 }
@@ -64,6 +71,8 @@ d_solr_facet <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
   if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  args$wt <- "xml"
+  callopts$followlocation <- TRUE
   conn_dryad$facet(params = args, callopts = callopts)
 }
 
@@ -73,6 +82,8 @@ d_solr_group <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
   if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  args$wt <- "xml"
+  callopts$followlocation <- TRUE
   conn_dryad$group(params = args, callopts = callopts)
 }
 
@@ -82,6 +93,8 @@ d_solr_highlight <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
   if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  args$wt <- "xml"
+  callopts$followlocation <- TRUE
   conn_dryad$highlight(params = args, callopts = callopts, parsetype = "list")
 }
 
@@ -91,6 +104,8 @@ d_solr_mlt <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
   if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  args$wt <- "xml"
+  callopts$followlocation <- TRUE
   conn_dryad$mlt(params = args, minOptimizedRows = FALSE,
     callopts = callopts)
 }
@@ -101,6 +116,8 @@ d_solr_stats <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
   if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
+  args$wt <- "xml"
+  callopts$followlocation <- TRUE
   conn_dryad$stats(params = args, callopts = callopts)
 }
 
@@ -108,5 +125,6 @@ d_solr_stats <- function(..., proxy = NULL, callopts = list()) {
 make_dryad_conn <- function(proxy) {
   solrium::SolrClient$new(host = "datadryad.org",
     path = "solr/search/select", scheme = "http",
-    port = NULL, errors = "complete")
+    port = NULL, errors = "complete", 
+    proxy = proxy)
 }
