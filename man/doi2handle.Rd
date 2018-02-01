@@ -24,7 +24,6 @@ Get a Dryad DOI from a handle, and vice versa
 \dontrun{
 doi2handle('10.5061/dryad.c0765')
 handle2doi('10255/dryad.153920')
-
 doi2handle('10.5061/dryad.c0765')
 }
 }

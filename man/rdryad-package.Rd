@@ -32,11 +32,22 @@ The following functions work with the Dryad OAI-PMH service
 \item \code{\link[=dr_list_sets]{dr_list_sets()}}
 }
 
-The following two functions sort out file URLs and help you download
+The following functions sort out file URLs and help you download
 those files
 \itemize{
 \item \code{\link[=dryad_fetch]{dryad_fetch()}}
 \item \code{\link[=dryad_files]{dryad_files()}}
+\item \code{\link[=dryad_metadata]{dryad_metadata()}}
+\item \code{\link[=dryad_package_dois]{dryad_package_dois()}}
+}
+
+These functions convert between Dryad handles and DOIs
+\itemize{
+\item \code{\link[=handle2doi]{handle2doi()}}
+\item \code{\link[=doi2handle]{doi2handle()}}
 }
 }
 
+\author{
+Scott Chamberlain \email{myrmecocystus@gmail.com}
+}

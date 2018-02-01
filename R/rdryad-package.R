@@ -22,11 +22,18 @@
 #' - [dr_list_records()]
 #' - [dr_list_sets()]
 #'
-#' The following two functions sort out file URLs and help you download
+#' The following functions sort out file URLs and help you download
 #' those files
 #'
 #' - [dryad_fetch()]
 #' - [dryad_files()]
+#' - [dryad_metadata()]
+#' - [dryad_package_dois()]
+#' 
+#' These functions convert between Dryad handles and DOIs
+#' 
+#' - [handle2doi()]
+#' - [doi2handle()]
 #'
 #' @importFrom solrium SolrClient
 #' @importFrom crul HttpClient
@@ -36,4 +43,5 @@
 #' @name rdryad-package
 #' @aliases rdryad
 #' @docType package
+#' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 NULL
