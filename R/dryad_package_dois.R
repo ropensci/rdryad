@@ -15,7 +15,7 @@ dryad_package_dois <- function(doi, ...) {
   stopifnot(length(doi) == 1)
   tmp <- dryad_metadata(doi, ...)
   desc <- tmp$desc
-  dois <- na.omit(desc$text[ desc$qualifier == "haspart" ])
+  dois <- stats::na.omit(desc$text[ desc$qualifier == "haspart" ])
   attributes(dois) <- NULL
   if (is.null(dois) || length(dois) == 0) return(character())
   return(gsub("doi:", "", dois))
