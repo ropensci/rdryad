@@ -12,6 +12,9 @@ dryad_fetch(url, destfile = NULL, try_file_names = FALSE, ...)
 \item{destfile}{(character) Destination file. If not given, we assign a
 file name based on URL provided.}
 
+\item{try_file_names}{(logical) try to parse file names out of the
+URLs. Default: \code{FALSE}}
+
 \item{...}{Further args passed on to \code{\link[curl:curl_download]{curl::curl_download()}}}
 }
 \value{

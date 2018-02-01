@@ -4,6 +4,8 @@
 #' @param url (character) One or more Dryad URL for a dataset
 #' @param destfile (character) Destination file. If not given, we assign a
 #' file name based on URL provided.
+#' @param try_file_names (logical) try to parse file names out of the 
+#' URLs. Default: `FALSE`
 #' @param ... Further args passed on to [curl::curl_download()]
 #' @return named (list) with path(s) to the file(s) - list names 
 #' are the urls passed into the `url` parameter
