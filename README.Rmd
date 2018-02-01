@@ -90,7 +90,7 @@ Get records
 dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
 ```
 
-### Get a download URL from Dryad identifier
+### Get download URLs from a Dryad identifier (DOI)
 
 ```{r}
 dryad_files('10.5061/dryad.1758')
@@ -101,9 +101,24 @@ dryad_files('10.5061/dryad.1758')
 Does not read file into, just a helper to get data files
 
 ```{r eval=FALSE}
-dryad_getfile(dryad_files('10.5061/dryad.1758'))
+dryad_fetch(dryad_files('10.5061/dryad.1758'))
 ```
 
+By default `dryad_fetch()` will download to temporary files (note that these are cleaned up at the end of your R session). Check out the documentation for other options.
+
+### Get file DOIs from a package DOI
+
+```{r}
+dryad_package_dois('10.5061/dryad.60699')
+```
+
+### Get metadata for a DOI
+
+Works for both package DOIs and for DOIs for files within packages
+
+```{r}
+dryad_metadata('10.5061/dryad.9t0n8')
+```
 
 ## Meta
 

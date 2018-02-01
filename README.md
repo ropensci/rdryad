@@ -181,7 +181,7 @@ dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
 #> 1 NEXUS… Janies,… Echinod… 2011… Data… doi:10.50… doi:10.… World's… http:…
 ```
 
-### Get a download URL from Dryad identifier
+### Get download URLs from a Dryad identifier (DOI)
 
 
 ```r
@@ -196,9 +196,73 @@ Does not read file into, just a helper to get data files
 
 
 ```r
-dryad_getfile(dryad_files('10.5061/dryad.1758'))
+dryad_fetch(dryad_files('10.5061/dryad.1758'))
 ```
 
+By default `dryad_fetch()` will download to temporary files (note that these are cleaned up at the end of your R session). Check out the documentation for other options.
+
+### Get file DOIs from a package DOI
+
+
+```r
+dryad_package_dois('10.5061/dryad.60699')
+#> [1] "10.5061/dryad.60699/1" "10.5061/dryad.60699/2" "10.5061/dryad.60699/3"
+#> [4] "10.5061/dryad.60699/4" "10.5061/dryad.60699/5" "10.5061/dryad.60699/6"
+```
+
+### Get metadata for a DOI
+
+Works for both package DOIs and for DOIs for files within packages
+
+
+```r
+dryad_metadata('10.5061/dryad.9t0n8')
+#> $desc
+#> # A tibble: 23 x 6
+#>    text                    qualifier confidence mdschema element authority
+#>    <chr>                   <chr>     <chr>      <chr>    <chr>   <chr>    
+#>  1 Lawing, A. Michelle     author    NOVALUE    dc       contri… <NA>     
+#>  2 Eronen, Jussi T.        author    NOVALUE    dc       contri… <NA>     
+#>  3 Blois, Jessica L.       author    NOVALUE    dc       contri… <NA>     
+#>  4 Graham, Catherine H.    author    NOVALUE    dc       contri… <NA>     
+#>  5 Polly, P. David         author    NOVALUE    dc       contri… <NA>     
+#>  6 2016-05-18T15:17:33Z    accessio… <NA>       dc       date    <NA>     
+#>  7 2016-05-18T15:17:33Z    available <NA>       dc       date    <NA>     
+#>  8 2016-04-27              issued    <NA>       dc       date    <NA>     
+#>  9 doi:10.5061/dryad.9t0n8 <NA>      <NA>       dc       identi… <NA>     
+#> 10 Lawing AM, Eronen JT, … citation  <NA>       dc       identi… <NA>     
+#> # ... with 13 more rows
+#> 
+#> $files
+#> # A tibble: 0 x 0
+#> 
+#> $attributes
+#> # A tibble: 9 x 2
+#>   attr        text                                     
+#>   <chr>       <chr>                                    
+#> 1 PROFILE     DSPACE METS SIP Profile 1.0              
+#> 2 LABEL       DSpace Item                              
+#> 3 OBJID       /handle/10255/dryad.116170               
+#> 4 ID          hdl:10255/dryad.116170                   
+#> 5 OBJEDIT     /admin/item?itemID=159223                
+#> 6 xmlns:mets  http://www.loc.gov/METS/                 
+#> 7 xmlns:xlink http://www.w3.org/TR/xlink/              
+#> 8 xmlns:xsi   http://www.w3.org/2001/XMLSchema-instance
+#> 9 xmlns:dim   http://www.dspace.org/xmlns/dspace/dim   
+#> 
+#> $structMap
+#> $structMap$div
+#> list()
+#> attr(,"DMDID")
+#> [1] "dmd_1"
+#> attr(,"TYPE")
+#> [1] "DSpace Item"
+#> 
+#> attr(,"LABEL")
+#> [1] "DSpace"
+#> attr(,"TYPE")
+#> [1] "LOGICAL"
+```
 
 ## Meta
 
