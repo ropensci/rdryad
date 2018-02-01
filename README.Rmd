@@ -114,5 +114,3 @@ dryad_getfile(dryad_files('10.5061/dryad.1758'))
 ### Data provided by...
 
 Data is provided from the Dryad API.
-
-<a href="http://wiki.datadryad.org/Data_Access"><img src="http://wiki.datadryad.org/wg/dryad/images/b/bc/Dryad_web_banner_small_v4.jpg" alt="Dryad API" /></a>

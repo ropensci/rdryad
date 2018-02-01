@@ -6,7 +6,7 @@ test_that("dyrad_files, works well", {
   aa <- dryad_files(doi = '10.5061/dryad.1758')
 
   expect_is(aa, "character")
-  expect_equal(length(aa), 1)
+  expect_equal(length(aa), 2)
   expect_match(aa, "datadryad.org")
   expect_match(aa, "bitstream")
 

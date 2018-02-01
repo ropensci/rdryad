@@ -7,6 +7,6 @@
 download_dryadmetadata(...)
 }
 \description{
-This function changed name to \code{\link{dr_get_records}}
+This function changed name to \code{\link[=dr_get_records]{dr_get_records()}}
 }
 \keyword{internal}

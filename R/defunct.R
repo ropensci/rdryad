@@ -18,9 +18,19 @@ search_dryad <- function(...) {
 
 #' Download metadata for individual Dryad id's
 #'
-#' This function changed name to \code{\link{dr_get_records}}
+#' This function changed name to [dr_get_records()]
 #'
 #' @keywords internal
 download_dryadmetadata <- function(...) {
-  .Defunct(msg = "This function is defunct. Use dr_get_records()", new = "dr_get_records", package = "rdryad")
+  .Defunct(msg = "This function is defunct. Use dr_get_records()", 
+    new = "dr_get_records", package = "rdryad")
+}
+
+#' Download url
+#'
+#' This function changed name to [dryad_files]
+#'
+#' @keywords internal
+`download_url` <- function(...) {
+  .Defunct(new = "dryad_files", package = "rdryad")
 }
