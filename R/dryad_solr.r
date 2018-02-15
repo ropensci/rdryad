@@ -25,7 +25,7 @@
 #' d_solr_search(q="Galliard")
 #'
 #' # Basic search, restricting to certain fields
-#' d_solr_search(q="Galliard", fl='handle,dc.title_sort')
+#' d_solr_search(q="Galliard", fl=c('handle', 'dc.title_sort'))
 #'
 #' # Search all text for a string, but limits results to two specified fields:
 #' d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort')
@@ -42,7 +42,7 @@
 #' d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
 #'    fl="dc.relation.isreferencedby", rows=10)
 #'
-#' # Data DOIs published in Dryad during January 2011, with results returned in JSON format:
+#' # Data DOIs published in Dryad during January 2011
 #' query <- "location:l2 dc.date.available_dt:[2011-01-01T00:00:00Z TO 2011-01-31T23:59:59Z]"
 #' d_solr_search(q=query, fl="dc.identifier", rows=10)
 #'
@@ -58,7 +58,6 @@
 d_solr_search <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
-  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   args$wt <- "xml"
   callopts$followlocation <- TRUE
   conn_dryad$search(params = args, minOptimizedRows = FALSE,
@@ -70,7 +69,6 @@ d_solr_search <- function(..., proxy = NULL, callopts = list()) {
 d_solr_facet <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
-  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   args$wt <- "xml"
   callopts$followlocation <- TRUE
   conn_dryad$facet(params = args, callopts = callopts)
@@ -81,7 +79,6 @@ d_solr_facet <- function(..., proxy = NULL, callopts = list()) {
 d_solr_group <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
-  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   args$wt <- "xml"
   callopts$followlocation <- TRUE
   conn_dryad$group(params = args, callopts = callopts)
@@ -92,7 +89,6 @@ d_solr_group <- function(..., proxy = NULL, callopts = list()) {
 d_solr_highlight <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
-  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   args$wt <- "xml"
   callopts$followlocation <- TRUE
   conn_dryad$highlight(params = args, callopts = callopts, parsetype = "list")
@@ -103,7 +99,6 @@ d_solr_highlight <- function(..., proxy = NULL, callopts = list()) {
 d_solr_mlt <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
-  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   args$wt <- "xml"
   callopts$followlocation <- TRUE
   conn_dryad$mlt(params = args, minOptimizedRows = FALSE,
@@ -115,7 +110,6 @@ d_solr_mlt <- function(..., proxy = NULL, callopts = list()) {
 d_solr_stats <- function(..., proxy = NULL, callopts = list()) {
   if (!is.null(proxy)) conn_dc <- make_dryad_conn(proxy)
   args <- list(...)
-  if (!is.null(args$fl)) args$fl <- paste(args$fl, collapse = ",")
   args$wt <- "xml"
   callopts$followlocation <- TRUE
   conn_dryad$stats(params = args, callopts = callopts)
@@ -124,7 +118,7 @@ d_solr_stats <- function(..., proxy = NULL, callopts = list()) {
 # helpers ---------------------------------------
 make_dryad_conn <- function(proxy) {
   solrium::SolrClient$new(host = "datadryad.org",
-    path = "solr/search/select", scheme = "http",
+    path = "solr/search/select", scheme = "https",
     port = NULL, errors = "complete", 
     proxy = proxy)
 }

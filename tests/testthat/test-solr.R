@@ -13,10 +13,10 @@ test_that("d_solr_search works", {
   aa <- d_solr_search(q="Galliard")
 
   # Basic search, restricting to certain fields
-  bb <- d_solr_search(q="Galliard", fl='handle,dc.title_sort')
+  bb <- d_solr_search(q="Galliard", fl=c('dc.type', 'dc.title_sort'))
 
   # Search all text for a string, but limits results to two specified fields:
-  cc <- d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort')
+  cc <- d_solr_search(q="dwc.ScientificName:drosophila", fl='dc.type,dc.title_sort')
 
   # Dryad data based on an article DOI:
   dd <- d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
@@ -45,10 +45,10 @@ test_that("d_solr_search works", {
   expect_true(any(grepl("Galliard", aa$dc.contributor.author, ignore.case = TRUE)))
   expect_gt(NROW(aa), 0)
 
-  expect_named(bb, c('handle', 'dc.title_sort'))
+  expect_named(bb, c('dc.title_sort', "dc.type"))
 
   expect_true(any(grepl("Drosophila", cc$dc.title_sort, ignore.case = TRUE)))
-  expect_named(cc, c('dc.title_sort', 'handle'))
+  expect_named(cc, c('dc.title_sort', 'dc.type'))
 
   expect_named(dd, c('dc.identifier', 'dc.title_ac'))
 

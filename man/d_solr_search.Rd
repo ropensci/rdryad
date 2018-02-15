@@ -52,7 +52,7 @@ hard code a curl option to follow redirects, just so you're aware.
 d_solr_search(q="Galliard")
 
 # Basic search, restricting to certain fields
-d_solr_search(q="Galliard", fl='handle,dc.title_sort')
+d_solr_search(q="Galliard", fl=c('handle', 'dc.title_sort'))
 
 # Search all text for a string, but limits results to two specified fields:
 d_solr_search(q="dwc.ScientificName:drosophila", fl='handle,dc.title_sort')
@@ -69,7 +69,7 @@ d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
 d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
    fl="dc.relation.isreferencedby", rows=10)
 
-# Data DOIs published in Dryad during January 2011, with results returned in JSON format:
+# Data DOIs published in Dryad during January 2011
 query <- "location:l2 dc.date.available_dt:[2011-01-01T00:00:00Z TO 2011-01-31T23:59:59Z]"
 d_solr_search(q=query, fl="dc.identifier", rows=10)
 
