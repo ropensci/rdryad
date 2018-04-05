@@ -18,5 +18,33 @@
 #' dr_get_records(ids)
 #' }
 dr_get_records <- function(ids, prefix = "oai_dc", as = "df", ...) {
-  oai::get_records(ids, prefix = prefix, url = dr_base_oai(), as = as, ...)
+  # oai::get_records(ids, prefix = prefix, url = dr_base_oai(), as = as, ...)
+  # FIXME: after moving oai pkg to crul, switch back to oai
+  url <- dr_base_oai()
+  rd_check_url(url)
+  if (as %in% c("list", "df")) as <- "parsed"
+  stats::setNames(lapply(ids, each_record_crul, url = url, prefix = prefix,
+      as = as, ...), ids)
+}
+
+each_record_crul <- function (identifier, url, prefix, as = "df", ...) {
+  args <- rc(list(verb = "GetRecord", metadataPrefix = prefix,
+      identifier = I(identifier)))
+  cli <- crul::HttpClient$new(url = url, opts = list(...))
+  res <- cli$get(query = args)
+  res$raise_for_status()
+  tt <- res$parse("UTF-8")
+  xml_orig <- xml2::read_xml(tt)
+  oai:::handle_errors(xml_orig)
+  if (as == "raw") {
+      tt
+  } else {
+      if (prefix == "oai_dc") {
+          oai:::parse_oai_dc(xml_orig)
+      } else if (prefix == "oai_datacite") {
+          oai:::parse_oai_datacite(xml_orig)
+      } else {
+          tt
+      }
+  }
 }

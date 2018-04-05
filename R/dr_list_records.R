@@ -22,7 +22,7 @@
 #' @return XML character string, data.frame, or list, depending on what requested
 #' witht the \code{as} parameter
 #' @examples \dontrun{
-#' dr_list_records(from='2010-01-01', until='2010-09-10')
+#' dr_list_records(from='2016-01-01', until='2016-09-10')
 #' }
 dr_list_records <- function(prefix = "oai_dc", from = NULL, until = NULL, set = "hdl_10255_3",
                             token = NULL, as = "df", ...) {

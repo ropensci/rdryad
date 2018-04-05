@@ -42,6 +42,6 @@ List Dryad records
 }
 \examples{
 \dontrun{
-dr_list_records(from='2010-01-01', until='2010-09-10')
+dr_list_records(from='2016-01-01', until='2016-09-10')
 }
 }

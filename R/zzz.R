@@ -17,3 +17,16 @@ assert <- function(x, y) {
     }
   }
 }
+
+rc <- function(l) Filter(Negate(is.null), l)
+
+is_url <- function(x, ...) {
+  grepl("https?://", x)
+}
+
+rd_check_url <- function(x) {
+  if (!all(is_url(x))) {
+      stop("One or more of your URLs appears to not be a proper URL",
+          call. = FALSE)
+  }
+}
