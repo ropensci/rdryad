@@ -9,11 +9,3 @@ test_that("dr_identify works", {
   expect_is(aa$repositoryName, "character")
   expect_true(grepl("Dryad", aa$repositoryName))
 })
-
-
-test_that("dr_identify curl options work", {
-  skip_on_cran()
-
-  library("httr")
-  expect_error(dr_identify(config = timeout(0.001)), "Timeout was reached")
-})

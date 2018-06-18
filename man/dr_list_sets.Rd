@@ -25,7 +25,5 @@ Retrieve the set structure of Dryad, useful for selective harvesting
 dr_list_sets()
 dr_list_sets(as = "list")
 dr_list_sets(as = "raw")
-library('httr')
-res <- dr_list_sets(config = verbose())
 }
 }

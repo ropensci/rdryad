@@ -19,10 +19,3 @@ test_that("dr_list_sets fails well", {
   expect_error(suppressWarnings(dr_list_sets(token = 5)),
                "The value of the resumptionToken argument is invalid or expired")
 })
-
-test_that("dr_list_sets curl options work", {
-  skip_on_cran()
-
-  library("httr")
-  expect_error(dr_list_sets(config = timeout(0.001)), "Timeout was reached")
-})

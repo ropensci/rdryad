@@ -28,10 +28,3 @@ test_that("dr_list_records fails well", {
   expect_error(suppressWarnings(dr_list_records(set = 344)), "The request includes illegal arguments")
   # expect_error(dr_list_records(as = 5), "The request includes illegal arguments") FIXME
 })
-
-test_that("dr_list_records curl options work", {
-  skip_on_cran()
-
-  library("httr")
-  expect_error(dr_list_records(config = timeout(0.001)), "Timeout was reached")
-})

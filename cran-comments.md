@@ -14,7 +14,7 @@ There are no reverse dependencies.
 
 ---
 
-This version gains a few functions, fixes some minor issues, adds a few package dependencies.
+This version gains a few functions, fixes some minor issues, adds a few package dependencies. In addition, undeclared dependency (httr) used in tests removed.
 
 Thanks!
 Scott Chamberlain
