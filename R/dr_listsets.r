@@ -3,11 +3,12 @@
 #' Retrieve the set structure of Dryad, useful for selective harvesting
 #'
 #' @export
-#' @param token	(character) a token previously provided by the server to resume a
-#' request where it last left off. 50 is max number of records returned. We will
-#' loop for you internally to get all the records you asked for.
-#' @param as (character) What to return. One of "df" (for data.frame; default),
-#' "list", or "raw" (raw text)
+#' @param token	(character) a token previously provided by the server to 
+#' resume a request where it last left off. 50 is max number of records 
+#' returned. We will loop for you internally to get all the records you 
+#' asked for.
+#' @param as (character) What to return. One of "df" (for data.frame; 
+#' default), "list", or "raw" (raw text)
 #' @param ... Curl debugging options passed on to `httr::GET`
 #' @examples \dontrun{
 #' dr_list_sets()

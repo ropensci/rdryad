@@ -1,4 +1,4 @@
-#' Get file DOIs dor a Dryad package DOI
+#' Get file DOIs for a Dryad package DOI
 #'
 #' @export
 #' @param doi (character) A Dryad package DOI. required

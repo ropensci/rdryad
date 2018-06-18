@@ -2,7 +2,7 @@
 % Please edit documentation in R/dryad_package_dois.R
 \name{dryad_package_dois}
 \alias{dryad_package_dois}
-\title{Get file DOIs dor a Dryad package DOI}
+\title{Get file DOIs for a Dryad package DOI}
 \usage{
 dryad_package_dois(doi, ...)
 }
@@ -16,7 +16,7 @@ dryad_package_dois(doi, ...)
 no results a zero length character vector
 }
 \description{
-Get file DOIs dor a Dryad package DOI
+Get file DOIs for a Dryad package DOI
 }
 \examples{
 \dontrun{

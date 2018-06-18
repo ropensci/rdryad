@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @param x (character) A Dryad dataset DOI or handle. required
-#' @param ...	Curl options, passed on to [crul::HttpClient]
+#' @param ... Curl options, passed on to [crul::HttpClient]
 #' @return (character) a DOI or handle
 #'
 #' @examples \dontrun{
