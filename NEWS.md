@@ -1,3 +1,28 @@
+rdryad 0.4.0
+============
+
+### NEW FEATURES
+
+* gains new function `dryad_metadata()` to download Dryad file metadata 
+* gains new function `dryad_package_dois()` to get file DOIs for a Dryad package DOI (a package can have many files) (#22)
+
+### MINOR IMPROVEMENTS
+
+* `dryad_files` (formerly `download_url()`) now scrapes Dryad page to get URLs to Dryad files instead of using their API, which was not dependable (#26)
+* `dryad_fetch` gains a parameter `try_file_names` (a boolean) which if `TRUE` we try to extract file names out of URLs (#26)
+
+### BUG FIXES
+
+* fix to solr `rdryad` functions to hard code use of `xml` return format, and followlocation to follow any redirects (#27)
+
+### DEFUNCT
+
+* `download_url()` is now defunct, see `dryad_files()`
+
+### NOTE
+
+* two new pacakage dependencies: `tibble` and `data.table`
+
 rdryad 0.3.0
 ============
 

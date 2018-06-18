@@ -1,12 +1,13 @@
 ## Test environments
 
-* local OS X install, R 3.4.2 patched
-* ubuntu 12.04 (on travis-ci), R 3.4.2
+* local OS X install, R 3.5.0
+* ubuntu 14.04 (on travis-ci), R 3.5.0
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 notes
+0 errors | 0 warnings | 1 notes
+
 
 
 ## Reverse dependencies
@@ -15,8 +16,7 @@ There are no reverse dependencies.
 
 ---
 
-This version swaps out some dependencies, and makes some
-improvements.
+This version gains a few functions, fixes some minor issues, adds a few package dependencies.
 
 Thanks!
 Scott Chamberlain
