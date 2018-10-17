@@ -7,7 +7,8 @@
 dr_get_records(ids, prefix = "oai_dc", as = "df", ...)
 }
 \arguments{
-\item{ids}{Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820}
+\item{ids}{Dryad identifier, e.g.
+oai:secundus.datadryad.org:10255/dryad.8820}
 
 \item{prefix}{A character string to specify the metadata format in OAI-PMH
 requests issued to the repository. The default (\code{"oai_dc"})
@@ -27,10 +28,10 @@ Download metadata for individual Dryad id's
 }
 \examples{
 \dontrun{
-dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
+dr_get_records(ids = 'oai:secundus.datadryad.org:10255/dryad.8820')
 handles <- c('10255/dryad.36217', '10255/dryad.86943', '10255/dryad.84720',
   '10255/dryad.34100')
-ids <- paste0('oai:datadryad.org:', handles)
+ids <- paste0('oai:secundus.datadryad.org:', handles)
 dr_get_records(ids)
 }
 }

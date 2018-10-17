@@ -1,7 +1,8 @@
 #' Download metadata for individual Dryad id's
 #'
 #' @export
-#' @param ids Dryad identifier, i.e. oai:datadryad.org:10255/dryad.8820
+#' @param ids Dryad identifier, e.g. 
+#' oai:secundus.datadryad.org:10255/dryad.8820
 #' @param prefix A character string to specify the metadata format in OAI-PMH
 #' requests issued to the repository. The default (`"oai_dc"`)
 #' corresponds to the mandatory OAI unqualified Dublin Core metadata schema.
@@ -11,10 +12,10 @@
 #' @return XML character string, data.frame, or list, depending on what
 #' requested witht the `as` parameter
 #' @examples \dontrun{
-#' dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
+#' dr_get_records(ids = 'oai:secundus.datadryad.org:10255/dryad.8820')
 #' handles <- c('10255/dryad.36217', '10255/dryad.86943', '10255/dryad.84720',
 #'   '10255/dryad.34100')
-#' ids <- paste0('oai:datadryad.org:', handles)
+#' ids <- paste0('oai:secundus.datadryad.org:', handles)
 #' dr_get_records(ids)
 #' }
 dr_get_records <- function(ids, prefix = "oai_dc", as = "df", ...) {
