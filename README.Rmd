@@ -89,7 +89,7 @@ dr_list_sets()
 Get records
 
 ```{r}
-dr_get_records(ids = 'oai:datadryad.org:10255/dryad.8820')
+dr_get_records(ids = 'oai:secundus.datadryad.org:10255/dryad.8820')
 ```
 
 ### Get download URLs from a Dryad identifier (DOI)
