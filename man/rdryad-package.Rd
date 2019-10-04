@@ -48,6 +48,3 @@ These functions convert between Dryad handles and DOIs
 }
 }
 
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
-}

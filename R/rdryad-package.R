@@ -43,5 +43,4 @@
 #' @name rdryad-package
 #' @aliases rdryad
 #' @docType package
-#' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 NULL
