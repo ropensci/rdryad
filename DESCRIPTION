@@ -15,7 +15,7 @@ Authors@R: c(
     person("Carl", "Boettiger", role = "aut", 
         comment = c(ORCID="0000-0002-1642-628X"))
     )
-URL: https://github.com/ropensci/rdryad
+URL: https://docs.ropensci.org/rdryad, https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
