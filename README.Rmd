@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Build Status](https://travis-ci.org/ropensci/rdryad.svg?branch=master)](https://travis-ci.org/ropensci/rdryad)
 [![codecov](https://codecov.io/gh/ropensci/rdryad/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rdryad)
 [![cran checks](https://cranchecks.info/badges/worst/rdryad)](https://cranchecks.info/pkgs/rdryad)
@@ -19,8 +19,8 @@ knitr::opts_chunk$set(
 
 `rdryad` is a package to interface with the Dryad data repository.
 
-* General Dryad API documentation: http://wiki.datadryad.org/Data_Access
-* [Solr API (http://wiki.datadryad.org/API#SOLR_search_access)](http://wiki.datadryad.org/API#SOLR_search_access)
+* General Dryad API documentation: https://datadryad.org/api/v2/docs/
+* Solr API: http://wiki.datadryad.org/API#SOLR_search_access
 * OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; [Dryad OAI-PMH description](http://wiki.datadryad.org/API#OAI-PMH). [Description of OAI-PMH in general](http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting)
 
 ## Installation
@@ -31,10 +31,10 @@ Install Dryad from CRAN
 install.packages("rdryad")
 ```
 
-Or install development version of rdryad from GitHub:
+development version:
 
 ```{r eval=FALSE}
-devtools::install_github("ropensci/rdryad")
+remotes::install_github("ropensci/rdryad")
 ```
 
 ```{r}
@@ -127,10 +127,12 @@ dryad_metadata('10.5061/dryad.9t0n8')
 * Please [report any issues or bugs](https://github.com/ropensci/rdryad/issues).
 * License: MIT
 * Get citation information for `rdryad` in R doing `citation(package = 'rdryad')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
 
 ### Data provided by...
 
 Data is provided from the Dryad API.
+
+[coc]: https://github.com/ropensci/rdryad/blob/master/CODE_OF_CONDUCT.md
