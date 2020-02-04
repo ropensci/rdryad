@@ -2,7 +2,7 @@ Package: rdryad
 Type: Package
 Title: Access for Dryad Web Services
 Description: Interface to the Dryad "Solr" API, their "OAI-PMH" service, and
-    fetch datasets. Dryad (<http://datadryad.org/>) is a curated host of
+    fetch datasets. Dryad (<https://datadryad.org/>) is a curated host of
     data underlying scientific publications.
 Version: 0.4.1.91
 License: MIT + file LICENSE
@@ -19,6 +19,7 @@ URL: https://docs.ropensci.org/rdryad, https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
+Language: en-US
 Imports:
     crul (>= 0.4.0),
     curl (>= 3.0),
