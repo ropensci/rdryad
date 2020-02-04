@@ -11,3 +11,4 @@ cran-comments.md
 ^codemeta\.json$
 ^CODE_OF_CONDUCT\.md$
 .github
+^Makefile$
