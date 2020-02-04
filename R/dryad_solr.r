@@ -117,7 +117,7 @@ d_solr_stats <- function(..., proxy = NULL, callopts = list()) {
 
 # helpers ---------------------------------------
 make_dryad_conn <- function(proxy) {
-  solrium::SolrClient$new(host = "datadryad.org",
+  solrium::SolrClient$new(host = "v1.datadryad.org",
     path = "solr/search/select", scheme = "https",
     port = NULL, errors = "complete", 
     proxy = proxy)
