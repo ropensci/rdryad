@@ -4,8 +4,15 @@
 \alias{dr_list_records}
 \title{List Dryad records}
 \usage{
-dr_list_records(prefix = "oai_dc", from = NULL, until = NULL,
-  set = "hdl_10255_3", token = NULL, as = "df", ...)
+dr_list_records(
+  prefix = "oai_dc",
+  from = NULL,
+  until = NULL,
+  set = "hdl_10255_3",
+  token = NULL,
+  as = "df",
+  ...
+)
 }
 \arguments{
 \item{prefix}{A character string to specify the metadata format in OAI-PMH
