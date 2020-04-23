@@ -1,11 +1,12 @@
 #' Get a dataset version by version ID
 #' @export
-#' @param ids (character) one or version ids, required
+#' @param ids (character) one or more version ids, required
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a list of lists, each named by the input DOI
 #' @examples \dontrun{
 #' dryad_versions(ids = 18774)
-#' dryad_versions_files(ids = 18774)
+#' dryad_versions_files(ids = 18774, verbose = TRUE)
+#' dryad_files(ids = 57485)
 #' }
 dryad_versions <- function(ids, ...) {
   og_ids <- ids
@@ -25,3 +26,11 @@ dryad_versions_files <- function(ids, ...) {
   parse_each(tmp, og_ids)
 }
 
+#' @export
+#' @rdname dryad_versions
+dryad_files <- function(ids, ...) {
+  og_ids <- ids
+  urls <- file.path(dr_base_apiv2(), v2("files", ids))
+  tmp <- dGETasync(urls = urls, ...)
+  parse_each(tmp, og_ids)
+}

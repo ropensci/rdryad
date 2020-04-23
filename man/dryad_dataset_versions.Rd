@@ -19,7 +19,7 @@ Get dataset versions by DOI(s)
 }
 \examples{
 \dontrun{
-x = dryad_dataset_versions(doi = "10.5061/dryad.f385721n")
+x = dryad_dataset_versions(dois = "10.5061/dryad.f385721n")
 x
 dois <- c("10.5061/dryad.f385721n", "10.5061/dryad.7ct1n", "10.5061/dryad.1g626")
 dryad_dataset_versions(dois = dois)

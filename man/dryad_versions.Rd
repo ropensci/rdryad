@@ -3,14 +3,17 @@
 \name{dryad_versions}
 \alias{dryad_versions}
 \alias{dryad_versions_files}
+\alias{dryad_files}
 \title{Get a dataset version by version ID}
 \usage{
 dryad_versions(ids, ...)
 
 dryad_versions_files(ids, ...)
+
+dryad_files(ids, ...)
 }
 \arguments{
-\item{ids}{(character) one or version ids, required}
+\item{ids}{(character) one or more version ids, required}
 
 \item{...}{Further args passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
@@ -23,6 +26,7 @@ Get a dataset version by version ID
 \examples{
 \dontrun{
 dryad_versions(ids = 18774)
-dryad_versions_files(ids = 18774)
+dryad_versions_files(ids = 18774, verbose = TRUE)
+dryad_files(ids = 57485)
 }
 }

@@ -2,25 +2,24 @@
 % Please edit documentation in R/dryad_download.R
 \name{dryad_download}
 \alias{dryad_download}
-\title{Get datasets download by DOI(s)}
+\title{dryad_download}
 \usage{
-dryad_download(doi, ...)
+dryad_download(dois, ...)
 }
 \arguments{
-\item{...}{Further args passed on to \link[crul:verb-GET]{crul::verb-GET}}
+\item{dois}{(character) one or more DOIs, required}
 
-\item{dois}{(character) one DOI, required}
+\item{...}{Further args passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
-a list of lists, each named by the input DOI
+file path for the file
 }
 \description{
-Get datasets download by DOI(s)
+Download datasets by their DOI(s)
 }
 \examples{
 \dontrun{
 dryad_download(doi = "10.5061/dryad.f385721n")
-z = dryad_download(doi = "10.5061/dryad.7ct1n", verbose = TRUE)
 dois <- c("10.5061/dryad.f385721n", "10.5061/dryad.7ct1n", "10.5061/dryad.1g626")
 dryad_download(dois = dois)
 }

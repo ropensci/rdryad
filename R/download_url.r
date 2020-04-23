@@ -20,16 +20,16 @@
 #' # file sizes in MB
 #' vapply(out, function(x) file.info(x)[["size"]], 1) / 10^6
 #' }
-dryad_files <- function(doi, ...) {
-  assert(doi, "character")
-	stopifnot(length(doi) == 1)
-  tt <- dGET(paste0("https://doi.org/", doi))
-  html <- xml2::read_html(tt)
-  hrefs <- xml2::xml_attr(
-    xml2::xml_find_all(html, '//a[contains(@href, "bitstream")]'), "href")
-  urls <- paste0("http://datadryad.org", hrefs)
-  return(urls)
-}
+# dryad_files <- function(doi, ...) {
+#   assert(doi, "character")
+# 	stopifnot(length(doi) == 1)
+#   tt <- dGET(paste0("https://doi.org/", doi))
+#   html <- xml2::read_html(tt)
+#   hrefs <- xml2::xml_attr(
+#     xml2::xml_find_all(html, '//a[contains(@href, "bitstream")]'), "href")
+#   urls <- paste0("http://datadryad.org", hrefs)
+#   return(urls)
+# }
 
 # ------
 # dGET2 <- function(x, ...) {
