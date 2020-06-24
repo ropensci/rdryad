@@ -12,10 +12,24 @@ their REST API.
 \section{Package API}{
 
 
-The following functions sort out file URLs and help you download
-those files
+Datasets:
 \itemize{
-\item \code{\link[=dryad_fetch]{dryad_fetch()}}
+\item \code{\link[=dryad_dataset]{dryad_dataset()}}
+\item \code{\link[=dryad_datasets]{dryad_datasets()}}
+\item \code{\link[=dryad_dataset_versions]{dryad_dataset_versions()}}
+}
+
+Files:
+\itemize{
+\item \code{\link[=dryad_files]{dryad_files()}}
+\item \code{\link[=dryad_files_download]{dryad_files_download()}}
+}
+
+Versions:
+\itemize{
+\item \code{\link[=dryad_versions]{dryad_versions()}}
+\item \code{\link[=dryad_versions_files]{dryad_versions_files()}}
+\item \code{\link[=dryad_versions_download]{dryad_versions_download()}}
 }
 }
 
@@ -35,6 +49,7 @@ More defunct functions:
 \item \code{\link[=handle2doi]{handle2doi()}}
 \item \code{\link[=doi2handle]{doi2handle()}}
 \item \code{\link[=dryad_files]{dryad_files()}}
+\item \code{\link[=dryad_fetch]{dryad_fetch()}}
 }
 }
 

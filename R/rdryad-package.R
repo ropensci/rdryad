@@ -4,11 +4,26 @@
 #' their REST API.
 #'
 #' @section Package API:
+#' 
+#' The functions match the three major sets of Dryad API routes for
+#' datasets, fiiles and versions.
 #'
-#' The following functions sort out file URLs and help you download
-#' those files
+#' Datasets:
 #'
-#' - [dryad_fetch()]
+#' - [dryad_dataset()]
+#' - [dryad_datasets()]
+#' - [dryad_dataset_versions()]
+#' 
+#' Files:
+#'
+#' - [dryad_files()]
+#' - [dryad_files_download()]
+#' 
+#' Versions:
+#'
+#' - [dryad_versions()]
+#' - [dryad_versions_files()]
+#' - [dryad_versions_download()]
 #' 
 #' @section Defunct:
 #' 
@@ -25,6 +40,8 @@
 #' - [handle2doi()]
 #' - [doi2handle()]
 #' - [dryad_files()]
+#' - [dryad_fetch()] - use instead [dryad_files_download()] or
+#' [dryad_versions_download()]
 #'
 #' @importFrom crul HttpClient
 #' @importFrom xml2 read_xml xml_find_all xml_ns xml_attr
