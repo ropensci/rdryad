@@ -32,6 +32,7 @@ dryad_files <- function(ids, ...) {
 #' }
 dryad_files_download <- function(ids, ...) {
   assert(ids, c('numeric', 'integer'))
+  rdryad_cache$mkdir()
   paths <- sprintf("api/v2/files/%s/download", ids)
   Map(function(x, y) each_files_download(x, y, ...), ids, paths)
 }
