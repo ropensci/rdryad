@@ -12,9 +12,9 @@ rdryad
 
 `rdryad` is a package to interface with the Dryad data repository.
 
-* General Dryad API documentation: https://datadryad.org/api/v2/docs/
-* Solr API: DEFUNCT
-* OAI-PMH: DEFUNCT
+General Dryad API documentation: https://datadryad.org/api/v2/docs/
+
+rdryad docs: https://docs.ropensci.org/rdryad/
 
 ## Installation
 
@@ -35,15 +35,6 @@ remotes::install_github("ropensci/rdryad")
 
 ```r
 library('rdryad')
-```
-
-## Examples
-
-### Get download URLs from a Dryad identifier (DOI)
-
-
-```r
-dryad_files(ids = 57485)
 ```
 
 ## Meta
