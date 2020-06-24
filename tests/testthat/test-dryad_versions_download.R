@@ -1,5 +1,6 @@
 test_that("dryad_versions_download", {
   skip_on_cran()
+  skip_on_ci()
   
   vcr::use_cassette("dryad_versions_download", {
     aa <- dryad_versions_download(ids = 18774)
@@ -15,6 +16,7 @@ test_that("dryad_versions_download", {
 
 test_that("dryad_versions_download accepts more than 1 id", {
   skip_on_cran()
+  skip_on_ci()
   # async, can't use vcr
 
   bb <- dryad_versions_download(ids = c(18774, 18775))

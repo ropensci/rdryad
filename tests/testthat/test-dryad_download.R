@@ -1,5 +1,6 @@
 test_that("dryad_download", {
   skip_on_cran()
+  skip_on_ci()
 
   vcr::use_cassette("dryad_download", {
     aa <- dryad_download(dois = "10.5061/dryad.f385721n")
