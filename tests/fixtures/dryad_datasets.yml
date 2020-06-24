@@ -1,0 +1,596 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://datadryad.org/api/v2/datasets
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.0 r-curl/4.3 crul/0.9.2.92
+      Accept-Encoding: gzip, deflate
+      Content-Type: application/json
+      Accept: application/json
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      connection: keep-alive
+      content-encoding: gzip
+      content-type: application/json; charset=utf-8
+      date: Wed, 24 Jun 2020 20:18:31 GMT
+      etag: W/"34f8bee248e9aa9f5fe89a618aa21155"
+      server: nginx/1.17.3 + Phusion Passenger 6.0.4
+      set-cookie:
+      - AWSALB=Sl6QjQ1z/6G7hIz7KNkTLJwhqAr49LNYUY+NVKgabsoiZ7C9RWVoeoJPt/8Cl0RU1t1+QAqyHDYJgNRfDl59ECZKEgQvdjqBWSlf6MknYKWB4gR+SFEHSiSmyI41;
+        Expires=Wed, 01 Jul 2020 20:18:31 GMT; Path=/
+      - AWSALBCORS=Sl6QjQ1z/6G7hIz7KNkTLJwhqAr49LNYUY+NVKgabsoiZ7C9RWVoeoJPt/8Cl0RU1t1+QAqyHDYJgNRfDl59ECZKEgQvdjqBWSlf6MknYKWB4gR+SFEHSiSmyI41;
+        Expires=Wed, 01 Jul 2020 20:18:31 GMT; Path=/; SameSite=None; Secure
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-powered-by: Phusion Passenger 6.0.4
+      x-request-id: 44884ae3-6275-4b17-b23c-bd6c697ec58c
+      x-runtime: '0.615557'
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"_links":{"self":{"href":"/api/v2/datasets"},"first":{"href":"/api/v2/datasets"},"last":{"href":"/api/v2/datasets?page=3389"},"next":{"href":"/api/v2/datasets?page=2"}},"count":10,"total":33888,"_embedded":{"stash:datasets":[{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.7rh4625"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.7rh4625/versions"},"stash:version":{"href":"/api/v2/versions/93"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.7rh4625/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.7rh4625","id":93,"storage_size":999901812,"title":"Data
+        from: Distinct predatory behaviors in scimitar- and dirk-toothed sabertooth
+        cats","authors":[{"firstName":"Borja","lastName":"Figueirido"},{"firstName":"Stephan","lastName":"Lautenschlager","affiliation":"University
+        of Birmingham","affiliationROR":"https://ror.org/03angcq70"},{"firstName":"Alejandro","lastName":"Perez-Ramos"},{"firstName":"Blaire","lastName":"Van
+        Valkenburgh","affiliation":"University of California System","affiliationROR":"https://ror.org/00pjdza24"}],"abstract":"Over
+        the Cenozoic, large cat-like forms have convergently evolved into specialized
+        killers of ‘megaherbivores’ that relied on their large, and laterally-compressed
+        (saber-like) canines to rapidly subdue their prey [1-5].  Scimitar- and dirk-toothed
+        sabertooths are distinct ecomorphs that differ in canine tooth length, degree
+        of serration, and postcranial features indicative of dissimilar predatory
+        behavior [6-13].  Despite these differences, it is assumed that they used
+        a similar ‘canine-shear’ bite to kill their prey [14,15]. We investigated
+        the killing behavior of the scimitar-toothed Homotherium serum and the dirk-toothed
+        Smilodon fatalis using a comparative sample of living carnivores and a new
+        quantitative approach to the analysis of skull function. For the first time,
+        we quantified differences in the relative amount and distribution of cortical
+        and trabecular bone in coronal sections of skulls to assess relative skull
+        stiffness and flexibility [16-19]. We also use finite element analysis to
+        simulate various killing scenarios that load skulls in ways that likely favor
+        distinct proportions of cortical versus trabecular bone across the skull.
+        Our data reveal that S. fatalis had an extremely thick skull and relatively
+        little trabecular bone, consistent with a large investment in cranial strength
+        for a stabbing canine-shear-bite. However, H. serum had more trabecular bone,
+        and likely deployed an unusual predatory behavior more similar to the clamp-and-hold
+        technique of the lion than S. fatalis. These data broaden the killing repertoire
+        of sabertooths and highlight the degree of ecological specialization among
+        members of the large carnivore guild during the Late Pleistocene of North
+        America.","keywords":["cranial biomechanics","Panthera leo","paleobiology","trabecular
+        bone","finite element analysis","Crocuta crocuta","killing bite","scimitar-tooths","Lycaon
+        pictus","Smilodon fatalis","Homotherium serum","dirk-tooths","Holocene","cortical
+        bone","Pleistocene"],"usageNotes":"\u003cdiv class=\"o-metadata__file-usage-entry\"\u003e\u003ch4
+        class=\"o-heading__level3-file-title\"\u003eCrocuta_bite\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eCrocuta_lateral\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eCrocuta_pull\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA model\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eCrocuta_stab\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eHomotherium_bite\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eHomotherium_lateral\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eHomotherium_pull\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eHomotherium_stab\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eLycaon_bite\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eLycaon_lateral\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eLycaon_pull\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eLycaon_stab\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ePanthera_bite\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ePanthera_lateral\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ePanthera_pull\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ePanthera_stab\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eSmilodon_bite\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eSmilodon_lateral\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eSmilodon_pull\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eSmilodon_stab\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eFEA MODEL\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e","locations":[{"place":"Africa"},{"place":"North
+        America"}],"relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1016/j.cub.2018.08.012"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2019-08-14","sharingLink":"https://datadryad.org/stash/share/ioGunm7RkqVWj0RDSAt8mqO9bzksB_m_LeZoLu5Tts0","userId":33915},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.r8d4q"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.r8d4q/versions"},"stash:version":{"href":"/api/v2/versions/94"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.r8d4q/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.r8d4q","id":94,"storage_size":997532058,"title":"Data
+        from: Phylogenomic insights into the evolution of stinging wasps and the origins
+        of ants and bees","authors":[{"firstName":"Michael G.","lastName":"Branstetter","affiliation":"University
+        of Utah","affiliationROR":"https://ror.org/03r0ha626"},{"firstName":"Bryan
+        N.","lastName":"Danforth","affiliation":"Utah State University","affiliationROR":"https://ror.org/00h6set76"},{"firstName":"James
+        P.","lastName":"Pitts","affiliation":"Utah State University","affiliationROR":"https://ror.org/00h6set76"},{"firstName":"Brant
+        C.","lastName":"Faircloth","affiliation":"Louisiana State University","affiliationROR":"https://ror.org/05ect4e57"},{"firstName":"Philip
+        S.","lastName":"Ward","affiliation":"University of California System","affiliationROR":"https://ror.org/00pjdza24"},{"firstName":"Matthew
+        L.","lastName":"Buffington","affiliation":"Smithsonian Institution","affiliationROR":"https://ror.org/01pp8nd67"},{"firstName":"Michael
+        W.","lastName":"Gates","affiliation":"Smithsonian Institution","affiliationROR":"https://ror.org/01pp8nd67"},{"firstName":"Robert
+        R.","lastName":"Kula","affiliation":"Smithsonian Institution","affiliationROR":"https://ror.org/01pp8nd67"},{"firstName":"Seán
+        G.","lastName":"Brady","affiliation":"Smithsonian Institution","affiliationROR":"https://ror.org/01pp8nd67"}],"abstract":"The
+        stinging wasps (Hymenoptera: Aculeata) are an extremely diverse lineage of
+        hymenopteran insects, encompassing over 70,000 described species and a diversity
+        of life history traits, including ectoparasitism, cleptoparasitism, predation,
+        pollen feeding (bees [Anthophila] and Masarinae) and eusociality (social vespid
+        wasps, ants, and some bees) [1]. The most well-studied lineages of Aculeata
+        are the ants, which are ecologically dominant in most terrestrial ecosystems
+        [2], and the bees, the most important lineage of angiosperm-pollinating insects
+        [3]. Establishing the phylogenetic affinities of ants and bees helps us understand
+        and reconstruct patterns of social evolution as well as fully appreciate the
+        biological implications of the switch from carnivory to pollen feeding (pollenivory).
+        Despite recent advancements in aculeate phylogeny [4–11], considerable uncertainty
+        remains regarding higher level relationships within Aculeata, including the
+        phylogenetic affinities of ants and bees [5–7]. We used ultraconserved element
+        (UCE) phylogenomics [7,12] to resolve relationships among stinging wasp families,
+        gathering sequence data from \u003e 800 UCE loci and 187 samples, including
+        30 out of 31 aculeate families. We analyzed the 187-taxon data set using multiple
+        analytical approaches, and we evaluated several alternative taxon sets. We
+        also tested alternative hypotheses for the phylogenetic positions of ants
+        and bees. Our results present a highly supported phylogeny of the stinging
+        wasps. Most importantly, we find unequivocal evidence that ants are the sister
+        group to bees+apoid wasps (Apoidea) and that bees are nested within a paraphyletic
+        Crabronidae. We also demonstrate that taxon choice can fundamentally impact
+        tree topology and clade support in phylogenomic inference.","funders":[{"organization":"National
+        Science Foundation","awardNumber":"DEB-1354996, DEB-0814544, DEB-0742998,
+        DEB-1555905"}],"keywords":["Mesozoic","Next-generation sequencing","ultraconserved
+        elements","social insects","Anthophila","Hymenoptera","taxon sampling","Cenozoic","molecular
+        systematics","phylogenomics","Aculeata","Apocrita"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eRaw
+        sequence reads.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eRaw
+        Illumina reads for all newly sequenced samples from this study.\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eAlignment
+        supermatrices.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eAll
+        alignment supermatrices from this study. In NEXUS format. Includes UCE locus
+        character set information.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eall-alignment-supermatrices.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eBEAST
+        XML data files.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eAll
+        BEAST XML data files generated for this study.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eall-beast-xml-files.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ePhylogenetic
+        trees.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eAll
+        phylogenetic trees generated in this study.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eall-phylogenetic-trees-results.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eData
+        tables.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eAll
+        data tables from this study.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eall-tables.xlsx\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ePartitioning
+        files.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003ePartitioning
+        files for the Hym-187T-F75 alignment supermatrix. Includes bylocus, hcluster,
+        rcluster, and kmeans partitioning schemes. In RAxML format.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003epartition-files-for-hym-187t-f75-supermatrix.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eAlternative
+        topologies for SH-tests.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eAll
+        alternative topologies used to test the position of ants and bees. SH-tests
+        were performed using RAxML.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003esh-test-alternative-topologies.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eSupplemental
+        figures S1 and S2 combined.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eThe
+        supplemental figures combined into a single pdf figure.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003esupplemental-figure-complete.pdf\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eUCE
+        contigs - aligned, untrimmed, and unfiltered.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eTrinity
+        contigs containing UCE loci. The contigs have been extracted from the bulk
+        set of Trinity contigs using Phyluce and aligned, but they have not been trimmed
+        to remove ambiguously aligned sites or filtered to remove loci with missing
+        data.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003euce-aligments-untrimmed-unfiltered.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eUCE
+        loci from genome-enabled samples.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eUCE
+        loci extracted from available genome-enabled Hymenoptera. Each UCE locus consists
+        of a core region plus 400 bp of flanking DNA on either side. Includes a lastz
+        match-counts database and fasta files for use with Phyluce.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003euce-loci-extracted-from-genome-enabled-samples.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eTrinity
+        assemblies - bulk.\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eThe
+        bulk set of Trinity assemblies for all enriched samples analyzed in this study.
+        Includes assemblies from the previous Faircloth et al. (2015) study. Cleaned
+        reads were assembled using Trinity ver. r2013-02-25.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003etrinity-assemblies-all-samples.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eBaCoCa
+        results\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eBaCoCa
+        analysis results. Performed on the Hym-187T-F75 locus set.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003ebacoca-results.xlsx\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e","locations":[{"place":"global"}],"relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1016/j.cub.2017.03.027"},{"relationship":"IsSupplementedBy","identifierType":"URN","identifier":"GenBank:../bioproject/?term=PRJNA379583"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2018-04-03","sharingLink":"https://datadryad.org/stash/share/sO_PLPW1TZWnzRjkNd5LeTtFEqvHttS8FIkZ7G8aRz4","userId":23331},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.2d7b8"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.2d7b8/versions"},"stash:version":{"href":"/api/v2/versions/95"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.2d7b8/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.2d7b8","id":95,"storage_size":997366561,"title":"Data
+        from: Complex selection on a regulator of social cognition: evidence of balancing
+        selection, regulatory interactions and population differentiation in the prairie
+        vole Avpr1a locus","authors":[{"firstName":"Alejandro","lastName":"Berrio","affiliation":"The
+        University of Texas at Austin","affiliationROR":"https://ror.org/00hj54h04"},{"firstName":"Rafael
+        F.","lastName":"Guerrero","affiliation":"Indiana University Bloomington","affiliationROR":"https://ror.org/02k40bc56"},{"firstName":"Galina
+        V.","lastName":"Aglyamova","affiliation":"The University of Texas at Austin","affiliationROR":"https://ror.org/00hj54h04"},{"firstName":"Mariam","lastName":"Okhovat","affiliation":"The
+        University of Texas at Austin","affiliationROR":"https://ror.org/00hj54h04"},{"firstName":"Mikhail
+        V.","lastName":"Matz","affiliation":"The University of Texas at Austin","affiliationROR":"https://ror.org/00hj54h04"},{"firstName":"Steven
+        M.","lastName":"Phelps","affiliation":"The University of Texas at Austin","affiliationROR":"https://ror.org/00hj54h04"}],"abstract":"Adaptive
+        variation in social behavior depends upon standing genetic variation, but
+        we know little about how evolutionary forces shape genetic diversity relevant
+        to brain and behavior. In prairie voles (Microtus ochrogaster), variants at
+        the Avpr1a locus predict expression of the vasopressin 1a receptor in the
+        retrosplenial cortex (RSC), a brain region that mediates spatial and contextual
+        memory; cortical V1aR abundance in turn predicts diversity in space-use and
+        sexual fidelity in the field. To examine the potential contributions of adaptive
+        and neutral forces to variation at the Avpr1a locus, we explore sequence diversity
+        at the Avpr1a locus and throughout the genome in two populations of wild prairie
+        voles. First, we refine results demonstrating balancing selection at the locus
+        by comparing the frequency spectrum of variants at the locus to a random sample
+        of the genome. Next, we find that the four SNPs that predict high V1aR expression
+        in the RSC are in stronger linkage disequilibrium than expected by chance
+        despite high recombination among intervening variants, suggesting that epistatic
+        selection maintains their association despite recombination. Analysis of population
+        structure and a haplotype network for two populations revealed that this excessive
+        LD was unlikely to be due to admixture alone. Furthermore, the two populations
+        differed considerably in the region shown to be a regulator of V1aR expression
+        despite the extremely low levels of genome-wide genetic differentiation. Together,
+        our data suggest that complex selection on Avpr1a locus favors specific combinations
+        of regulatory polymorphisms, maintains the resulting alleles at populations-specific
+        frequencies, and may contribute to unique patterns of spatial cognition and
+        sexual fidelity among populations.","funders":[{"organization":"National Science
+        Foundation","awardNumber":"IOS-1457350, IOS-1355188"}],"keywords":["Gene Regulation","Sexual
+        Fidelity","Microtus ochrogaster","Behavior/Social Evolution","Holocene","Adaptation","Population
+        Genetics - Empirical"],"usageNotes":"\u003cdiv class=\"o-metadata__file-usage-entry\"\u003e\u003ch4
+        class=\"o-heading__level3-file-title\"\u003eData and scripts to plot and analyse
+        complex selection in two populations of prairie voles\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eThis repository contains the data
+        necessary to plot each figure from 1 to 4, and S1 and S2. Also in folder Haploview_Slider_PopArt_data,
+        we include the nucleotide alignments and and output data from haploview, and
+        input data for popart, slider and dnasp5. In the root, we included two excel
+        files. Raw scores of haplotypes and data procesing for generating input files
+        for haploview and phase.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eBerrio2017.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e","locations":[{"place":"Jackson
+        County"},{"place":"IL"},{"place":"Champaign County"}],"relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1111/mec.14455"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2017-11-07","sharingLink":"https://datadryad.org/stash/share/McB6KSO128OrE8j7qy05_-O1ofjD0hvyF8yR4sasE6k","userId":15906},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.s3j9074"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.s3j9074/versions"},"stash:version":{"href":"/api/v2/versions/96"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.s3j9074/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.s3j9074","id":96,"storage_size":996067863,"title":"Data
+        from: The evolution of marine larval dispersal kernels in spatially structured
+        habitats: analytical models, individual-based simulations, and comparisons
+        with empirical estimates","authors":[{"firstName":"Allison K.","lastName":"Shaw","affiliation":"University
+        of Minnesota","affiliationROR":"https://ror.org/017zqws13"},{"firstName":"Cassidy
+        C.","lastName":"D''Aloia","affiliation":"Woods Hole Oceanographic Institution","affiliationROR":"https://ror.org/03zbnzt98"},{"firstName":"Peter
+        M.","lastName":"Buston","affiliation":"Boston University","affiliationROR":"https://ror.org/05qwgg493"}],"abstract":"Understanding
+        the causes of larval dispersal is a major goal of marine ecology, yet most
+        research focuses on proximate causes. Here, we ask how ultimate, evolutionary
+        causes affect dispersal. Building on Hamilton and May''s 1977 classic paper
+        (``Dispersal in stable habitats\"), we develop analytic and simulation models
+        for the evolution of dispersal kernels in spatially structured habitats. First,
+        we investigate dispersal in a world without edges and find that most offspring
+        disperse as far as possible, opposite the pattern of empirical data. Adding
+        edges to our model world leads to nearly all offspring dispersing short distances,
+        again a mismatch with empirical data. Adding resource heterogeneity improves
+        our results: most offspring disperse short distances with some dispersing
+        longer distances. Finally, we simulate dispersal evolution in a real seascape
+        in Belize and find that the simulated dispersal kernel and an empirical dispersal
+        kernel from that seascape both have the same shape, with a high level of short-distance
+        dispersal and a low level of long-distance dispersal. The novel contribution
+        of this work is to provide a spatially explicit analytic extension of Hamilton
+        and May 1977, to demonstrate that our spatially explicit simulations and analytic
+        models provide equivalent results, and to use simulation approaches to investigate
+        the evolution of dispersal kernel shape in spatially complex habitats. Our
+        model could be modified in various ways to investigate dispersal evolution
+        in other species and seascapes, providing new insights into patterns of marine
+        larval dispersal.","funders":[{"organization":"National Science Foundation","awardNumber":"OCE-1260424"}],"keywords":["Ecology:
+        evolutionary","Dispersal","Coral reef"],"usageNotes":"\u003cdiv class=\"o-metadata__file-usage-entry\"\u003e\u003ch4
+        class=\"o-heading__level3-file-title\"\u003eREADME\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eContains readme and notes for
+        all files.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eREADME.txt\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003efiles_runsims\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eContains Matlab code (.m files)
+        for running model simulation data used for Figures 2-4 in the paper.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eoutput_environments\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eContains Matlab data files (.mat
+        files) for each type of simulation environment.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eoutput_simulations\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eContains Matlab data files (.mat
+        files) for each individual-based simulation.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003efiles_plotsims\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eContains Matlab code (.m files)
+        for plotting Figures 2-4 in the paper, using the above .mat files.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003efiles_plotcomparisons\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eContains Matlab code (.m files),
+        R code (.R files) and data files (.csv) to compare simulated and empirical
+        data and to plot Figure 5 in the paper.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e","relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1086/701667"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2018-11-07","sharingLink":"https://datadryad.org/stash/share/QSMRTYkWBgtT63mX_545mXZ8q9SCkevAZSKW3TbzM90","userId":7568},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.08vv50n"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.08vv50n/versions"},"stash:version":{"href":"/api/v2/versions/97"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.08vv50n/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.08vv50n","id":97,"storage_size":994990868,"title":"Data
+        from: Gene discovery in Gelsemium highlights conserved gene clusters in monoterpene
+        indole alkaloid biosynthesis","authors":[{"firstName":"Jakob","lastName":"Franke","affiliation":"John
+        Innes Centre","affiliationROR":"https://ror.org/055zmrh94"},{"firstName":"Jeongwoon","lastName":"Kim","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"John
+        P.","lastName":"Hamilton","affiliation":"Michigan State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Dongyan","lastName":"Zhao","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Gina
+        M.","lastName":"Pham","affiliation":"Michigan State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Krystle","lastName":"Wiegert-Rininger","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Emily","lastName":"Crisovan","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Linsey","lastName":"Newton","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Brieanne","lastName":"Vaillancourt","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Evangelos","lastName":"Tatsis","affiliation":"John
+        Innes Centre","affiliationROR":"https://ror.org/055zmrh94"},{"firstName":"C.
+        Robin","lastName":"Buell","affiliation":"Michigan State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Sarah
+        E.","lastName":"O''Connor","affiliation":"John Innes Centre","affiliationROR":"https://ror.org/055zmrh94"}],"keywords":["Alkaloid","Gelsimium","Biosynthesis"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003egel_v1_asm.fasta\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGenome assembly of Gelsemium sempervirens
+        (version 1), containing 3,352 scaffold sequences\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ecro_v2_asm.fasta\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGenome assembly of Catharanthus
+        roseus (version 2), containing 2,090 scaffold sequences\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003egel_v1.gene_models.gff3\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGene Model Annotation for Gelsemium
+        sempervirens (version 1) in Generic Feature Format 3 (GFF3)\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003egel_v1.transcripts.fasta\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGelsemium sempervirens (version
+        1) transcript sequences\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003egel_v1.proteins.fasta\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGelsemium sempervirens (version
+        1) protein sequences\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ecro_v2.gene_models.gff3\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGene Model Annotation for Catharanthus
+        roseus (version 2) in Generic Feature Format 3 (GFF3)\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ecro_v2.transcripts.fasta\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eCatharanthus roseus (version 2)
+        transcript sequences\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003ecro_v2.proteins.fasta\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eCatharanthus roseus (version 2)
+        protein sequences\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eREADME.txt\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eREADME.txt\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003eREADME.txt\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e","relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1002/cbic.201800592"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2018-10-25","sharingLink":"https://datadryad.org/stash/share/kXrqckBe-UK1ZtdsEDo9D5DXL3VEbmSqKKSD6QoGWK8","userId":7856},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.n2q7f"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.n2q7f/versions"},"stash:version":{"href":"/api/v2/versions/35333"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.n2q7f/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.n2q7f","id":98,"storage_size":994682183,"title":"Data
+        from: \"Comparative genomic resources for spiny lizards (genus Sceloporus)\"
+        in Genomic Resources Notes accepted 1 August 2014-30 September 2014","authors":[{"firstName":"Rebecca
+        B.","lastName":"Harris","email":"rharri35@asu.edu","affiliation":"Arizona
+        State University","affiliationROR":"https://ror.org/03efmqc40"},{"firstName":"Adam
+        D.","lastName":"Leaché","email":"","affiliation":"University of Washington","affiliationROR":"https://ror.org/00cvxb145"}],"abstract":"To
+        advance comparative genomic studies of the spiny fence lizards (genus Sceloprous),
+        we provide the genomic annotations for 35 Sceloporus species.","keywords":["Reptiles","Sceloporus
+        clarkii","Sceloporus carinatus","Comparative Biology","Sceloporus malachiticus","Sceloporus
+        zosteromus","Sceloporus occidentalis","Sceloporus licki","Sceloporus olivaceus","Sceloporus
+        exsul","Gene Structure and Function","Sceloporus ochoterenae","Sceloporus
+        tristichus","Sceloporus edwardtaylori","Sceloporus hunsakeri","Sceloporus
+        jalapae","Sceloporus spinosus","Sceloporus angustus","Sceloporus bicanthalis","Sceloporus
+        adleri","Sceloporus gadoviae","Sceloporus taeniocnemis","Sceloporus torquatus","Sceloporus
+        scalaris","Sceloporus siniferus","Sceloporus smithi","Sceloporus formosus","Sceloporus
+        grammicus","Sceloporus horridus","Sceloporus mucronatus","Sceloporus palaciosi","Sceloporus
+        cowlesi","Sceloporus magister","Genomics/Proteomics","Sceloporus graciosus","Sceloporus
+        woodi","Sceloporus variabilis","Sceloporus utiformis","Sceloporus orcutti"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eSceloporus
+        GFF3 annotation files\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eAnnotation,
+        gene ontology, and genomic sequences in GFF3 format\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003esceloporus_gff.tar.gz\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eOrthologous
+        groups\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eOrthologous
+        groups predicted by OrthoMCL. Datasets included: 35 Sceloporus species, plus
+        the Anolis carolinensis, Gallus gallus, and human proteins.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003esceloporus_ortho_groups.txt\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e","relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1111/1755-0998.12340"}],"versionNumber":2,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2019-10-02","sharingLink":"https://datadryad.org/stash/share/k6K80eoTqAOR-jlwXZ5KG7YsCAytNITI2PueTeF4W50","userId":5397},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.4vg17"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.4vg17/versions"},"stash:version":{"href":"/api/v2/versions/35335"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.4vg17/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.4vg17","id":99,"storage_size":994533047,"title":"Data
+        from: Demographic modelling reveals a history of divergence with gene flow
+        for a glacially tied stonefly in a changing post-Pleistocene landscape","authors":[{"firstName":"Scott","lastName":"Hotaling","email":"scott.hotaling@wsu.edu","affiliation":"University
+        of Kentucky","affiliationROR":"https://ror.org/02k3smh20"},{"firstName":"Clint
+        C.","lastName":"Muhlfeld","affiliation":"University of Montana","affiliationROR":"https://ror.org/0078xmk34"},{"firstName":"J.
+        Joseph","lastName":"Giersch","email":"","affiliation":"United States Geological
+        Survey","affiliationROR":"https://ror.org/035a68863"},{"firstName":"Omar A.","lastName":"Ali","email":"","affiliation":"University
+        of California, Davis","affiliationROR":"https://ror.org/05rrcem69"},{"firstName":"Steve","lastName":"Jordan","affiliation":"Bucknell
+        University","affiliationROR":"https://ror.org/00fc1qt65"},{"firstName":"Michael
+        R.","lastName":"Miller","email":"","affiliation":"University of California,
+        Davis","affiliationROR":"https://ror.org/05rrcem69"},{"firstName":"Gordon","lastName":"Luikart","affiliation":"University
+        of Montana","affiliationROR":"https://ror.org/0078xmk34"},{"firstName":"David
+        W.","lastName":"Weisrock","affiliation":"University of Kentucky","affiliationROR":"https://ror.org/02k3smh20"}],"abstract":"Aim:
+        Climate warming is causing extensive loss of glaciers in mountainous regions,
+        yet our understanding of how glacial recession influences evolutionary processes
+        and genetic diversity is limited. Linking genetic structure with the influences
+        shaping it can improve understanding of how species respond to environmental
+        change. Here, we used genome-scale data and demographic modelling to resolve
+        the evolutionary history of Lednia tumana, a rare, aquatic insect endemic
+        to alpine streams. We also employed a range of widely used data filtering
+        approaches to quantify how they influenced population structure results.\r\nLocation:
+        Alpine streams in the Rocky Mountains of Glacier National Park, Montana, USA.\r\nTaxon:
+        Lednia tumana, a stonefly (Order Plecoptera) in the family Nemouridae.\r\nMethods:
+        We generated single nucleotide polymorphism data through restriction-site
+        associated DNA sequencing to assess contemporary patterns of genetic structure
+        for 11 L. tumana populations. Using identified clusters, we assessed demographic
+        history through model selection and parameter estimation in a coalescent framework.
+        During population structure analyses, we filtered our data to assess the influence
+        of singletons, missing data and total number of markers on results.\r\nResults:
+        Contemporary patterns of population structure indicate that L. tumana exhibits
+        a pattern of isolation-by-distance among populations within three genetic
+        clusters that align with geography. Mean pairwise genetic differentiation
+        (FST) among populations was 0.033. Coalescent-based demographic modelling
+        supported divergence with gene flow among genetic clusters since the end of
+        the Pleistocene (~13-17 kya), likely reflecting the south-to-north recession
+        of ice sheets that accumulated during the Wisconsin glaciation.\r\nMain conclusions:
+        We identified a link between glacial retreat, evolutionary history and patterns
+        of genetic diversity for a range-restricted stonefly imperiled by climate
+        change. This finding included a history of divergence with gene flow, an unexpected
+        conclusion for a mountaintop species. Beyond L. tumana, this study demonstrates
+        the complexity of assessing genetic structure for weakly differentiated species,
+        shows the degree to which rare alleles and missing data may influence results,
+        and highlights the usefulness of genome-scale data to extend population genetic
+        inquiry in non-model species.","keywords":["alpine stream ecology","global
+        change","population genomics","Glacier National Park","Lednia tumana","RAD
+        sequencing","coalescent","phylogeography","conservation genetics","Pleistocene"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eDryad
+        Accession for Hotaling et al. 2017, Journal of Biogeography\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eRelevant files for the associated
+        study: input files for PLINK and Fastsimcoal2, a key of individuals/populations,
+        and raw SNP catalog as output by STACKS with a whitelist for the loci/SNPs
+        used in this study.\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003eHotaling_2017_Dryad.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e","locations":[{"place":"Glacier
+        National Park"}],"relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1111/jbi.13125"}],"versionNumber":2,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2018-10-12","sharingLink":"https://datadryad.org/stash/share/GeA7w1XNQlNtEXJM7gQWDU9QW3lL69BeuOddlYdjVFA","userId":19324},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.77b2422"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.77b2422/versions"},"stash:version":{"href":"/api/v2/versions/40259"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.77b2422/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.77b2422","id":100,"storage_size":992653273,"title":"Data
+        from: A chromosomal-scale genome assembly of Tectona grandis reveals the importance
+        of tandem gene duplication and enables discovery of genes in natural product
+        biosynthetic pathways","authors":[{"firstName":"Dongyan","lastName":"Zhao","email":"zhaodon4@msu.edu","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"John
+        P.","lastName":"Hamilton","email":"zhaodon4@msu.edu","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Wajid
+        Waheed","lastName":"Bhat","email":"zhaodon4@msu.edu","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Sean
+        R.","lastName":"Johnson","email":"zhaodon4@msu.edu","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"Grant
+        T.","lastName":"Godden","email":"zhaodon4@msu.edu","affiliation":"University
+        of Florida","affiliationROR":"https://ror.org/02y3ad647"},{"firstName":"Taliesin
+        J.","lastName":"Kinser","email":"zhaodon4@msu.edu","affiliation":"University
+        of Florida","affiliationROR":"https://ror.org/02y3ad647"},{"firstName":"Benoît","lastName":"Boachon","email":"zhaodon4@msu.edu","affiliation":"Purdue
+        University West Lafayette","affiliationROR":"https://ror.org/02dqehb95"},{"firstName":"Natalia","lastName":"Dudareva","email":"zhaodon4@msu.edu","affiliation":"Purdue
+        University West Lafayette","affiliationROR":"https://ror.org/02dqehb95"},{"firstName":"Douglas
+        E.","lastName":"Soltis","email":"zhaodon4@msu.edu","affiliation":"University
+        of Florida","affiliationROR":"https://ror.org/02y3ad647"},{"firstName":"Pamela
+        S.","lastName":"Soltis","email":"zhaodon4@msu.edu","affiliation":"University
+        of Florida","affiliationROR":"https://ror.org/02y3ad647"},{"firstName":"Bjoern","lastName":"Hamberger","email":"zhaodon4@msu.edu","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"},{"firstName":"C.
+        Robin","lastName":"Buell","email":"buell@msu.edu","affiliation":"Michigan
+        State University","affiliationROR":"https://ror.org/05hs6h993"}],"abstract":"Background:
+        Teak, a member of the Lamiaceae family, produces one of the most expensive
+        hardwoods in the world. High demand coupled with deforestation have caused
+        a decrease in natural teak forests, and future supplies will be reliant on
+        teak plantations. Hence, selection of teak tree varieties for clonal propagation
+        with superior growth performance is of great importance, and access to high-quality
+        genetic and genomic resources can accelerate the selection process by identifying
+        genes underlying desired traits.\r\nFindings: To facilitate teak research
+        and variety improvement, we generated a highly contiguous, chromosomal-scale
+        genome assembly using high-coverage PacBio long reads coupled with high-throughput
+        chromatin conformation capture. Of the 18 teak chromosomes, we generated 17
+        near-complete pseudomolecules with one chromosome present as two chromosome
+        arm scaffolds. Genome annotation yielded 31,168 genes encoding 46,826 gene
+        models, of which, 39,930 and 41,155 had Pfam domain and expression evidence,
+        respectively. We identified 14 clusters of tandem-duplicated terpene synthases
+        (TPSs), genes central to the biosynthesis of terpenes which are involved in
+        plant defense and pollinator attraction. Transcriptome analysis revealed 10
+        TPSs highly expressed in woody tissues, of which, 8 were in tandem, revealing
+        the importance of resolving tandemly duplicated genes and the quality of the
+        assembly and annotation. We also validated the enzymatic activity of four
+        TPSs to demonstrate the function of key TPSs.\r\nConclusions: In summary,
+        this high-quality chromosomal-scale assembly and functional annotation of
+        the teak genome will facilitate the discovery of candidate genes related to
+        traits critical for sustainable production of teak and for anti-insecticidal
+        natural products.","funders":[{"organization":"National Science Foundation","awardNumber":"IOS-1444499"}],"keywords":["chromosomal-scale
+        assembly","tandem-duplicated genes","teak","terpene synthases"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_tectona_grandis_26Jun2018_7GlFM_fmt_tp.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003efasta sequences of the assembly\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak.working_models_HiC.cdna_con_sorted.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003ecDNA sequences of all isoforms
+        of the working gene set\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak.working_models_HiC.cds_con_sorted.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eCDS of all isoforms of the working
+        gene set\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak.working_models_HiC.pep_con_sorted.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003ePeptide sequence of all isoforms
+        of the working gene set\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak.working_models_HiC_fmtDes_con_sorted.gff\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGFF of all isoforms of the working
+        gene set\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_hc_models_HiC_con_sorted_modiGeneID.gff\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGFF of all high-confidence gene
+        models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_hc_models_HiC.cdna_con_sorted_modiGeneID.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003ecDNA sequences of all high-confidence
+        gene models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_hc_models_HiC.cds_con_sorted_modiGeneID.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eCDS of all high-confidence gene
+        models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_hc_models_HiC.pep_con_sorted_modiGeneID.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003ePeptide sequences of all high-confidence
+        gene models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_repr_hc_models_HiC_con_sorted_modiGeneID.gff\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eGFF of representative high-confidence
+        gene models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_repr_hc_models_HiC.cdna_con_sorted_modiGeneID.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003ecDNA sequences of representative
+        high-confidence gene models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_repr_hc_models_HiC.cds_con_sorted_modiGeneID.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eCDS of representative high-confidence
+        gene models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_repr_hc_models_HiC.pep_con_sorted_modiGeneID.fa\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003ePeptide sequences of representative
+        high-confidence gene models\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eteak_working_gene_fpkm_matrix_con_sorted.txt\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eExpression abundances of the working
+        gene set were estimated using cufflinks RNAseq experiment atlas from NCBI
+        SRA BioProject PRJNA287604\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003e2018.10.23-teak-data-readme.docx\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003eReadme\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e","relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1093/gigascience/giz005"}],"versionNumber":5,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2019-10-23","sharingLink":"https://datadryad.org/stash/share/0OJnYyLlHTJgKT09McEdKNrRMFTSN8FUnFUS5KEzQfc","userId":7856},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.9cp3j"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.9cp3j/versions"},"stash:version":{"href":"/api/v2/versions/101"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.9cp3j/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.9cp3j","id":101,"storage_size":991316188,"title":"Data
+        from: The chinchilla as a novel animal model of pregnancy","authors":[{"firstName":"Emmeli","lastName":"Mikkelsen","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Henrik","lastName":"Lauridsen","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Per
+        Mose","lastName":"Nielsen","affiliation":"Aarhus University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Haiyun","lastName":"Qi","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Thomas","lastName":"Nørlinger","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Maria
+        Dahl","lastName":"Andersen","affiliation":"Aarhus University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Niels","lastName":"Uldbjerg","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Christoffer","lastName":"Laustsen","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Puk","lastName":"Sandager","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"},{"firstName":"Michael","lastName":"Pedersen","affiliation":"Aarhus
+        University Hospital","affiliationROR":"https://ror.org/040r8fr65"}],"abstract":"Several
+        parameters are important when choosing the most appropriate animal to model
+        human obstetrics, including gestation period, number of fetuses per gestation
+        and placental structure. The domesticated long-tailed chinchilla (Chinchilla
+        lanigera) is a well-suited and appropriate animal model of pregnancy that
+        often will carry only one offspring and has a long gestation period of 105–115
+        days. Furthermore, the chinchilla placenta is of the haemomonochorial labyrinthine
+        type and is therefore comparable to the human villous haemomonochorial placenta.
+        This proof-of-concept study demonstrated the feasibility in laboratory settings,
+        and demonstrated the potential of the pregnant chinchilla as an animal model
+        for obstetric research and its potential usefulness for non-invasive measurements
+        in the placenta. We demonstrate measurements of the placental and fetal metabolism
+        (demonstrated in vivo by hyperpolarized MRI and in vitro by qPCR analyses),
+        placental vessels (demonstrated ex vivo by contrast-enhanced CT angiography)
+        and overall anatomy (demonstrated in vivo by whole-body CT).","keywords":["Pregnant
+        animal models","Placenta","Imaging","Comparative Biology","Chinchilla"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eImaging
+        data\u003c/h4\u003e\u003cdiv class=\"o-metadata__file-description\"\u003eData
+        contains (zip format files): 1) reconstructed MRI data (General Electric MRI
+        system) and regions-of-interests files. Excel spreadsheet is provided with
+        signal intensity results. 2) CT whole-animal data (SIemens CT system). 3)
+        CT angiography of placenta (Scanco CT system).\u003c/div\u003e\u003cdiv class=\"o-metadata__file-name\"\u003esupplementary
+        data.zip\u003c/br\u003e\u003c/div\u003e\u003c/div\u003e","relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1098/rsos.161098"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2017-03-30","sharingLink":"https://datadryad.org/stash/share/lY5ZQSehrrNDoq7x8vBoDToSvYHHXwFLvagTY6rFg3w","userId":23797},{"_links":{"self":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.r5nf0"},"stash:versions":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.r5nf0/versions"},"stash:version":{"href":"/api/v2/versions/102"},"stash:download":{"href":"/api/v2/datasets/doi%3A10.5061%2Fdryad.r5nf0/download"},"curies":[{"name":"stash","href":"https://github.com/CDL-Dryad/stash/blob/master/stash_api/link-relations.md#{rel}","templated":"true"}]},"identifier":"doi:10.5061/dryad.r5nf0","id":102,"storage_size":990328081,"title":"Data
+        from: Community trees: identifying codiversification in the páramo dipteran
+        community","authors":[{"firstName":"Bryan Charles","lastName":"Carstens","affiliation":"University
+        of California, Davis","affiliationROR":"https://ror.org/05rrcem69"},{"firstName":"Michael","lastName":"Gruenstaeudl","affiliation":"Freie
+        Universität Berlin","affiliationROR":"https://ror.org/046ak2485"},{"firstName":"Noah
+        M.","lastName":"Reid","affiliation":"University of California, Davis","affiliationROR":"https://ror.org/05rrcem69"},{"firstName":"Bryan
+        C.","lastName":"Carstens","affiliation":"The Ohio State University","affiliationROR":"https://ror.org/00rs6vg23"}],"abstract":"Groups
+        of codistributed species that responded in a concerted manner to environmental
+        events are expected to share patterns of evolutionary diversification. However,
+        the identification of such groups has largely been based on qualitative, post
+        hoc analyses. We develop here two methods (PPS, K-F ANOVA) for the analysis
+        of codistributed species that, given a group of species with a shared pattern
+        of diversification, allow empiricists to identify those taxa that do not codiversify
+        (i.e., \"outlier\" species). The identification of outlier species makes it
+        possible to jointly estimate the evolutionary history of co-diversifying taxa.
+        To evaluate the approaches presented here, we collected data from Páramo dipterans,
+        identified outlier species, and estimated a \"community tree\" from species
+        that are identified as having co-diversified. Our results demonstrate that
+        dipteran communities from different Páramo habitats in the same mountain range
+        are more closely related than communities in other ranges. We also conduct
+        simulation testing to evaluate this approach. Results suggest that our approach
+        provides a useful addition to comparative phylogeographic methods, while identifying
+        aspects of the analysis that require careful interpretation. In particular,
+        both the PPS and K-F ANOVA perform acceptably when there are one or two outlier
+        species, but less so as the number of outliers increase. This is likely a
+        function of the corresponding degradation of the signal of community divergence;
+        without a strong signal from a co-diversifying community, there is no dominant
+        pattern from which to detect and outlier species. For this reason, both the
+        magnitude of K-F distance distribution and outside knowledge about the phylogeographic
+        history of each putative member of the community should be considered when
+        interpreting results.","keywords":["Coalescent Theory","Dipteran communities","Pleistocene
+        to recent","Biogeography","Páramo","Diptera","comparative phylogeography"],"usageNotes":"\u003cdiv
+        class=\"o-metadata__file-usage-entry\"\u003e\u003ch4 class=\"o-heading__level3-file-title\"\u003eCommunity_Trees\u003c/h4\u003e\u003cdiv
+        class=\"o-metadata__file-description\"\u003e1. Nexus files from Paramo fly
+        species, containing aligned COI data described in text of manuscript. 2. Results
+        from community tree analysis of Paramo fly COI data.\u003c/div\u003e\u003cdiv
+        class=\"o-metadata__file-name\"\u003e\u003c/div\u003e\u003c/div\u003e","locations":[{"place":"Central
+        America"}],"relatedWorks":[{"relationship":"IsSupplementTo","identifierType":"DOI","identifier":"doi:10.1111/evo.12916"}],"versionNumber":1,"versionStatus":"submitted","curationStatus":"Published","publicationDate":"2016-03-23","sharingLink":"https://datadryad.org/stash/share/dpTpU9k42sDqO-N1aLYqCFbWGLw2wpOIAk1lxB4XFLc","userId":18363}]}}'
+  recorded_at: 2020-06-24 20:18:31 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

@@ -1,0 +1,100 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://datadryad.org/api/v2/files/61858/download
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.0 r-curl/4.3 crul/0.9.2.92
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      x-amz-id-2: bPIHwZNJT2JV2sF62jdIrry+uKzD+8VwV53M7SXUHMPLQmTvddJbSJYgIYhz2K1jpEvWQzBwvis=
+      x-amz-request-id: 3FC7FFE309FCEB5F
+      date: Wed, 24 Jun 2020 17:24:59 GMT
+      x-amz-replication-status: FAILED
+      last-modified: Fri, 05 Jul 2019 16:55:26 GMT
+      etag: '"c914810b357752a8e0df61c65a2acad9"'
+      x-amz-meta-sha256: 506c33db2b3916080640e0b18184cc9f1893544b22dbe15a0fb5a46c0f334a5d
+      x-amz-version-id: XSWU7dN9eaAnOJTjIdjFxRtStKzasZXL
+      accept-ranges: bytes
+      content-type: text/csv
+      content-length: '1805'
+      server: AmazonS3
+    body:
+      encoding: UTF-8
+      file: no
+      string: "Bird,Day,Tree,Mean max-depth,Mean depth,Total depth,Mean duration,Total
+        duration,Mean wiggles,Total wiggles,Chick mass,CORTA,CORTB,Pre mass,Post mass,PRLA,PRLB,Time
+        away\r1,1,CORT,,,,,,,,1900,17.05,183.59,3.25,3.25,19.93,14.67,0.4\r2,1,CORT,17.9526,14.2179,2388.6,65.3452,10978,11.3631,1909,2000,27.57,22.12,3.6,3.65,9.37,8.66,0.63\r5,5,CORT,19.4013,15.1923,6639.04,72.1053,31510,8.56751,3744,2000,7.16,18,3.3,3.65,9.02,7.72,2.32\r7,5,CORT,25.0019,17.6142,6129.74,82.125,28579.5,10.9655,3816,1825,28.76,43.75,3.45,3.7,8.46,9.19,1.25\r9,5,CORT,22.9801,15.9005,13451.8,90.1489,76266,9.74941,8248,2320,30.49,56.84,3.5,3.5,10.37,8.9,3.23\r10,5,CORT,20.2809,14.1672,11319.6,86.062,68763.5,10.781,8614,1900,41.64,27.59,3.5,4.2,10.91,10.95,3.24\r13,10,CORT,23.3878,15.7367,5854.06,77.6909,28901,11.1962,4165,1850,24.87,31.49,3.35,3.5,15.6,6.72,1.28\r14,10,CORT,,,,,,,,1850,13.34,136.19,3.65,3.75,9.74,9.04,0.49\r17,10,CORT,24.5975,17.5577,17224.1,98.788,96911,10.2232,10029,2250,28.64,76.42,3.45,4.08,9.98,6.05,3.12\r3,1,s/c,22.9098,15.4219,2220.75,76.2118,10974.5,9.40972,1355,1555,16.27,10.18,3.75,3.75,8.74,7.77,1.27\r4,1,s/c,24.0125,17.1987,5108,89.0219,26439.5,11.4007,3386,1805,11.8,11.01,4.1,4.25,8.34,9.18,1.27\r6,5,s/c,19.4948,14.5914,8973.68,90.2902,55528.5,11.7577,7231,2000,24.74,34.57,3.5,3.5,8.14,9.39,1.89\r8,5,s/c,20.8311,14.958,11532.6,89.9578,69357.5,10.5266,8116,1850,20.12,10.38,3.25,3.75,11.2,10.82,1.22\r11,5,s/c,16.6037,11.6318,348.953,70.6667,2120,7.53333,226,1705,36.02,29.03,3.35,3.25,10.95,12.2,0.45\r12,5,s/c,16.4438,13.1394,4033.8,82.9935,25479,12.0293,3693,1800,27.62,20.32,3.95,4.15,10.72,7.88,1.55\r15,10,s/c,37.1391,25.613,7479,94.976,27733,11.4247,3336,1900,8.74,14.28,3.5,3.65,10.48,7.3,1.51\r16,10,s/c,26.4352,19.6094,5922.04,87.6308,26464.5,12.7252,3843,1740,9.58,3.98,3.3,3.4,10.45,7.46,0.75"
+  recorded_at: 2020-06-24 17:24:58 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://datadryad.org/api/v2/files/61859/download
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.0 r-curl/4.3 crul/0.9.2.92
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      x-amz-id-2: BQhR6cdpydeEan9JudIuBoPZ4597X2t72zvOmsabG1sAu0CToD7T145t5+u+45n8k1TfB06s2Yw=
+      x-amz-request-id: BW8M3VFWAN7VCP1R
+      date: Wed, 24 Jun 2020 17:24:59 GMT
+      x-amz-replication-status: FAILED
+      last-modified: Fri, 05 Jul 2019 16:55:26 GMT
+      etag: '"17b8b16632df3fead0dd8417fa786a8a"'
+      x-amz-meta-sha256: 9c4720cf4b330e9b4590d0e75c4f5c26fa94a64fafda2f3644a69a26d6264b9e
+      x-amz-version-id: EUKq4EX63WCX3KOS_GyM5UldkTA0QpMv
+      accept-ranges: bytes
+      content-type: application/rtf
+      content-length: '1136'
+      server: AmazonS3
+    body:
+      encoding: UTF-8
+      file: no
+      string: |-
+        {\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+        {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+        {\colortbl;\red255\green255\blue255;}
+        \margl1440\margr1440\vieww9000\viewh8400\viewkind0
+        \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+        \f0\fs24 \cf0 Column descriptions\
+        \
+        A- Bird number\
+        B- Day of capture and pre-foraging trip sampling (Julian)\
+        C- Treatment: corticosterone implanted or sham/control\
+        D- Maximum depth of dives during foraging trip (mean value), in meters\
+        E- Mean depth of dives, in meters\
+        F- Total additive depth of all dives, in meters\
+        G- Mean duration of dives, in seconds\
+        H- Total additive duration of dives, in seconds\
+        I- Mean number of wiggles, or foraging events, per dive\
+        J- Total number of wiggles exhibited during all dives\
+        K- Chick mass measured on Jan 20.\
+        L- Pre-foraging corticosterone [ng/ml)\
+        M- Post-foraging corticosterone [ng/ml)\
+        N- Pre-foraging body mass (kg)\
+        O- Post-foraging body mass (kg)\
+        P- Pre-foraging prolactin (ng/ml)\
+        Q- Post-foraging prolactin (ng/ml)\
+        R- Total time away from colony during foraging trip (days)\
+        }
+  recorded_at: 2020-06-24 17:24:58 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

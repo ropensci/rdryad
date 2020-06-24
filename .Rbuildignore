@@ -12,3 +12,4 @@ cran-comments.md
 ^CODE_OF_CONDUCT\.md$
 .github
 ^Makefile$
+tests/files/

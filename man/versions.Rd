@@ -14,7 +14,7 @@ dryad_versions_files(ids, ...)
 dryad_versions_download(ids, ...)
 }
 \arguments{
-\item{ids}{(character) one or more version ids, required}
+\item{ids}{(numeric/integer) one or more version ids, required}
 
 \item{...}{Further args passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
@@ -25,7 +25,7 @@ a list of lists, each named by the input DOI
 Get a dataset version by version ID
 }
 \details{
-\code{dryad_versions()}, \code{dryad_versions_files()}, and \code{dryad_files()}
+\code{dryad_versions()} and \code{dryad_versions_files()}
 use async http requests, while \code{dryad_versions_download()}
 does not use async
 }
@@ -34,6 +34,5 @@ does not use async
 dryad_versions(ids = 18774)
 dryad_versions_files(ids = 18774)
 dryad_versions_download(ids = 18774)
-dryad_files(ids = 57485)
 }
 }

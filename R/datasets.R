@@ -27,6 +27,7 @@ dryad_datasets <- function(...) {
 #' dryad_dataset(dois = dois)
 #' }
 dryad_dataset <- function(dois, ...) {
+  assert(dois, "character")
   og_dois <- dois
   dois <- curl::curl_escape(paste0("doi:", dois))
   tmp <- dGETasync(urls = file.path(dr_base_apiv2(), "api/v2/datasets", dois), ...)
@@ -46,6 +47,7 @@ dryad_dataset <- function(dois, ...) {
 #' dryad_dataset_versions(dois = dois)
 #' }
 dryad_dataset_versions <- function(dois, ...) {
+  assert(dois, "character")
   og_dois <- dois
   dois <- curl::curl_escape(paste0("doi:", dois))
   urls <- file.path(dr_base_apiv2(), sprintf("api/v2/datasets/%s/versions", dois))

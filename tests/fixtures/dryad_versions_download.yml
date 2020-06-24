@@ -1,0 +1,40 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://datadryad.org/api/v2/versions/18774/download
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.0 r-curl/4.3 crul/0.9.2.92
+      Accept-Encoding: gzip, deflate
+      Accept: application/zip
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      cache-control: no-cache
+      connection: keep-alive
+      content-disposition: attachment; filename="doi_10.5061_dryad.f385721n__v1.zip"
+      content-type: application/zip
+      date: Wed, 24 Jun 2020 20:32:17 GMT
+      last-modified: Wed, 24 Jun 2020 20:32:17 GMT
+      server: nginx/1.17.3 + Phusion Passenger 6.0.4
+      set-cookie:
+      - AWSALB=0spMa9E+QlY6w88Kx3hvetof78PEMc6pAi/jVqHiS4UNNCItIzyvXsiJxXMzbIb30K8AXdJ0NnLl4734bsCcjQlAXePQQjupvipTYmjh2aImZaxibCTyEZsqwSKz;
+        Expires=Wed, 01 Jul 2020 20:32:17 GMT; Path=/
+      - AWSALBCORS=0spMa9E+QlY6w88Kx3hvetof78PEMc6pAi/jVqHiS4UNNCItIzyvXsiJxXMzbIb30K8AXdJ0NnLl4734bsCcjQlAXePQQjupvipTYmjh2aImZaxibCTyEZsqwSKz;
+        Expires=Wed, 01 Jul 2020 20:32:17 GMT; Path=/; SameSite=None; Secure
+      status:
+      - HTTP/1.1 200 OK
+      - 200 OK
+      transfer-encoding: chunked
+      x-powered-by: Phusion Passenger 6.0.4
+    body:
+      encoding: UTF-8
+      file: yes
+      string: ../files/18774.zip
+  recorded_at: 2020-06-24 20:32:21 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

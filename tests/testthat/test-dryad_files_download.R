@@ -1,7 +1,9 @@
 test_that("dryad_files_download", {
   skip_on_cran()
 
-  aa <- dryad_files_download(ids = 61858)
+  vcr::use_cassette("dryad_files_download", {
+    aa <- dryad_files_download(ids = 61858)
+  })
 
   expect_is(aa, "list")
   expect_equal(length(aa), 1)
@@ -12,9 +14,10 @@ test_that("dryad_files_download", {
 
 test_that("dryad_files_download accepts more than 1 id", {
   skip_on_cran()
-  # can't use vcr, async
 
-  bb <- dryad_files_download(ids = c(61858, 61859))
+  vcr::use_cassette("dryad_files_download_many_ids", {
+    bb <- dryad_files_download(ids = c(61858, 61859))
+  })
 
   expect_is(bb, "list")
   expect_equal(length(bb), 2)

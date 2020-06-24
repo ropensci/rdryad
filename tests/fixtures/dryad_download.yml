@@ -1,0 +1,36 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.f385721n/download
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.0 r-curl/4.3 crul/0.9.2.92
+      Accept-Encoding: gzip, deflate
+      Accept: application/zip
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      x-amz-id-2: 2mIVnNBvVvhkFdlDdfGU5FsrdnNZByujI2QjWCVkiRT30CEfULs1MJgtan7j0kbaKg6402LYJiM=
+      x-amz-request-id: DB3093CB4E649271
+      date: Wed, 24 Jun 2020 17:38:33 GMT
+      last-modified: Wed, 24 Jun 2020 17:33:04 GMT
+      x-amz-expiration: expiry-date="Thu, 09 Jul 2020 00:00:00 GMT", rule-id="14days-life-cycle"
+      etag: '"146178b679e308016d6e2dfe41de3885"'
+      x-amz-meta-sha256: c475ffe480eee2b4ba654387bd65d5bc68db518b71306b57721de765c6bc38f7
+      content-disposition: attachment; filename=doi_10.5061_dryad.f385721n__v1.zip
+      accept-ranges: bytes
+      content-type: application/zip
+      content-length: '1882'
+      server: AmazonS3
+    body:
+      encoding: UTF-8
+      file: yes
+      string: ../files/10_5061_dryad_f385721n.zip
+  recorded_at: 2020-06-24 17:38:32 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

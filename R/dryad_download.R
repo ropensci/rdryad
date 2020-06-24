@@ -10,12 +10,13 @@
 #' dryad_download(dois = dois)
 #' }
 dryad_download <- function(dois, ...) {
+  assert(dois, "character")
   rdryad_cache$mkdir()
   stats::setNames(lapply(dois, function(z, ...) {
     path <- v2(sprintf("datasets/%s/download",
       curl::curl_escape(paste0("doi:", z))))
     each_download(z, path, ...)
-  }), dois)
+  }, ...), dois)
 }
 
 each_download <- function(id, path, ...) {
