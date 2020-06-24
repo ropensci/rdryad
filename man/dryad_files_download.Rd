@@ -7,7 +7,7 @@
 dryad_files_download(ids, ...)
 }
 \arguments{
-\item{ids}{(character) one or more version ids, required}
+\item{ids}{(numeric) one or more file ids, required}
 
 \item{...}{Further args passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }

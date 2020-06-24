@@ -1,7 +1,7 @@
 #' Get metadata information about a file
 #' @export
 #' @family dryad-files
-#' @param ids (character) one or more version ids, required
+#' @param ids (numeric) one or more file ids, required
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a list of lists, each named by the input DOI
 #' @examples \dontrun{
@@ -10,7 +10,9 @@
 #' dryad_files(ids = c(61858, 61859))
 #' }
 dryad_files <- function(ids, ...) {
-  urls <- file.path(dr_base_apiv2(), v2("files", ids))
+  assert(ids, c('numeric', 'integer'))
+  urls <- vapply(ids, function(z)
+    file.path(dr_base_apiv2(), v2("files", z)), "")
   tmp <- dGETasync(urls = urls, ...)
   parse_each(tmp, ids)
 }
@@ -18,7 +20,7 @@ dryad_files <- function(ids, ...) {
 #' Download a specific file
 #' @export
 #' @family dryad-files
-#' @param ids (character) one or more version ids, required
+#' @param ids (numeric) one or more file ids, required
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a list of lists, each named by the input DOI
 #' @note there's no use of cached files here because we can't 
@@ -29,6 +31,7 @@ dryad_files <- function(ids, ...) {
 #' dryad_files_download(ids = 61859)
 #' }
 dryad_files_download <- function(ids, ...) {
+  assert(ids, c('numeric', 'integer'))
   paths <- sprintf("api/v2/files/%s/download", ids)
   Map(function(x, y) each_files_download(x, y, ...), ids, paths)
 }

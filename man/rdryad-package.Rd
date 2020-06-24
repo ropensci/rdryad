@@ -12,6 +12,9 @@ their REST API.
 \section{Package API}{
 
 
+The functions match the three major sets of Dryad API routes for
+datasets, fiiles and versions.
+
 Datasets:
 \itemize{
 \item \code{\link[=dryad_dataset]{dryad_dataset()}}
@@ -49,7 +52,8 @@ More defunct functions:
 \item \code{\link[=handle2doi]{handle2doi()}}
 \item \code{\link[=doi2handle]{doi2handle()}}
 \item \code{\link[=dryad_files]{dryad_files()}}
-\item \code{\link[=dryad_fetch]{dryad_fetch()}}
+\item \code{\link[=dryad_fetch]{dryad_fetch()}} - use instead \code{\link[=dryad_files_download]{dryad_files_download()}} or
+\code{\link[=dryad_versions_download]{dryad_versions_download()}}
 }
 }
 
