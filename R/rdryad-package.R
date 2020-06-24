@@ -29,6 +29,7 @@
 #' @importFrom crul HttpClient
 #' @importFrom xml2 read_xml xml_find_all xml_ns xml_attr
 #' @importFrom jsonlite fromJSON
+#' @importFrom mime mimemap
 #' @name rdryad-package
 #' @aliases rdryad
 #' @docType package

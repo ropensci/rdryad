@@ -28,7 +28,8 @@ Imports:
     tibble,
     hoardr,
     zip,
-    jsonlite
+    jsonlite,
+    mime
 Suggests:
     testthat
 RoxygenNote: 7.1.0

@@ -1,5 +1,6 @@
 #' List datasets
 #' @export
+#' @family dryad-datasets
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a tibble
 #' @examples \dontrun{
@@ -16,6 +17,7 @@ dryad_datasets <- function(...) {
 
 #' Get datasets by DOI(s)
 #' @export
+#' @family dryad-datasets
 #' @param dois (character) one or more DOIs, required
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a list of lists, each named by the input DOI
@@ -33,6 +35,7 @@ dryad_dataset <- function(dois, ...) {
 
 #' Get dataset versions by DOI(s)
 #' @export
+#' @family dryad-datasets
 #' @param dois (character) one or more DOIs, required
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a list of lists, each named by the input DOI

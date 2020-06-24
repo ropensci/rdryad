@@ -1,5 +1,6 @@
 #' Get a dataset version by version ID
 #' @export
+#' @name versions
 #' @param ids (character) one or more version ids, required
 #' @param ... Further args passed on to [crul::verb-GET]
 #' @return a list of lists, each named by the input DOI
@@ -15,6 +16,9 @@
 #' dryad_versions_download(ids = 18774)
 #' dryad_files(ids = 57485)
 #' }
+
+#' @export
+#' @rdname versions
 dryad_versions <- function(ids, ...) {
   og_ids <- ids
   urls <- file.path(dr_base_apiv2(), v2("versions", ids))
@@ -23,7 +27,7 @@ dryad_versions <- function(ids, ...) {
 }
 
 #' @export
-#' @rdname dryad_versions
+#' @rdname versions
 dryad_versions_files <- function(ids, ...) {
   urls <- file.path(dr_base_apiv2(), sprintf("api/v2/versions/%s/files", ids))
   tmp <- dGETasync(urls = urls, ...)
@@ -31,17 +35,8 @@ dryad_versions_files <- function(ids, ...) {
 }
 
 #' @export
-#' @rdname dryad_versions
+#' @rdname versions
 dryad_versions_download <- function(ids, ...) {
   paths <- sprintf("api/v2/versions/%s/download", ids)
   Map(function(x, y) each_download(x, y, ...), ids, paths)
-}
-
-#' @export
-#' @rdname dryad_versions
-dryad_files <- function(ids, ...) {
-  og_ids <- ids
-  urls <- file.path(dr_base_apiv2(), v2("files", ids))
-  tmp <- dGETasync(urls = urls, ...)
-  parse_each(tmp, og_ids)
 }

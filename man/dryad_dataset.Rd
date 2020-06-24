@@ -24,3 +24,9 @@ dois <- c("10.5061/dryad.f385721n", "10.5061/dryad.7ct1n", "10.5061/dryad.1g626"
 dryad_dataset(dois = dois)
 }
 }
+\seealso{
+Other dryad-datasets: 
+\code{\link{dryad_dataset_versions}()},
+\code{\link{dryad_datasets}()}
+}
+\concept{dryad-datasets}

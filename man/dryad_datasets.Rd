@@ -23,3 +23,9 @@ x$links
 x$data
 }
 }
+\seealso{
+Other dryad-datasets: 
+\code{\link{dryad_dataset_versions}()},
+\code{\link{dryad_dataset}()}
+}
+\concept{dryad-datasets}
