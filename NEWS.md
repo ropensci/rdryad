@@ -1,3 +1,11 @@
+rdryad 1.0.0
+============
+
+### BREAKING CHANGES
+
+* Package redone to work with new Dryad API v2. Most functions are defunct, and there's three sets of new functions following the three major sets of API routes for datasets, versions, and files. See `?rdryad` for more (#28) (#29)
+
+
 rdryad 0.4.0
 ============
 

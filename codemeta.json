@@ -5,19 +5,19 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "rdryad",
-  "description": "Interface to the Dryad \"Solr\" API, their \"OAI-PMH\" service, and\n    fetch datasets. Dryad (<http://datadryad.org/>) is a curated host of\n    data underlying scientific publications.",
+  "description": "Interface to the Dryad \"Solr\" API, their \"OAI-PMH\" service, and\n    fetch datasets. Dryad (<https://datadryad.org/>) is a curated host of\n    data underlying scientific publications.",
   "name": "rdryad: Access for Dryad Web Services",
   "codeRepository": "https://github.com/ropensci/rdryad",
   "issueTracker": "https://github.com/ropensci/rdryad/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.0",
+    "version": "4.0.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.0 (2018-04-23)",
+  "runtimePlatform": "R version 4.0.2 (2020-06-22)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -25,6 +25,12 @@
     "url": "https://cran.r-project.org"
   },
   "author": [
+    {
+      "@type": "Person",
+      "givenName": "Karthik",
+      "familyName": "Ram",
+      "@id": "https://orcid.org/0000-0002-0233-1757"
+    },
     {
       "@type": "Person",
       "givenName": "Scott",
@@ -60,6 +66,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "vcr",
+      "name": "vcr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=vcr"
     }
   ],
   "softwareRequirements": [
@@ -67,7 +85,6 @@
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
-      "version": ">= 0.4.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -80,7 +97,6 @@
       "@type": "SoftwareApplication",
       "identifier": "curl",
       "name": "curl",
-      "version": ">= 3.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -88,57 +104,6 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=curl"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "xml2",
-      "name": "xml2",
-      "version": ">= 1.0.0",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=xml2"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "oai",
-      "name": "oai",
-      "version": ">= 0.2.2",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=oai"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "solrium",
-      "name": "solrium",
-      "version": ">= 1.0.0",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=solrium"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "data.table",
-      "name": "data.table",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=data.table"
     },
     {
       "@type": "SoftwareApplication",
@@ -151,19 +116,73 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "hoardr",
+      "name": "hoardr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=hoardr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "zip",
+      "name": "zip",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=zip"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=jsonlite"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "mime",
+      "name": "mime",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=mime"
     }
   ],
   "contIntegration": "https://travis-ci.org/ropensci/rdryad",
   "releaseNotes": "https://github.com/ropensci/rdryad/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rdryad/blob/master/README.md",
-  "fileSize": "46.176KB",
-  "contributor": [
-    {
-      "@type": "Person",
-      "givenName": "Karthik",
-      "familyName": "Ram"
-    }
-  ],
+  "fileSize": "57.267KB",
+  "contributor": {},
   "developmentStatus": "http://www.repostatus.org/#active",
-  "keywords": ["dryad-api", "dryad", "data", "doi", "oai-pmh", "r", "rstats", "r-package"]
+  "keywords": [
+    "dryad-api",
+    "dryad",
+    "data",
+    "doi",
+    "oai-pmh",
+    "r",
+    "rstats",
+    "r-package"
+  ],
+  "relatedLink": "https://docs.ropensci.org/rdryad",
+  "copyrightHolder": {},
+  "funder": {}
 }
