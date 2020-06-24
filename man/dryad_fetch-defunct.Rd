@@ -10,6 +10,6 @@ dryad_fetch(...)
 \item{...}{ignored}
 }
 \description{
-Download Dryad files
+This function is defunct
 }
 \keyword{internal}

@@ -10,6 +10,6 @@ dryad_metadata(doi, ...)
 \item{...}{ignored}
 }
 \description{
-Download Dryad file metadata
+This function is defunct
 }
 \keyword{internal}

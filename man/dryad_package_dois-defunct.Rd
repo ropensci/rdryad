@@ -10,6 +10,6 @@ dryad_package_dois(doi, ...)
 \item{...}{ignored}
 }
 \description{
-Get file DOIs for a Dryad package DOI
+This function is defunct
 }
 \keyword{internal}

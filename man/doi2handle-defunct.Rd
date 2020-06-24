@@ -13,6 +13,6 @@ handle2doi(...)
 \item{...}{ignored}
 }
 \description{
-Get a Dryad DOI from a handle, and vice versa
+These functions are defunct
 }
 \keyword{internal}

@@ -37,6 +37,7 @@ download_dryadmetadata <- function(...) {
 
 #' Get a Dryad DOI from a handle, and vice versa
 #'
+#' These functions are defunct
 #' @param ... ignored
 #' @rdname doi2handle-defunct
 #' @keywords internal
@@ -126,6 +127,7 @@ dr_list_sets <- function(token = NULL, as = "df", ...) {
 
 #' Download Dryad file metadata
 #'
+#' This function is defunct
 #' @param ... ignored
 #' @rdname dryad_metadata-defunct
 #' @keywords internal
@@ -135,6 +137,7 @@ dryad_metadata <- function(doi, ...) {
 
 #' Get file DOIs for a Dryad package DOI
 #'
+#' This function is defunct
 #' @param ... ignored
 #' @rdname dryad_package_dois-defunct
 #' @keywords internal
@@ -144,6 +147,7 @@ dryad_package_dois <- function(doi, ...) {
 
 #' Download Dryad files
 #'
+#' This function is defunct
 #' @param ... ignored
 #' @rdname dryad_fetch-defunct
 #' @keywords internal
