@@ -3,7 +3,7 @@
 #' This function is defunct
 #'
 #' @keywords internal
-getalldryad_metadata <- function(...) {
+getalldryad_metadata <- function(...) {  # nocov start 
   .Defunct(msg = "This function is defunct. Use OAI-PMH via dr_*() functions or Solr based search via d_*() functions")
 }
 
@@ -141,3 +141,66 @@ dryad_metadata <- function(doi, ...) {
 dryad_package_dois <- function(doi, ...) {
   .Defunct(msg = "`dryad_package_dois()` is defunct")
 }
+
+#' Download Dryad files
+#'
+#' @param ... ignored
+#' @rdname dryad_fetch-defunct
+#' @keywords internal
+dryad_fetch <- function(...) {
+  .Defunct(msg = "defunct; see ?dryad for how to download files")
+}
+
+#' Defunct Solr functions
+#' @name solr-defunct
+#' @details The Dryad Solr service is no longer being updated
+#' See http://wiki.datadryad.org/Old:Dryad_API#SOLR_search_access
+#' 
+#' Defunct functions:
+#' 
+#' - `d_solr_search`
+#' - `d_solr_facet`
+#' - `d_solr_group`
+#' - `d_solr_highlight`
+#' - `d_solr_mlt`
+#' - `d_solr_stats`
+NULL
+
+#' Search the Dryad Solr endpoint
+#'
+#' @param ... ignored
+#' @rdname solr-defunct
+#' @keywords internal
+d_solr_search <- function(...) {
+  .Defunct(msg = "defunct; the Dryad Solr service is no longer being updated")
+}
+
+#' @rdname solr-defunct
+#' @keywords internal
+d_solr_facet <- function(...) {
+  .Defunct(msg = "defunct; the Dryad Solr service is no longer being updated")
+}
+
+#' @rdname solr-defunct
+#' @keywords internal
+d_solr_group <- function(...) {
+  .Defunct(msg = "defunct; the Dryad Solr service is no longer being updated")
+}
+
+#' @rdname solr-defunct
+#' @keywords internal
+d_solr_highlight <- function(...) {
+  .Defunct(msg = "defunct; the Dryad Solr service is no longer being updated")
+}
+
+#' @rdname solr-defunct
+#' @keywords internal
+d_solr_mlt <- function(...) {
+  .Defunct(msg = "defunct; the Dryad Solr service is no longer being updated")
+}
+
+#' @rdname solr-defunct
+#' @keywords internal
+d_solr_stats <- function(...) {
+  .Defunct(msg = "defunct; the Dryad Solr service is no longer being updated")
+} # nocov end
