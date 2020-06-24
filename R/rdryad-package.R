@@ -44,9 +44,12 @@
 #' [dryad_versions_download()]
 #'
 #' @importFrom crul HttpClient
-#' @importFrom xml2 read_xml xml_find_all xml_ns xml_attr
+#' @importFrom curl curl_escape
 #' @importFrom jsonlite fromJSON
+#' @importFrom tibble as_tibble
 #' @importFrom mime mimemap
+#' @importFrom hoardr hoard
+#' @importFrom zip unzip
 #' @name rdryad-package
 #' @aliases rdryad
 #' @docType package
