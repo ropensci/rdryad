@@ -18,12 +18,9 @@ dryad_versions <- function(ids, ...) {
 #' @export
 #' @rdname dryad_versions
 dryad_versions_files <- function(ids, ...) {
-  # FIXME: throwing 500 errors, look into
-  stop("not working yet")
-  og_ids <- ids
   urls <- file.path(dr_base_apiv2(), sprintf("api/v2/versions/%s/files", ids))
   tmp <- dGETasync(urls = urls, ...)
-  parse_each(tmp, og_ids)
+  parse_each(tmp, ids)
 }
 
 #' @export

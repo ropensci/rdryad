@@ -5,41 +5,29 @@
 #'
 #' @section Package API:
 #'
-#' The following functions work with the Dryad Solr service
-#' - [d_solr_facet()]
-#' - [d_solr_group()]
-#' - [d_solr_highlight()]
-#' - [d_solr_mlt()]
-#' - [d_solr_search()]
-#' - [d_solr_stats()]
-#'
-#' The following functions work with the Dryad OAI-PMH service
-#'
-#' - [dr_get_records()]
-#' - [dr_identify()]
-#' - [dr_list_identifiers()]
-#' - [dr_list_metadata_formats()]
-#' - [dr_list_records()]
-#' - [dr_list_sets()]
-#'
 #' The following functions sort out file URLs and help you download
 #' those files
 #'
 #' - [dryad_fetch()]
-#' - [dryad_files()]
+#' 
+#' @section Defunct:
+#' 
+#' The Dryad Solr API is no longer being updated, so the functions
+#' that used to work with it are all defunct, see [solr-defunct]
+#'
+#' The Dryad OAI-PMH service is no longer being updated, so the functions
+#' that used to work with it are all defunct, see [oai-defunct]
+#' 
+#' More defunct functions:
+#' 
 #' - [dryad_metadata()]
 #' - [dryad_package_dois()]
-#' 
-#' These functions convert between Dryad handles and DOIs
-#' 
 #' - [handle2doi()]
 #' - [doi2handle()]
+#' - [dryad_files()]
 #'
-#' @importFrom solrium SolrClient
 #' @importFrom crul HttpClient
 #' @importFrom xml2 read_xml xml_find_all xml_ns xml_attr
-#' @importFrom oai id list_identifiers list_records list_metadataformats
-#' list_sets get_records
 #' @importFrom jsonlite fromJSON
 #' @name rdryad-package
 #' @aliases rdryad
