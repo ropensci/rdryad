@@ -59,12 +59,11 @@ v2_parse <- function(x) {
   jsonlite::fromJSON(x, flatten = TRUE)
 }
 
-dr_base_oai <- function() "http://www.datadryad.org/oai/request"
 dr_base_apiv2 <- function() "https://datadryad.org"
 
 assert <- function(x, y) {
   if (!is.null(x)) {
-    if (!class(x) %in% y) {
+    if (!inherits(x, y)) {
       stop(deparse(substitute(x)), " must be of class ",
            paste0(y, collapse = ", "), call. = FALSE)
     }

@@ -3,12 +3,15 @@
 \name{dryad_versions}
 \alias{dryad_versions}
 \alias{dryad_versions_files}
+\alias{dryad_versions_download}
 \alias{dryad_files}
 \title{Get a dataset version by version ID}
 \usage{
 dryad_versions(ids, ...)
 
 dryad_versions_files(ids, ...)
+
+dryad_versions_download(ids, ...)
 
 dryad_files(ids, ...)
 }
@@ -23,10 +26,16 @@ a list of lists, each named by the input DOI
 \description{
 Get a dataset version by version ID
 }
+\details{
+\code{dryad_versions()}, \code{dryad_versions_files()}, and \code{dryad_files()}
+use async http requests, while \code{dryad_versions_download()}
+does not use async
+}
 \examples{
 \dontrun{
 dryad_versions(ids = 18774)
-dryad_versions_files(ids = 18774, verbose = TRUE)
+dryad_versions_files(ids = 18774)
+dryad_versions_download(ids = 18774)
 dryad_files(ids = 57485)
 }
 }

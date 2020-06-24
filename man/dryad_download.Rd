@@ -19,7 +19,7 @@ Download datasets by their DOI(s)
 }
 \examples{
 \dontrun{
-dryad_download(doi = "10.5061/dryad.f385721n")
+dryad_download(dois = "10.5061/dryad.f385721n")
 dois <- c("10.5061/dryad.f385721n", "10.5061/dryad.7ct1n", "10.5061/dryad.1g626")
 dryad_download(dois = dois)
 }
