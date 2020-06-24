@@ -20,8 +20,8 @@ knitr::opts_chunk$set(
 `rdryad` is a package to interface with the Dryad data repository.
 
 * General Dryad API documentation: https://datadryad.org/api/v2/docs/
-* Solr API: http://wiki.datadryad.org/API#SOLR_search_access
-* OAI-PMH (Open Archives Initiative Protocol for Metadata Harvesting) interface; [Dryad OAI-PMH description](http://wiki.datadryad.org/API#OAI-PMH). [Description of OAI-PMH in general](http://en.wikipedia.org/wiki/Open_Archives_Initiative_Protocol_for_Metadata_Harvesting)
+* Solr API: DEFUNCT
+* OAI-PMH: DEFUNCT
 
 ## Installation
 
@@ -43,83 +43,10 @@ library('rdryad')
 
 ## Examples
 
-### Solr search interface
-
-Basic search, restricting to certain fields for brevity
-
-```{r}
-d_solr_search(q="Galliard", fl='handle,dc.title_sort')
-```
-
-Dryad data based on an article DOI:
-
-```{r}
-d_solr_search(q="dc.relation.isreferencedby:10.1038/nature04863",
-   fl="dc.identifier,dc.title_ac")
-```
-
-All terms in the dc.subject facet, along with their frequencies:
-
-```{r}
-d_solr_facet(q="location:l2", facet.field="dc.subject_filter", facet.minCount=1,
-   facet.limit=10)
-```
-
-Article DOIs associated with all data published in Dryad over the past 90 days:
-
-```{r}
-d_solr_search(q="dc.date.available_dt:[NOW-90DAY/DAY TO NOW]",
-   fl="dc.relation.isreferencedby", rows=10)
-```
-
-### OAI-PMH interface
-
-Identify the service
-
-```{r}
-dr_identify()
-```
-
-List sets
-
-```{r}
-dr_list_sets()
-```
-
-Get records
-
-```{r}
-dr_get_records(ids = 'oai:secundus.datadryad.org:10255/dryad.8820')
-```
-
 ### Get download URLs from a Dryad identifier (DOI)
 
-```{r}
-dryad_files('10.5061/dryad.1758')
-```
-
-### Download a file
-
-Does not read file into, just a helper to get data files
-
 ```{r eval=FALSE}
-dryad_fetch(dryad_files('10.5061/dryad.1758'))
-```
-
-By default `dryad_fetch()` will download to temporary files (note that these are cleaned up at the end of your R session). Check out the documentation for other options.
-
-### Get file DOIs from a package DOI
-
-```{r}
-dryad_package_dois('10.5061/dryad.60699')
-```
-
-### Get metadata for a DOI
-
-Works for both package DOIs and for DOIs for files within packages
-
-```{r}
-dryad_metadata('10.5061/dryad.9t0n8')
+dryad_files(ids = 57485)
 ```
 
 ## Meta
