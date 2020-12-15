@@ -32,3 +32,13 @@ test_that("dryad_files_download fails well", {
   # ids: wrong type
   expect_error(dryad_files_download("4"))
 })
+
+test_that("dryad_files_download handles when ctype=text/plain", {
+  skip_on_cran()
+
+  vcr::use_cassette("dryad_files_download_txt_type", {
+    zz <- dryad_files_download(33893)
+  })
+  expect_is(zz, "list")
+  expect_match(zz[[1]], ".txt")
+})

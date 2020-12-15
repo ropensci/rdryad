@@ -43,7 +43,14 @@ each_files_download <- function(id, path, ...) {
   res <- con$get()
   ctype <- res$response_headers$`content-type`
   check <- mime::mimemap %in% ctype
-  if (any(check)) file_ext <- paste0(".", names(mime::mimemap)[check])
+  file_ext <- ""
+  if (any(check)) {
+    exts <- names(mime::mimemap)[check]
+    ext <- if (length(exts) > 1) exts[1] else exts
+    # special case for text/plain, always use .txt
+    if ("text/plain" == ctype) ext <- "txt"
+    file_ext <- paste0(".", ext)
+  }
   file <- file.path(rdryad_cache$cache_path_get(), paste0(id, file_ext))
   file_con <- file(file)
   on.exit(close(file_con))
