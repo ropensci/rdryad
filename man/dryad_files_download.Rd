@@ -18,9 +18,8 @@ a list of lists, each named by the input DOI
 Download a specific file
 }
 \note{
-there's no use of cached files here because we can't
-determine what the file path will be before making the request,
-which requires knowing what the data type the file will be
+UPDATE: we used to not use caching in this fxn; we do now
+as of 2020-12-15
 }
 \examples{
 \dontrun{
