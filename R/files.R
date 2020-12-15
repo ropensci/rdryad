@@ -37,6 +37,15 @@ dryad_files_download <- function(ids, ...) {
   Map(function(x, y) each_files_download(x, y, ...), ids, paths)
 }
 
+# FIXME: this is not complete
+binary_formats <- c(
+  "docx", "doc", "xls", "xlsx", "zip", "rar", "7z", "tar", "iso", "mdb",
+  "accde", "frm", "sqlite", "exe", "dll", "so", "class", "pdf", "ppt",
+  "pptx", "odt", "mp3", "aac", "wav", "flac", "ogg", "mka", "wma", "mp4",
+  "mkv", "avi", "mov", "mpg", "vob", "jpg", "png", "gif", "bmp", "tiff",
+  "psd"
+)
+
 each_files_download <- function(id, path, ...) {
   url <- file.path(dr_base_apiv2(), path)
   con <- crul::HttpClient$new(url = url)
@@ -52,8 +61,13 @@ each_files_download <- function(id, path, ...) {
     file_ext <- paste0(".", ext)
   }
   file <- file.path(rdryad_cache$cache_path_get(), paste0(id, file_ext))
-  file_con <- file(file)
+  if (ext %in% binary_formats) {
+    file_con <- file(file, "wb")
+    writeBin(res$content, con = file_con)
+  } else {
+    file_con <- file(file)
+    writeLines(res$parse("UTF-8"), con = file_con)
+  }
   on.exit(close(file_con))
-  writeLines(res$parse("UTF-8"), con = file_con)
   return(file)
 }
