@@ -13,9 +13,10 @@ Authors@R: c(
         email = "myrmecocystus@gmail.com",
         comment = c(ORCID = "0000-0003-1444-9135")),
     person("Carl", "Boettiger", role = "aut", 
-        comment = c(ORCID="0000-0002-1642-628X"))
+        comment = c(ORCID="0000-0002-1642-628X")),
+    person(given = "rOpenSci", role = "fnd", comment = "https://ropensci.org/")
     )
-URL: https://docs.ropensci.org/rdryad, https://github.com/ropensci/rdryad
+URL: https://docs.ropensci.org/rdryad/, https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
