@@ -18,7 +18,7 @@ Authors@R: c(
     )
 URL: https://docs.ropensci.org/rdryad/, https://github.com/ropensci/rdryad
 BugReports: https://github.com/ropensci/rdryad/issues
-Roxygen: list(markdown = TRUE)
+Roxygen: list(markdown = TRUE, r6 = FALSE)
 Encoding: UTF-8
 Language: en-US
 Imports:
@@ -28,7 +28,8 @@ Imports:
     hoardr,
     zip,
     jsonlite,
-    mime
+    mime,
+    sodium
 Suggests:
     testthat,
     vcr

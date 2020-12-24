@@ -1,5 +1,9 @@
 library("vcr")
-invisible(vcr::vcr_configure(dir = "../fixtures", write_disk_path = "../files"))
+vcr::vcr_configure(
+  dir = "../fixtures", 
+  write_disk_path = "../files",
+  filter_request_headers = "Authorization"
+)
 vcr::check_cassette_names()
 
 ogpath <- rdryad_cache$cache_path_get()

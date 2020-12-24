@@ -21,7 +21,7 @@
 dryad_versions <- function(ids, ...) {
   assert(ids, c("numeric", "integer"))
   og_ids <- ids
-  urls <- file.path(dr_base_apiv2(), file.path("api/v2/versions", ids))
+  urls <- file.path(dr_base_api(), file.path("api/v2/versions", ids))
   tmp <- dGETasync(urls = urls, ...)
   parse_each(tmp, og_ids)
 }
@@ -30,7 +30,7 @@ dryad_versions <- function(ids, ...) {
 #' @rdname versions
 dryad_versions_files <- function(ids, ...) {
   assert(ids, c("numeric", "integer"))
-  urls <- file.path(dr_base_apiv2(), sprintf("api/v2/versions/%s/files", ids))
+  urls <- file.path(dr_base_api(), sprintf("api/v2/versions/%s/files", ids))
   tmp <- dGETasync(urls = urls, ...)
   parse_each(tmp, ids)
 }

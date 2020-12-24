@@ -12,7 +12,7 @@
 dryad_files <- function(ids, ...) {
   assert(ids, c('numeric', 'integer'))
   urls <- vapply(ids, function(z)
-    file.path(dr_base_apiv2(), v2("files", z)), "")
+    file.path(dr_base_api(), v2("files", z)), "")
   tmp <- dGETasync(urls = urls, ...)
   parse_each(tmp, ids)
 }
@@ -46,7 +46,7 @@ binary_formats <- c(
 )
 
 each_files_download <- function(id, path, ...) {
-  url <- file.path(dr_base_apiv2(), path)
+  url <- file.path(dr_base_api(), path)
   con <- crul::HttpClient$new(url = url)
   res <- con$get()
   ctype <- res$response_headers$`content-type`

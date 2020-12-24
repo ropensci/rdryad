@@ -14,3 +14,4 @@ cran-comments.md
 ^Makefile$
 tests/files/
 ^LICENSE\.md$
+.rdryad-token

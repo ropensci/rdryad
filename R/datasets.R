@@ -10,7 +10,7 @@
 #' x$data
 #' }
 dryad_datasets <- function(...) {
-  tmp <- dGET(dr_base_apiv2(), v2("datasets"), headers = head_json(), ...)
+  tmp <- dGET(dr_base_api(), v2("datasets"), headers = head_json(), ...)
   res <- v2_parse(tmp)
   parse_ds(res)
 }
@@ -30,7 +30,7 @@ dryad_dataset <- function(dois, ...) {
   assert(dois, "character")
   og_dois <- dois
   dois <- curl::curl_escape(paste0("doi:", dois))
-  tmp <- dGETasync(urls = file.path(dr_base_apiv2(), "api/v2/datasets", dois), ...)
+  tmp <- dGETasync(urls = file.path(dr_base_api(), "api/v2/datasets", dois), ...)
   parse_each(tmp, og_dois)
 }
 
@@ -50,7 +50,7 @@ dryad_dataset_versions <- function(dois, ...) {
   assert(dois, "character")
   og_dois <- dois
   dois <- curl::curl_escape(paste0("doi:", dois))
-  urls <- file.path(dr_base_apiv2(), sprintf("api/v2/datasets/%s/versions", dois))
+  urls <- file.path(dr_base_api(), sprintf("api/v2/datasets/%s/versions", dois))
   tmp <- dGETasync(urls = urls, ...)
   parse_each(tmp, og_dois)
 }

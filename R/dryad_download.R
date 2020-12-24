@@ -20,7 +20,7 @@ dryad_download <- function(dois, ...) {
 }
 
 each_download <- function(id, path, ...) {
-  zfile <- dGETwrite(dr_base_apiv2(), path,
+  zfile <- dGETwrite(dr_base_api(), path,
     id, headers = list(`Accept` = "application/zip"), ...)
   extract_path <- file.path(rdryad_cache$cache_path_get(),
     sub(".zip", "", basename(zfile)))

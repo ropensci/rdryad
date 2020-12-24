@@ -50,6 +50,7 @@
 #' @importFrom mime mimemap
 #' @importFrom hoardr hoard
 #' @importFrom zip unzip
+#' @importFrom sodium data_encrypt data_decrypt
 #' @name rdryad-package
 #' @aliases rdryad
 #' @docType package
