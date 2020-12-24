@@ -60,8 +60,8 @@ jobs:
         env:
           RHUB_PLATFORM: linux-x86_64-ubuntu-gcc
         run: |
-          sudo apt update
-          sudo apt install libsodium-dev
+          sudo apt-get update
+          sudo apt-get install -y libsodium libsodium-dev
       
       - name: Install dependencies
         run: |
