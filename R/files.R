@@ -31,7 +31,7 @@ dryad_files <- function(ids, ...) {
 #' }
 dryad_files_download <- function(ids, ...) {
   assert(ids, c('numeric', 'integer'))
-  get_rdryad_cache()$mkdir()
+  dryad_get_cache()$mkdir()
   paths <- sprintf("api/v2/files/%s/download", ids)
   Map(function(x, y) each_files_download(x, y, ...), ids, paths)
 }
@@ -59,7 +59,7 @@ each_files_download <- function(id, path, ...) {
     if ("text/plain" == ctype) ext <- "txt"
     file_ext <- paste0(".", ext)
   }
-  file <- file.path(get_rdryad_cache()$cache_path_get(), paste0(id, file_ext))
+  file <- file.path(dryad_get_cache()$cache_path_get(), paste0(id, file_ext))
   if (ext %in% binary_formats) {
     file_con <- file(file, "wb")
     writeBin(res$content, con = file_con)

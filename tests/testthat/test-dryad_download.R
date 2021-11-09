@@ -3,9 +3,9 @@ test_that("dryad_download", {
   skip_on_ci()
 
   # for some the cache path set in 'helper-rdryad.R' is not set here?
-  obj <- rdryad:::get_rdryad_cache()
+  obj <- rdryad::dryad_get_cache()
   obj$cache_path_set(full_path = "../files")
-  rdryad:::set_rdryad_cache(obj)
+  rdryad::dryad_set_cache(obj)
 
   vcr::use_cassette("dryad_download", {
     aa <- dryad_download(dois = "10.5061/dryad.f385721n")
