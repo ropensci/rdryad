@@ -1,1 +1,36 @@
-
+http_interactions:
+- request:
+    method: get
+    uri: https://uc3-s3mrt1001-prd.s3.us-west-2.amazonaws.com/8c2b05d4-f06a-4921-a485-9c8b619fe1e5/data?response-content-disposition=attachment%3B%20filename%3Ddoi_10.5061_dryad.f385721n__v1.zip&response-content-type=application%2Fzip&X-Amz-Security-Token=IQoJb3JpZ2luX2VjECkaCXVzLXdlc3QtMiJGMEQCIDzx5ckslz2o1M6XH1YfHyVsjUhXuvs2yyS7cHJ53OFIAiAeduqOv2p5j9672hdtBRsWj6rG5aPMpx1DfTFhQXNJzCqDBAjS%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDQ1MTgyNjkxNDE1NyIM1MacTkuF%2FspZJRsTKtcDlKOqndg4k5t3mr2tPOHBckePy9W8TBWK9uIjwMW46oRnWb9PPlTLz0B8kJ%2FLDhKQ4F2xpXwDTbDMPbxRSvm5heax2e%2FneRRAT%2B%2FeDGXMHXoyBa49NJe6RjXTlDEFkkeYOkfJXisFIcEVInCXgjEhwDHBwguvVY01FXv%2BJStcRd0LMgWLy69NY3Hpn7fapttsmX2CFVRdlGgRJot%2Fq%2FU1gOPIEqECwKlHOW9nfLlTRmFCS5fOwE5xzL9bulhyz%2FMvAcRtB%2BX9xdUGhiI9tfSvdyKlg1TnPjKTv3jMvZwsi%2B0SmAgVKZUm%2B2M7ItlHj2CW4Mzah41r9GdmKZW9ryWssPCCDZrf%2B2KZ0uB9Z4x90HHM0Z0e7RR4HIIRM8hE0mIJRm5AS%2FgxR0ZcsWsQL0cHYt5Soa0SGtV0qyAG3m9s5nvg42Wsd1kifrvU0CegXu2UdHyGBRsyqrrlTIgrknlm%2Be0HHJjl2JXOsxUy25%2FVpf6xRelB2aNTKCJwllJvl3JZJEWTHDOWD%2ByNHwTSkf3%2Bopg3D%2B4WcP83z1%2FYFK7A3hBgBPV3dYGqeVqzjg42PDVi1HFgbzMowSVh9A5XSx2LQCWpHzMhZhg%2FrnZhapWya1%2BhBJN30Uz1MNzyqIwGOqYBn8H5iI1eDcUT2tNf3pH0ecazgvMDDvHKELbNSXz3js0sdEpQ%2FEuk6IwV%2Fj5CsPXsSNFAT%2FieG1cqwqRqASlZj5blyWklbIJyPFroOkUp4mtE%2BwoYd8lVlJWT42iwv5shSd7%2Fbll1Slw34d%2BhJqCEiqn2yaeX%2F%2FFsXe%2Fkoo1McqWvgBFRtFlBnt6OtsDjpeEohTuj9Fvyc%2BldUouqojargvd3G0AX%2Bg%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20211109T095928Z&X-Amz-SignedHeaders=host&X-Amz-Expires=14400&X-Amz-Credential=ASIAWSMX3SNWQ4FUFF4Q%2F20211109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Signature=f94c0868dafa69d41f426aacb6dc23c809fa1a8c917dedd1e3e315b10cf03bbd
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.79.1 r-curl/4.3.2 crul/1.1.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/zip
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      x-amz-id-2: 2MKHOMtwn02fbSBsT4t3cxYOOEwEJlSwspEidH/XuajmDNdBj3dTJSunZh7ECVxFkscPICUP1ek=
+      x-amz-request-id: M67YXACN8MG30PE6
+      date: Tue, 09 Nov 2021 09:59:29 GMT
+      last-modified: Tue, 09 Nov 2021 09:30:43 GMT
+      x-amz-expiration: expiry-date="Sat, 13 Nov 2021 00:00:00 GMT", rule-id="3days-life-cycle"
+      etag: '"b674d72612fd2e5686f7d3fb6f559d70"'
+      x-amz-meta-sha256: 45bc3e6e6958e9edb60509e6d78147b95ee88787bfe047a21269d5d0bd864053
+      content-disposition: attachment; filename=doi_10.5061_dryad.f385721n__v1.zip
+      accept-ranges: bytes
+      content-type: application/zip
+      server: AmazonS3
+      content-length: '1882'
+    body:
+      encoding: UTF-8
+      file: yes
+      string: ../files/18774.zip
+  recorded_at: 2021-11-09 09:59:29 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
