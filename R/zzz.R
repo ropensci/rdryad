@@ -1,5 +1,13 @@
 strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 
+get_rdryad_cache <- function () {
+    options ("rdryad_cache")$rdryad_cache
+}
+
+set_rdryad_cache <- function (obj) {
+    options ("rdryad_cache" = obj)
+}
+
 dGET <- function(x, path = NULL, query = list(), headers = list(), ...) {
 	con <- crul::HttpClient$new(url = x, opts = list(...), headers = headers)
 	res <- con$get(path, query = query)
@@ -9,7 +17,7 @@ dGET <- function(x, path = NULL, query = list(), headers = list(), ...) {
 
 dGETwrite <- function(x, path, doi, query = list(), headers = list(), ...) {
   con <- crul::HttpClient$new(url = x, opts = list(...), headers = headers)
-  file <- file.path(rdryad_cache$cache_path_get(), paste0(xdoi(doi), ".zip"))
+  file <- file.path(get_rdryad_cache()$cache_path_get(), paste0(xdoi(doi), ".zip"))
   if (!file.exists(file)) {
     res <- con$get(path, query = query, disk = file)
     res$raise_for_status()

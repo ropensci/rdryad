@@ -11,7 +11,7 @@
 #' }
 dryad_download <- function(dois, ...) {
   assert(dois, "character")
-  rdryad_cache$mkdir()
+  get_rdryad_cache()$mkdir()
   stats::setNames(lapply(dois, function(z, ...) {
     path <- v2(sprintf("datasets/%s/download",
       curl::curl_escape(paste0("doi:", z))))
@@ -22,7 +22,7 @@ dryad_download <- function(dois, ...) {
 each_download <- function(id, path, ...) {
   zfile <- dGETwrite(dr_base_apiv2(), path,
     id, headers = list(`Accept` = "application/zip"), ...)
-  extract_path <- file.path(rdryad_cache$cache_path_get(),
+  extract_path <- file.path(get_rdryad_cache()$cache_path_get(),
     sub(".zip", "", basename(zfile)))
   zip::unzip(zfile, junkpaths = TRUE, exdir = extract_path)
   list.files(extract_path, full.names = TRUE)
