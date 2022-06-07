@@ -7,7 +7,8 @@
 dryad_datasets(...)
 }
 \arguments{
-\item{...}{Further args passed on to \link[crul:verb-GET]{crul::verb-GET}}
+\item{...}{Named key-value sequeunce of parameters passed to Dryad query
+such as "page" (nunber), or "per_page".}
 }
 \value{
 a tibble
@@ -21,6 +22,7 @@ List datasets
 x$meta
 x$links
 x$data
+x <- dryad_datasets(per_page = 50, page = 7)
 }
 }
 \seealso{

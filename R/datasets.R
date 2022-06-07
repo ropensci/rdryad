@@ -1,16 +1,22 @@
 #' List datasets
 #' @export
 #' @family dryad-datasets
-#' @param ... Further args passed on to [crul::verb-GET]
+#' @param ... Named key-value sequeunce of parameters passed to Dryad query
+#' such as "page" (nunber), or "per_page".
 #' @return a tibble
 #' @examples \dontrun{
 #' (x <- dryad_datasets())
 #' x$meta
 #' x$links
 #' x$data
+#' x <- dryad_datasets(per_page = 50, page = 7)
 #' }
 dryad_datasets <- function(...) {
-  tmp <- dGET(dr_base_apiv2(), v2("datasets"), headers = head_json(), ...)
+  query <- list()
+  if (!missing(...)) {
+    query <- list(...)
+  }
+  tmp <- dGET(dr_base_apiv2(), v2("datasets"), headers = head_json(), query = query, ...)
   res <- v2_parse(tmp)
   parse_ds(res)
 }
