@@ -3,7 +3,7 @@ rdryad
 
 
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)*
 [![R-check](https://github.com/ropensci/rdryad/workflows/R-check/badge.svg)](https://github.com/ropensci/rdryad/actions?query=workflow%3AR-check)
 [![codecov](https://codecov.io/gh/ropensci/rdryad/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rdryad)
 [![cran checks](https://cranchecks.info/badges/worst/rdryad)](https://cranchecks.info/pkgs/rdryad)
@@ -11,6 +11,8 @@ rdryad
 [![cran version](https://www.r-pkg.org/badges/version/rdryad)](https://cran.r-project.org/package=rdryad)
 
 `rdryad` is a package to interface with the Dryad data repository.
+
+_*This package will be superceded by [{deposits}](https://github.com/ropenscilabs/deposits). See Issue [#39](https://github.com/ropensci/rdryad/issues/39])_
 
 General Dryad API documentation: https://datadryad.org/api/v2/docs/
 
