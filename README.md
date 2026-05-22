@@ -4,7 +4,7 @@ rdryad
 
 
 [![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)*
-[![R-check](https://github.com/ropensci/rdryad/workflows/R-check/badge.svg)](https://github.com/ropensci/rdryad/actions?query=workflow%3AR-check)
+[![R-CMD-check](https://github.com/ropensci/rdryad/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ropensci/rdryad/actions/workflows/R-CMD-check.yaml)
 [![codecov](https://codecov.io/gh/ropensci/rdryad/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rdryad)
 [![cran checks](https://cranchecks.info/badges/worst/rdryad)](https://cranchecks.info/pkgs/rdryad)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rdryad)](https://github.com/metacran/cranlogs.app)
