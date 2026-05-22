@@ -25,8 +25,8 @@ dryad_dataset(dois = dois)
 }
 }
 \seealso{
-Other dryad-datasets: 
-\code{\link{dryad_dataset_versions}()},
-\code{\link{dryad_datasets}()}
+Other dryad-datasets:
+\code{\link[=dryad_dataset_versions]{dryad_dataset_versions()}},
+\code{\link[=dryad_datasets]{dryad_datasets()}}
 }
 \concept{dryad-datasets}

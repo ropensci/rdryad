@@ -26,8 +26,8 @@ x <- dryad_datasets(per_page = 50, page = 7)
 }
 }
 \seealso{
-Other dryad-datasets: 
-\code{\link{dryad_dataset_versions}()},
-\code{\link{dryad_dataset}()}
+Other dryad-datasets:
+\code{\link[=dryad_dataset]{dryad_dataset()}},
+\code{\link[=dryad_dataset_versions]{dryad_dataset_versions()}}
 }
 \concept{dryad-datasets}

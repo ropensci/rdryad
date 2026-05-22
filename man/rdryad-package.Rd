@@ -57,3 +57,23 @@ More defunct functions:
 }
 }
 
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://docs.ropensci.org/rdryad}
+  \item \url{https://github.com/ropensci/rdryad}
+  \item Report bugs at \url{https://github.com/ropensci/rdryad/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Scott Chamberlain \email{myrmecocystus@gmail.com} (\href{https://orcid.org/0000-0003-1444-9135}{ORCID})
+
+Authors:
+\itemize{
+  \item Scott Chamberlain \email{myrmecocystus@gmail.com} (\href{https://orcid.org/0000-0003-1444-9135}{ORCID})
+  \item Karthik Ram (\href{https://orcid.org/0000-0002-0233-1757}{ORCID})
+  \item Carl Boettiger (\href{https://orcid.org/0000-0002-1642-628X}{ORCID})
+}
+
+}

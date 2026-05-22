@@ -25,7 +25,7 @@ dryad_files(ids = c(61858, 61859))
 }
 }
 \seealso{
-Other dryad-files: 
-\code{\link{dryad_files_download}()}
+Other dryad-files:
+\code{\link[=dryad_files_download]{dryad_files_download()}}
 }
 \concept{dryad-files}
