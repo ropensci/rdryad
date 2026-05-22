@@ -49,6 +49,9 @@ each_files_download <- function(id, path, ...) {
   url <- file.path(dr_base_apiv2(), path)
   con <- crul::HttpClient$new(url = url)
   res <- con$get()
+  if (!res$success()) {
+    stop(res$status_code, ": ", res$status_http()$message, call. = FALSE)
+  }
   ctype <- res$response_headers$`content-type`
   check <- mime::mimemap %in% ctype
   file_ext <- ""
@@ -58,6 +61,8 @@ each_files_download <- function(id, path, ...) {
     # special case for text/plain, always use .txt
     if ("text/plain" == ctype) ext <- "txt"
     file_ext <- paste0(".", ext)
+  } else {
+    stop("Unrecognised file type")
   }
   file <- file.path(dryad_get_cache()$cache_path_get(), paste0(id, file_ext))
   if (ext %in% binary_formats) {

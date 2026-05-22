@@ -1,3 +1,13 @@
+
+rdryad 1.0.0.00x (current dev version)
+============
+
+### BUG FIXES
+
+- Improve errors on file download (#43; thanks to  @CeresBarros)
+
+----
+
 rdryad 1.0.0
 ============
 
