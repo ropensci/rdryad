@@ -10,7 +10,7 @@
   "codeRepository": "https://github.com/ropensci/rdryad",
   "issueTracker": "https://github.com/ropensci/rdryad/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.0.1.096",
+  "version": "1.0.1.097",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
